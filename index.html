@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts matter, period.</title>
+    <meta name="description"
+      content="Typography education, type history, and font culture for people who notice the kerning. Who flinch at Comic Sans. Who know a typeface isn't just a font — it's a point of view.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+    <style>
+    /* ============================================
+       RESET & BASE
+    ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f8f8f5;
+      --mint: #cce0d6;
+      --mint-dark: #bdd4c8;
+      --sage: #a8c4b8;
+      --ink: #1a1a1a;
+      --muted: #555;
+      --courier: "Courier New", Courier, monospace;
+      --serif: "Playfair Display", Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--courier);
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 14px;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    em { font-style: italic; }
+
+    /* ============================================
+       HEADER / NAV
+    ============================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .logo {
+      font-family: var(--courier);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: lowercase;
+    }
+
+    .logo span {
+      opacity: 0.4;
+      margin-left: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    .nav-cta {
+      background: var(--black);
+      color: var(--white) !important;
+      opacity: 1 !important;
+      padding: 8px 18px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    /* ============================================
+       MARQUEE
+    ============================================ */
+    .marquee-bar {
+      background: var(--black);
+      color: var(--mint);
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-inner {
+      display: inline-flex;
+      gap: 0;
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee-inner span {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      padding: 0 16px;
+    }
+
+    .marquee-dot { color: var(--sage); }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    .hero {
+      background: var(--mint);
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 80px 40px 80px 80px;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: 'Aa';
+      position: absolute;
+      right: -30px;
+      bottom: -60px;
+      font-family: var(--serif);
+      font-size: 420px;
+      color: rgba(0,0,0,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: lowercase;
+      opacity: 0.5;
+      margin-bottom: 24px;
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(42px, 5.5vw, 80px);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 28px;
+      color: var(--black);
+    }
+
+    .hero-headline em {
+      color: var(--black);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 420px;
+      opacity: 0.75;
+      margin-bottom: 40px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--courier);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      padding: 14px 28px;
+      border: 1px solid var(--black);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-solid {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-solid:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* Hero right: type specimen cards */
+    .hero-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .specimen-card {
+      background: var(--white);
+      padding: 28px 24px;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .specimen-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+
+    .specimen-card:nth-child(2) {
+      margin-top: 32px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .specimen-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 12px;
+    }
+
+    .specimen-name {
+      font-size: 22px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .specimen-card:nth-child(1) .specimen-name { font-family: "Courier New", monospace; }
+    .specimen-card:nth-child(2) .specimen-name { font-family: var(--serif); font-style: italic; }
+    .specimen-card:nth-child(3) .specimen-name { font-family: Georgia, serif; }
+    .specimen-card:nth-child(4) .specimen-name { font-family: "Courier New", monospace; font-weight: 700; }
+
+    .specimen-year {
+      font-size: 10px;
+      opacity: 0.4;
+      letter-spacing: 0.08em;
+    }
+
+    .specimen-alphabet {
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      opacity: 0.35;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       TAGLINE SECTION
+    ============================================ */
+    .tagline-section {
+      background: var(--white);
+      padding: 100px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tagline-text {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 40px);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--black);
+      white-space: pre-line;
+    }
+
+    /* ============================================
+       MANIFESTO
+    ============================================ */
+    .manifesto {
+      background: var(--black);
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 100px 80px;
+      align-items: start;
+    }
+
+    .manifesto h2 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .manifesto p {
+      font-size: 14px;
+      line-height: 1.9;
+      opacity: 0.7;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .stat-block {
+      background: rgba(255,255,255,0.04);
+      padding: 32px 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--mint);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      line-height: 1.6;
+      opacity: 0.5;
+      letter-spacing: 0.03em;
+    }
+
+    /* ============================================
+       TYPE HISTORY FEATURE
+    ============================================ */
+    .type-history {
+      padding: 100px 80px;
+      background: var(--white);
+    }
+
+    .type-history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding-bottom: 24px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    .type-history h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 400;
+      max-width: 500px;
+    }
+
+    .type-history-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .type-card {
+      background: var(--mint);
+      padding: 48px 36px;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .type-card::after {
+      content: attr(data-glyph);
+      position: absolute;
+      right: -10px;
+      bottom: -20px;
+      font-size: 160px;
+      opacity: 0.07;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .type-card:nth-child(2) { background: var(--mint-dark); }
+    .type-card:nth-child(3) { background: var(--sage); }
+
+    .type-card:hover { background: var(--black); color: var(--white); }
+    .type-card:hover .type-card-year { color: var(--mint); }
+
+    .type-card-era {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+
+    .type-card-name {
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .type-card:nth-child(1) .type-card-name { font-family: Georgia, serif; }
+    .type-card:nth-child(2) .type-card-name { font-family: var(--serif); font-style: italic; }
+    .type-card:nth-child(3) .type-card-name { font-family: "Courier New", monospace; }
+
+    .type-card-year {
+      font-size: 13px;
+      opacity: 0.4;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+
+    .type-card-desc {
+      font-size: 13px;
+      line-height: 1.8;
+      opacity: 0.7;
+    }
+
+    /* ============================================
+       WHY SECTION
+    ============================================ */
+    .why-section {
+      background: var(--white);
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-block {
+      padding: 60px 48px;
+      border-right: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .why-block:last-child { border-right: none; }
+
+    .why-num {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      opacity: 0.3;
+      margin-bottom: 20px;
+    }
+
+    .why-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .why-text {
+      font-size: 13px;
+      line-height: 1.9;
+      opacity: 0.6;
+    }
+
+    /* ============================================
+       QUOTE
+    ============================================ */
+    .quote-section {
+      background: var(--mint-dark);
+      padding: 100px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .quote-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 28px;
+    }
+
+    blockquote {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.8vw, 40px);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+
+    .quote-attr {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      opacity: 0.5;
+    }
+
+    .quote-right {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mini-quote {
+      background: var(--white);
+      padding: 24px;
+      border-left: 3px solid var(--black);
+    }
+
+    .mini-quote p {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .mini-quote small {
+      font-size: 11px;
+      opacity: 0.5;
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================
+       OUR STORY
+    ============================================ */
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .story-left {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .story-left .section-label { color: rgba(255,255,255,0.35); }
+
+    .story-headline {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-top: 24px;
+      margin-bottom: auto;
+      padding-bottom: 48px;
+    }
+
+    .story-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .story-stat {
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .story-stat-num {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--mint);
+      flex-shrink: 0;
+      width: 56px;
+    }
+
+    .story-stat-label {
+      font-size: 12px;
+      opacity: 0.5;
+      line-height: 1.5;
+    }
+
+    .story-right {
+      padding: 80px 80px;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      justify-content: center;
+    }
+
+    .story-right p {
+      font-size: 14px;
+      line-height: 1.9;
+      opacity: 0.75;
+      max-width: 560px;
+    }
+
+    .story-right p em {
+      font-style: italic;
+      opacity: 1;
+      color: var(--black);
+    }
+
+    /* ============================================
+       SHOP SECTION (secondary)
+    ============================================ */
+    .shop-section {
+      background: var(--mint);
+      padding: 80px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 60px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .shop-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .shop-copy p {
+      font-size: 13px;
+      line-height: 1.8;
+      opacity: 0.65;
+      max-width: 480px;
+    }
+
+    .shop-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .shop-note {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      opacity: 0.4;
+      text-align: right;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 60px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .footer-brand .logo {
+      font-size: 14px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: 12px;
+      line-height: 1.8;
+      opacity: 0.4;
+      max-width: 260px;
+    }
+
+    .footer-links h4 {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.3;
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links a:hover { opacity: 1; }
+
+    .footer-bottom {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom span {
+      font-size: 11px;
+      opacity: 0.3;
+      letter-spacing: 0.06em;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .social-links a {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover { color: var(--mint); }
+
+    /* ============================================
+       EMAIL SIGNUP
+    ============================================ */
+    .email-section {
+      background: var(--white);
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding: 60px 80px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .email-section h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    .email-section p {
+      font-size: 13px;
+      opacity: 0.5;
+      flex: 1;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 0;
+      flex-shrink: 0;
+    }
+
+    .email-form input {
+      font-family: var(--courier);
+      font-size: 12px;
+      padding: 14px 20px;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-right: none;
+      background: transparent;
+      outline: none;
+      width: 260px;
+      letter-spacing: 0.03em;
+    }
+
+    .email-form button {
+      font-family: var(--courier);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      padding: 14px 24px;
+      background: var(--black);
+      color: var(--white);
+      border: 1px solid var(--black);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .email-form button:hover { background: var(--ink); }
+
+    /* ============================================
+       MOBILE
+    ============================================ */
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        min-height: auto;
+      }
+
+      .hero::before { display: none; }
+      .hero-right { display: none; }
+
+      .manifesto { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+
+      .tagline-section { padding: 60px 24px; }
+
+      .type-history { padding: 60px 24px; }
+      .type-history-grid { grid-template-columns: 1fr; gap: 2px; }
+      .type-history-header { flex-direction: column; gap: 16px; }
+
+      .why-section { grid-template-columns: 1fr; }
+      .why-block { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
+
+      .quote-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
+
+      .story-section { grid-template-columns: 1fr; }
+      .story-left { padding: 60px 24px; }
+      .story-right { padding: 60px 24px; }
+
+      .shop-section { grid-template-columns: 1fr; padding: 60px 24px; }
+      .shop-cta-wrap { align-items: flex-start; }
+      .shop-note { text-align: left; }
+
+      footer { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+      .footer-bottom { padding: 24px; flex-direction: column; gap: 12px; }
+
+      .email-section { flex-direction: column; padding: 60px 24px; gap: 24px; align-items: flex-start; }
+      .email-form { width: 100%; }
+      .email-form input { flex: 1; width: auto; }
+    }
+  </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">fonts matter, period<span>.</span></div>
+      <nav>
+        <a href="#type-history">type history</a>
+        <a href="#about">about</a>
+        <a href="https://www.instagram.com/fontsmatterperiod"
+          target="_blank">instagram</a>
+        <a href="https://www.etsy.com" target="_blank" class="btn nav-cta">shop
+          etsy →</a>
+      </nav>
+    </header>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>typography isn't decoration</span><span
+          class="marquee-dot">·</span>
+        <span>est. in courier new</span><span class="marquee-dot">·</span>
+        <span>kerning is caring</span><span class="marquee-dot">·</span>
+        <span>serif > sans, fight me</span><span class="marquee-dot">·</span>
+        <span>the medium is the typeface</span><span
+          class="marquee-dot">·</span>
+        <span>300,000+ fonts exist. you have opinions.</span><span
+          class="marquee-dot">·</span>
+        <span>typography isn't decoration</span><span
+          class="marquee-dot">·</span>
+        <span>est. in courier new</span><span class="marquee-dot">·</span>
+        <span>kerning is caring</span><span class="marquee-dot">·</span>
+        <span>serif > sans, fight me</span><span class="marquee-dot">·</span>
+        <span>the medium is the typeface</span><span
+          class="marquee-dot">·</span>
+        <span>300,000+ fonts exist. you have opinions.</span><span
+          class="marquee-dot">·</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="hero-eyebrow">est. in courier new · typography first</p>
+        <h1 class="hero-headline">typography is<br><em>a point of
+            view.</em></h1>
+        <p class="hero-sub">For people who notice the kerning. Who flinch at
+          Comic Sans. Who understand that a typeface isn't just a font — it
+          carries history, intention, and meaning. This is where we talk about
+          all of it.</p>
+        <div class="hero-ctas">
+          <a href="#type-history" class="btn btn-solid">explore type history</a>
+          <a href="#about" class="btn btn-outline">our story</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="specimen-card" data-font="Courier New">
+          <div class="specimen-label">monospace · 1955</div>
+          <div class="specimen-name">Courier New</div>
+          <div class="specimen-year">Howard "Bud" Kettler</div>
+          <div
+            class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
+        </div>
+        <div class="specimen-card">
+          <div class="specimen-label">transitional · 1722</div>
+          <div class="specimen-name">Caslon</div>
+          <div class="specimen-year">William Caslon I</div>
+          <div
+            class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
+        </div>
+        <div class="specimen-card">
+          <div class="specimen-label">old style · 1495</div>
+          <div class="specimen-name">Bembo</div>
+          <div class="specimen-year">Francesco Griffo</div>
+          <div
+            class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
+        </div>
+        <div class="specimen-card">
+          <div class="specimen-label">grotesque · 1957</div>
+          <div class="specimen-name">Helvetica</div>
+          <div class="specimen-year">Max Miedinger</div>
+          <div
+            class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAGLINE -->
+    <div class="tagline-section">
+      <p class="tagline-text">Typography isn't decoration. It's the message.
+        It's the difference between a whisper and a shout,
+        between trusted and ignored, between remembered and forgotten.</p>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+      <div>
+        <h2>we're not just another <em>font account.</em></h2>
+        <p>We make content for people who care deeply about craft — the
+          designers, developers, writers, and obsessives who know that the right
+          typeface changes everything. Type history is under-told. We're here to
+          tell it.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-block">
+          <div class="stat-num">300k+</div>
+          <div class="stat-label">typefaces in existence. you have opinions
+            about at least twelve.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">0.05s</div>
+          <div class="stat-label">time to form an opinion. typography is always
+            first.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">years of type history most people don't know
+            about.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">of our followers have strong feelings about
+            Comic Sans.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPE HISTORY -->
+    <section class="type-history" id="type-history">
+      <div class="type-history-header">
+        <span class="section-label">type history</span>
+        <h2>Fonts that changed<br><em>everything.</em></h2>
+      </div>
+      <div class="type-history-grid">
+        <div class="type-card" data-glyph="G">
+          <div class="type-card-era">Old Style · Renaissance</div>
+          <div class="type-card-name">Garamond</div>
+          <div class="type-card-year">c. 1530</div>
+          <div class="type-card-desc">Claude Garamond's types became the
+            foundation for European book printing for over a century. Elegant,
+            readable, and utterly human — cut from the same tradition as the
+            Italian humanist hand. Still one of the most widely used typefaces
+            in the world, which either means it's timeless or everyone's out of
+            ideas.</div>
+        </div>
+        <div class="type-card" data-glyph="B">
+          <div class="type-card-era">Didone · Neoclassical</div>
+          <div class="type-card-name">Bodoni</div>
+          <div class="type-card-year">c. 1798</div>
+          <div class="type-card-desc">Giambattista Bodoni pushed type to the
+            edge of legibility in pursuit of pure geometry — extreme contrast
+            between thick and thin strokes, mathematical precision. Fashion
+            magazines have never recovered. Neither has anyone who's tried to
+            set it at small sizes. It is, objectively, too beautiful to be
+            practical.</div>
+        </div>
+        <div class="type-card" data-glyph="F">
+          <div class="type-card-era">Geometric Sans · Modernist</div>
+          <div class="type-card-name">Futura</div>
+          <div class="type-card-year">1927</div>
+          <div class="type-card-desc">Paul Renner's Futura was designed for the
+            future, which is funny because it's been the past for a century and
+            still looks more modern than half of what gets released today.
+            Geometric circles and triangles masquerading as letters. Used on the
+            moon. Volkswagen. Ikea. Your friend's brand that
+            "just does clean design."</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why-section">
+      <div class="why-block">
+        <div class="why-num">01</div>
+        <div class="why-title">craft over noise</div>
+        <p class="why-text">In a world of algorithmically optimized everything,
+          typography is one of the last places pure human judgment lives. We
+          celebrate that — loudly, in Courier New.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">02</div>
+        <div class="why-title">history first</div>
+        <p class="why-text">Every typeface has a story. A name behind it, a
+          moment in time, a problem it was trying to solve. We dig into that.
+          Because context is what separates appreciation from obsession.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">03</div>
+        <div class="why-title">for the obsessed</div>
+        <p class="why-text">You're here because you notice things other people
+          don't. The tracking on a restaurant menu. The wrong font on a
+          government form. We see you. We are you.</p>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <div>
+        <p class="quote-eyebrow">on typography</p>
+        <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
+        <span class="quote-attr">— Matthew Carter, type designer · born
+          1937</span>
+      </div>
+      <div class="quote-right">
+        <div class="mini-quote">
+          <p>"Typography is what language looks like."</p>
+          <small>— Ellen Lupton, designer & educator</small>
+        </div>
+        <div class="mini-quote">
+          <p>"The best type is invisible."</p>
+          <small>— Beatrice Warde, typographer · 1900–1969</small>
+        </div>
+        <div class="mini-quote">
+          <p>"A typeface is an alphabet on a leash."</p>
+          <small>— attributed to various, disputed (as good things often
+            are)</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section" id="about">
+      <div class="story-left">
+        <div>
+          <p class="section-label">our story</p>
+          <h2 class="story-headline">we're from San Diego.<br>we have
+            <em>opinions.</em></h2>
+        </div>
+        <div class="story-stats">
+          <div class="story-stat">
+            <span class="story-stat-num">30</span>
+            <span class="story-stat-label">years of caring too much about
+              fonts</span>
+          </div>
+          <div class="story-stat">
+            <span class="story-stat-num">1</span>
+            <span class="story-stat-label">city. San Diego. obviously.</span>
+          </div>
+          <div class="story-stat">
+            <span class="story-stat-num">0</span>
+            <span class="story-stat-label">apologies for having opinions about
+              kerning</span>
+          </div>
+        </div>
+      </div>
+      <div class="story-right">
+        <p>fonts matter. started in San Diego, which means we grew up next to
+          the Pacific Ocean and still found time to have strong feelings about
+          typefaces. priorities.</p>
+        <p>this obsession with typography didn't start last year. it's been
+          thirty years of noticing the wrong font on a sign, the bad kerning on
+          a menu, the moment a brand's whole personality collapses because
+          someone picked Arial. we've been the person at the table saying
+          <em>that's not the right typeface</em> since before it was something
+          you could say out loud.</p>
+        <p>and it's not just one of us. there are more people behind this than
+          you'd expect for a brand that talks about fonts for a living. some of
+          us design. some of us write. some of us just show up and say <em>the
+            tracking is off.</em> all of us mean it.</p>
+        <p>follow us on instagram for type history, font opinions, and the
+          occasional righteous take on why certain typefaces deserve
+          retirement.</p>
+        <a href="https://www.instagram.com/fontsmatterperiod" target="_blank"
+          class="btn btn-solid"
+          style="align-self: flex-start; margin-top: 12px;">follow
+          @fontsmatterperiod →</a>
+      </div>
+    </section>
+
+    <!-- SHOP (secondary, Etsy) -->
+    <section class="shop-section">
+      <div class="shop-copy">
+        <h2>wear what you <em>believe</em> in.</h2>
+        <p>For those who want to signal their typographic convictions to the
+          world — we make logo apparel for designers who notice the smallest
+          details. Printed in Courier New. Deliberate. No explanation
+          required.</p>
+      </div>
+      <div class="shop-cta-wrap">
+        <a href="https://www.etsy.com" target="_blank"
+          class="btn btn-solid">shop on etsy →</a>
+        <span class="shop-note">t-shirts · hoodies · long sleeves · via
+          printful</span>
+      </div>
+    </section>
+
+    <!-- EMAIL SIGNUP -->
+    <section class="email-section">
+      <h3>Stay typographically informed.</h3>
+      <p>Type history, font opinions, and things you'll want to know.</p>
+      <form class="email-form" action="/contact" method="post">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">subscribe</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-brand">
+        <span class="logo">fonts matter, period.</span>
+        <p>Typography education and type culture for people who notice the
+          kerning. Est. in Courier New, somewhere in San Diego.</p>
+      </div>
+      <div class="footer-links">
+        <h4>explore</h4>
+        <ul>
+          <li><a href="#type-history">type history</a></li>
+          <li><a href="#about">our story</a></li>
+          <li><a href="https://www.instagram.com/fontsmatterperiod"
+              target="_blank">instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>the merch</h4>
+        <ul>
+          <li><a href="https://www.etsy.com" target="_blank">etsy shop
+              →</a></li>
+          <li><a href="#">privacy policy</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="footer-bottom">
+      <span>© 2026 fonts matter, period. · set in courier new · made in san
+        diego</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/fontsmatterperiod"
+          target="_blank">instagram</a>
+      </div>
+    </div>
+
+  </body>
+</html>
