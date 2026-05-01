@@ -1,1278 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===================== SEO ===================== -->
-    <title>Fonts Matter, Period. | Typography Education &amp; Type
-      History</title>
-    <meta name="description"
-      content="Typography education, type history, and font culture for designers and obsessives. We cover the typefaces, designers, and moments that shaped how the world reads.">
-    <meta name="keywords"
-      content="typography, type history, font education, typeface design, graphic design, kerning, Garamond, Bodoni, Futura, Helvetica, Courier New">
-    <meta name="author" content="Fonts Matter, Period.">
-    <link rel="canonical" href="https://fontsmatterperiod.com/">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fontsmatterperiod.com/">
-    <meta property="og:site_name" content="Fonts Matter, Period.">
-    <meta property="og:title"
-      content="Fonts Matter, Period. | Typography Education &amp; Type History">
-    <meta property="og:description"
-      content="For people who notice the kerning. Who flinch at Comic Sans. Who know a typeface isn't just a font — it's a point of view. Typography education and type history.">
-    <meta property="og:image"
-      content="https://fontsmatterperiod.com/cdn/shop/files/fonts_matter..png?v=1769206302">
-    <meta property="og:image:width" content="2250">
-    <meta property="og:image:height" content="1125">
-    <meta property="og:image:alt"
-      content="Fonts Matter, Period. — typography education and type history">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@fontsmatterperiod">
-    <meta name="twitter:title"
-      content="Fonts Matter, Period. | Typography Education &amp; Type History">
-    <meta name="twitter:description"
-      content="For people who notice the kerning. Typography education, type history, and font culture.">
-    <meta name="twitter:image"
-      content="https://fontsmatterperiod.com/cdn/shop/files/fonts_matter..png?v=1769206302">
-    <meta name="twitter:image:alt"
-      content="Fonts Matter, Period. — typography education and type history">
-
-    <!-- Structured Data: Organization -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Fonts Matter, Period.",
-    "url": "https://fontsmatterperiod.com",
-    "description": "Typography education, type history, and font culture for designers and obsessives.",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "San Diego, California, USA"
-    },
-    "sameAs": [
-      "https://www.instagram.com/fontsmatterperiod"
-    ]
-  }
-  </script>
-
-    <!-- Structured Data: WebSite -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Fonts Matter, Period.",
-    "url": "https://fontsmatterperiod.com"
-  }
-  </script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>fonts matter, period.</title>
     <style>
-    /* ============================================
-       RESET & BASE
-    ============================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --black: #0a0a0a;
-      --white: #f8f8f5;
-      --mint: #cce0d6;
-      --mint-dark: #bdd4c8;
-      --sage: #a8c4b8;
-      --ink: #1a1a1a;
-      --muted: #4a4a4a;
-      --courier: "Courier New", Courier, monospace;
-      --serif: "Playfair Display", Georgia, serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--courier);
-      background: var(--white);
-      color: var(--ink);
-      line-height: 1.6;
-      font-size: 14px;
-      overflow-x: hidden;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
-      html { scroll-behavior: auto; }
-    }
-
-    a { color: inherit; text-decoration: none; }
-    em { font-style: italic; }
-
-    /* Visually hidden — accessible text for screen readers */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* ============================================
-       ACCESSIBILITY: SKIP NAV & FOCUS
-    ============================================ */
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 16px;
-      background: var(--black);
-      color: var(--white);
-      padding: 12px 20px;
-      font-family: var(--courier);
-      font-size: 13px;
-      z-index: 9999;
-      text-decoration: underline;
-      transition: top 0.15s;
-      border-radius: 0 0 4px 4px;
-    }
-
-    .skip-link:focus { top: 0; }
-
-    /* Universal focus ring — never hidden */
-    :focus-visible {
-      outline: 3px solid var(--black);
-      outline-offset: 3px;
-    }
-
-    /* Inverted ring for dark backgrounds */
-    .manifesto :focus-visible,
-    .story-left :focus-visible,
-    footer :focus-visible,
-    .footer-bottom :focus-visible {
-      outline-color: var(--mint);
-    }
-
-    /* ============================================
-       HEADER / NAV
-    ============================================ */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-
-    .logo {
-      font-family: var(--courier);
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      text-transform: lowercase;
-      color: var(--ink);
-    }
-
-    .logo .period { opacity: 0.4; margin-left: 2px; }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    nav a {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-
-    nav a:hover { color: var(--ink); }
-
-    .nav-cta {
-      background: var(--black);
-      color: var(--white) !important;
-      padding: 8px 18px;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      transition: background 0.2s !important;
-    }
-
-    .nav-cta:hover { background: #333 !important; }
-
-    /* ============================================
-       MARQUEE
-    ============================================ */
-    .marquee-bar {
-      background: var(--black);
-      color: var(--mint);
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee-inner {
-      display: inline-flex;
-      animation: marquee 28s linear infinite;
-    }
-
-    .marquee-inner span {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: lowercase;
-      padding: 0 16px;
-    }
-
-    .marquee-dot { color: var(--sage); }
-
-    @keyframes marquee {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ============================================
-       HERO
-    ============================================ */
-    .hero {
-      background: var(--mint);
-      min-height: 92vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 80px 40px 80px 80px;
-      gap: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: 'Aa';
-      position: absolute;
-      right: -30px;
-      bottom: -60px;
-      font-family: var(--serif);
-      font-size: 420px;
-      color: rgba(0,0,0,0.04);
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .hero-eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: lowercase;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 5.5vw, 80px);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 28px;
-      color: var(--black);
-    }
-
-    .hero-sub {
-      font-size: 14px;
-      line-height: 1.8;
-      max-width: 420px;
-      color: var(--muted);
-      margin-bottom: 40px;
-    }
-
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-block;
-      font-family: var(--courier);
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: lowercase;
-      padding: 14px 28px;
-      border: 1px solid var(--black);
-      transition: background 0.2s, color 0.2s;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-solid { background: var(--black); color: var(--white); }
-    .btn-solid:hover { background: #333; border-color: #333; }
-    .btn-outline { background: transparent; color: var(--black); }
-    .btn-outline:hover { background: var(--black); color: var(--white); }
-
-    /* Hero right: decorative type specimens */
-    .hero-right {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .specimen-card {
-      background: var(--white);
-      padding: 28px 24px;
-      border: 1px solid rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .specimen-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    }
-
-    .specimen-card:nth-child(2) {
-      margin-top: 32px;
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .specimen-label {
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .specimen-card:nth-child(2) .specimen-label { color: rgba(255,255,255,0.4); }
-
-    .specimen-name { font-size: 22px; line-height: 1.2; margin-bottom: 8px; font-weight: 400; }
-    .specimen-card:nth-child(1) .specimen-name { font-family: "Courier New", monospace; }
-    .specimen-card:nth-child(2) .specimen-name { font-family: var(--serif); font-style: italic; }
-    .specimen-card:nth-child(3) .specimen-name { font-family: Georgia, serif; }
-    .specimen-card:nth-child(4) .specimen-name { font-family: "Courier New", monospace; font-weight: 700; }
-
-    .specimen-year { font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
-    .specimen-card:nth-child(2) .specimen-year { color: rgba(255,255,255,0.4); }
-
-    .specimen-alphabet { font-size: 11px; letter-spacing: 0.05em; color: var(--muted); margin-top: 14px; line-height: 1.6; }
-    .specimen-card:nth-child(2) .specimen-alphabet { color: rgba(255,255,255,0.25); }
-
-    /* ============================================
-       TAGLINE SECTION
-    ============================================ */
-    .tagline-section {
-      background: var(--white);
-      padding: 72px 80px;
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .tagline-text {
-      font-family: var(--serif);
-      font-size: clamp(15px, 1.5vw, 20px);
-      font-weight: 400;
-      line-height: 1.85;
-      color: var(--muted);
-      white-space: pre-line;
-    }
-
-    /* ============================================
-       MANIFESTO
-    ============================================ */
-    .manifesto {
-      background: var(--black);
-      color: var(--white);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      padding: 100px 80px;
-      align-items: start;
-    }
-
-    .manifesto h2 {
-      font-family: var(--serif);
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
-
-    .manifesto > div > p {
-      font-size: 14px;
-      line-height: 1.9;
-      color: rgba(255,255,255,0.7);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-    }
-
-    .stat-block {
-      background: rgba(255,255,255,0.04);
-      padding: 32px 28px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 36px;
-      font-weight: 400;
-      color: var(--mint);
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .stat-label {
-      font-size: 11px;
-      line-height: 1.6;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.03em;
-    }
-
-    /* ============================================
-       TYPE HISTORY
-    ============================================ */
-    .type-history {
-      padding: 100px 80px;
-      background: var(--white);
-    }
-
-    .type-history-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 60px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      padding-bottom: 24px;
-    }
-
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .type-history h2 {
-      font-family: var(--serif);
-      font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 400;
-      max-width: 500px;
-    }
-
-    .type-history-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-
-    .type-card {
-      background: var(--mint);
-      padding: 48px 36px;
-      transition: background 0.3s, color 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .type-card::after {
-      content: attr(data-glyph);
-      position: absolute;
-      right: -10px;
-      bottom: -20px;
-      font-size: 160px;
-      color: rgba(0,0,0,0.07);
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .type-card:nth-child(2) { background: var(--mint-dark); }
-    .type-card:nth-child(3) { background: var(--sage); }
-
-    .type-card:hover { background: var(--black); color: var(--white); }
-    .type-card:hover .type-card-era,
-    .type-card:hover .type-card-year,
-    .type-card:hover .type-card-desc { color: rgba(255,255,255,0.6); }
-    .type-card:hover .type-card-name { color: var(--mint); }
-    .type-card:hover::after { color: rgba(255,255,255,0.05); }
-
-    .type-card-era {
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 20px;
-      transition: color 0.3s;
-    }
-
-    .type-card-name {
-      font-size: 28px;
-      font-weight: 400;
-      margin-bottom: 6px;
-      color: var(--ink);
-      transition: color 0.3s;
-    }
-
-    .type-card:nth-child(1) .type-card-name { font-family: Georgia, serif; }
-    .type-card:nth-child(2) .type-card-name { font-family: var(--serif); font-style: italic; }
-    .type-card:nth-child(3) .type-card-name { font-family: "Courier New", monospace; }
-
-    .type-card-year {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
-      transition: color 0.3s;
-    }
-
-    .type-card-desc {
-      font-size: 13px;
-      line-height: 1.8;
-      color: var(--muted);
-      transition: color 0.3s;
-    }
-
-    /* ============================================
-       WHY SECTION
-    ============================================ */
-    .why-section {
-      background: var(--white);
-      border-top: 1px solid rgba(0,0,0,0.08);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .why-block {
-      padding: 60px 48px;
-      border-right: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .why-block:last-child { border-right: none; }
-
-    .why-num { font-size: 11px; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 20px; }
-
-    .why-title {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 16px;
-      line-height: 1.3;
-      color: var(--black);
-    }
-
-    .why-text { font-size: 13px; line-height: 1.9; color: var(--muted); }
-
-    /* ============================================
-       QUOTES
-    ============================================ */
-    .quote-section {
-      background: var(--mint-dark);
-      padding: 100px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .quote-eyebrow {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    blockquote {
-      font-family: var(--serif);
-      font-size: clamp(18px, 2.2vw, 30px);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--black);
-      margin-bottom: 20px;
-    }
-
-    figcaption.quote-attr {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-
-    .quote-right { display: grid; gap: 16px; }
-
-    .mini-quote {
-      background: var(--white);
-      padding: 24px;
-      border-left: 3px solid var(--black);
-    }
-
-    .mini-quote blockquote {
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 8px;
-    }
-
-    .mini-quote figcaption { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; }
-
-    /* ============================================
-       OUR STORY
-    ============================================ */
-    .story-section {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      border-top: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .story-left {
-      background: var(--black);
-      color: var(--white);
-      padding: 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .story-left .section-label { color: rgba(255,255,255,0.3); }
-
-    .story-headline {
-      font-family: var(--serif);
-      font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-top: 24px;
-      margin-bottom: auto;
-      padding-bottom: 48px;
-      color: var(--white);
-    }
-
-    .story-stats { display: flex; flex-direction: column; gap: 24px; }
-
-    .story-stat { display: flex; gap: 20px; align-items: baseline; }
-
-    .story-stat-num {
-      font-family: var(--serif);
-      font-size: 32px;
-      font-weight: 400;
-      color: var(--mint);
-      flex-shrink: 0;
-      width: 56px;
-    }
-
-    .story-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-
-    .story-right {
-      padding: 80px;
-      background: var(--white);
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      justify-content: center;
-    }
-
-    .story-right p { font-size: 14px; line-height: 1.9; color: var(--muted); max-width: 560px; }
-    .story-right p em { font-style: italic; color: var(--ink); }
-
-    /* ============================================
-       SHOP SECTION (secondary)
-    ============================================ */
-    .shop-section {
-      background: var(--mint);
-      padding: 80px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 60px;
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .shop-copy h2 {
-      font-family: var(--serif);
-      font-size: clamp(24px, 3vw, 40px);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: var(--black);
-    }
-
-    .shop-copy p { font-size: 13px; line-height: 1.8; color: var(--muted); max-width: 480px; }
-
-    .shop-cta-wrap { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
-
-    .shop-note { font-size: 10px; letter-spacing: 0.1em; text-transform: lowercase; color: var(--muted); text-align: right; }
-
-    /* ============================================
-       EMAIL SIGNUP
-    ============================================ */
-    .email-section {
-      background: var(--white);
-      border-top: 1px solid rgba(0,0,0,0.08);
-      padding: 60px 80px;
-      display: flex;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .email-section h2 {
-      font-family: var(--serif);
-      font-size: 24px;
-      font-weight: 400;
-      flex-shrink: 0;
-      color: var(--black);
-    }
-
-    .email-section > p { font-size: 13px; color: var(--muted); flex: 1; }
-
-    .email-form { display: flex; flex-shrink: 0; }
-
-    .email-form input {
-      font-family: var(--courier);
-      font-size: 12px;
-      padding: 14px 20px;
-      border: 1px solid rgba(0,0,0,0.25);
-      border-right: none;
-      background: transparent;
-      outline: none;
-      width: 260px;
-      letter-spacing: 0.03em;
-      color: var(--ink);
-    }
-
-    .email-form input::placeholder { color: var(--muted); }
-    .email-form input:focus { border-color: var(--black); }
-
-    .email-form button {
-      font-family: var(--courier);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: lowercase;
-      padding: 14px 24px;
-      background: var(--black);
-      color: var(--white);
-      border: 1px solid var(--black);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .email-form button:hover { background: #333; }
-
-    /* ============================================
-       FOOTER
-    ============================================ */
-    footer {
-      background: var(--black);
-      color: var(--white);
-      padding: 60px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .footer-logo {
-      font-family: var(--courier);
-      font-size: 14px;
-      letter-spacing: 0.05em;
-      text-transform: lowercase;
-      margin-bottom: 16px;
-      display: block;
-      color: var(--white);
-    }
-
-    .footer-brand p { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 260px; }
-
-    .footer-nav-heading {
-      font-family: var(--courier);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-
-    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-
-    .footer-bottom {
-      background: var(--black);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 24px 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-bottom p { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
-
-    .social-links { display: flex; gap: 24px; }
-
-    .social-links a {
-      font-size: 11px;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: 0.1em;
-      text-transform: lowercase;
-      transition: color 0.2s;
-    }
-
-    .social-links a:hover { color: var(--mint); }
-
-    /* ============================================
-       MOBILE
-    ============================================ */
-    @media (max-width: 900px) {
-      header { padding: 0 24px; }
-      nav a:not(.nav-cta) { display: none; }
-
-      .hero { grid-template-columns: 1fr; padding: 60px 24px; min-height: auto; }
-      .hero::before { display: none; }
-      .hero-right { display: none; }
-
-      .tagline-section { padding: 60px 24px; }
-
-      .manifesto { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-
-      .type-history { padding: 60px 24px; }
-      .type-history-header { flex-direction: column; gap: 16px; }
-      .type-history-grid { grid-template-columns: 1fr; gap: 2px; }
-
-      .why-section { grid-template-columns: 1fr; }
-      .why-block { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
-
-      .quote-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
-
-      .story-section { grid-template-columns: 1fr; }
-      .story-left { padding: 60px 24px; }
-      .story-right { padding: 60px 24px; }
-
-      .shop-section { grid-template-columns: 1fr; padding: 60px 24px; }
-      .shop-cta-wrap { align-items: flex-start; }
-      .shop-note { text-align: left; }
-
-      .email-section { flex-direction: column; padding: 60px 24px; gap: 24px; align-items: flex-start; }
-      .email-form { width: 100%; }
-      .email-form input { flex: 1; width: auto; }
-
-      footer { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
-      .footer-bottom { padding: 24px; flex-direction: column; gap: 12px; }
-    }
-
-    /* High contrast / forced colors support */
-    @media (forced-colors: active) {
-      .btn, .nav-cta { border: 2px solid ButtonText; }
-      .skip-link { border: 2px solid ButtonText; }
-    }
-  </style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-white: #f8f8f5;
+    --sage: #e3f1eb;
+    --sage-mid: #d4e8e0;
+    --sage-dark: #a8cfc0;
+    --mono: "Courier New", Courier, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --page-max: 1200px;
+    --page-pad: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  body {
+    font-family: var(--mono);
+    background: var(--off-white);
+    color: var(--black);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ─────────────────────────────────── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 0 var(--page-pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .site-header img { height: 28px; width: auto; }
+  .site-nav { display: flex; gap: 2rem; list-style: none; }
+  .site-nav a {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--black);
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+  .site-nav a:hover { opacity: 1; }
+
+  /* ── HERO ────────────────────────────────────── */
+  .fm-hero {
+    background: var(--sage);
+    padding: clamp(3rem, 8vw, 7rem) var(--page-pad);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) { .fm-hero { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .fm-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    opacity: 0.55;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .fm-hero__headline {
+    font-family: var(--mono);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+  .fm-hero__headline em { font-style: italic; }
+  .fm-hero__sub {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0.75;
+    max-width: 38ch;
+    margin-bottom: 2rem;
+  }
+  .fm-hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .fm-btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border: 1px solid var(--black);
+    color: var(--black);
+    transition: background 0.15s, color 0.15s;
+    cursor: pointer;
+  }
+  .fm-btn:hover { background: var(--black); color: var(--off-white); }
+  .fm-btn--solid { background: var(--black); color: var(--off-white); }
+  .fm-btn--solid:hover { background: #333; }
+
+  /* hero right — editorial type specimen */
+  .hero-specimen {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .specimen-word {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.4rem;
+  }
+  .specimen-word:last-child { border-bottom: none; }
+  .specimen-label {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    opacity: 0.4;
+    text-transform: uppercase;
+    align-self: flex-end;
+    padding-bottom: 0.2rem;
+    min-width: 60px;
+    text-align: right;
+  }
+  .spec-courier { font-family: "Courier New", Courier, monospace; }
+  .spec-ak { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; }
+  .spec-garamond { font-family: Garamond, "Times New Roman", serif; font-style: italic; }
+  .spec-times { font-family: "Times New Roman", Times, serif; }
+
+  /* ── MARQUEE ─────────────────────────────────── */
+  .fm-marquee {
+    background: var(--black);
+    color: var(--off-white);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .fm-marquee__inner {
+    display: inline-flex;
+    gap: 2rem;
+    animation: marquee 28s linear infinite;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+  .fm-marquee__inner span:nth-child(even) { color: var(--sage-dark); }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── MANIFESTO ───────────────────────────────── */
+  .fm-manifesto {
+    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) { .fm-manifesto { grid-template-columns: 1fr; gap: 2rem; } }
+  .fm-manifesto h2 {
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .fm-manifesto h2 em { font-style: italic; }
+  .fm-manifesto p { font-size: 0.82rem; line-height: 1.8; opacity: 0.72; }
+  .fm-stats { display: flex; flex-direction: column; gap: 1.5rem; }
+  .fm-stat__num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1; }
+  .fm-stat__label { font-size: 0.72rem; line-height: 1.5; opacity: 0.55; margin-top: 0.25rem; max-width: 28ch; }
+
+  /* ── TAGLINE ─────────────────────────────────── */
+  .fm-tagline {
+    background: var(--off-white);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: clamp(2.5rem, 6vw, 5rem) var(--page-pad);
+    text-align: center;
+  }
+  .fm-tagline p {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.75;
+    max-width: 55ch;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+
+  /* ── BLOG: THE FONTS ─────────────────────────── */
+  .fm-blog {
+    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  .fm-blog__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 1rem;
+  }
+  .fm-blog__header h2 { font-size: 1.1rem; font-weight: 400; }
+  .fm-blog__header a { font-size: 0.72rem; opacity: 0.5; text-decoration: none; color: var(--black); }
+  .fm-blog__header a:hover { opacity: 1; }
+
+  .fm-blog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .font-card {
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--black);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .font-card:hover { border-color: rgba(0,0,0,0.3); transform: translateY(-2px); }
+
+  .font-card__specimen {
+    padding: 2rem 1.75rem 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .font-card__big {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .font-card__alpha {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    opacity: 0.35;
+    text-transform: uppercase;
+  }
+
+  /* per-font specimen styles */
+  .font-card--courier .font-card__specimen { background: #f5f3f0; }
+  .font-card--courier .font-card__big { font-family: "Courier New", Courier, monospace; }
+
+  .font-card--ak .font-card__specimen { background: #0a0a0a; color: #f8f8f5; }
+  .font-card--ak .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; letter-spacing: -0.03em; }
+  .font-card--ak .font-card__alpha { opacity: 0.4; color: #f8f8f5; }
+
+  .font-card--garamond .font-card__specimen { background: var(--sage); }
+  .font-card--garamond .font-card__big { font-family: Garamond, "EB Garamond", "Times New Roman", serif; font-style: italic; }
+
+  .font-card--times .font-card__specimen { background: #1a1a2e; color: #e8e4da; }
+  .font-card--times .font-card__big { font-family: "Times New Roman", Times, serif; font-weight: 700; letter-spacing: -0.01em; }
+  .font-card--times .font-card__alpha { color: #e8e4da; opacity: 0.35; }
+
+  .font-card--futura .font-card__specimen { background: #f0ece4; }
+  .font-card--futura .font-card__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: 0.05em; }
+
+  .font-card--baskerville .font-card__specimen { background: #2a1a0e; color: #f5ece0; }
+  .font-card--baskerville .font-card__big { font-family: Baskerville, "Baskerville Old Face", "Palatino Linotype", serif; }
+  .font-card--baskerville .font-card__alpha { color: #f5ece0; opacity: 0.35; }
+
+  .font-card--helvetica .font-card__specimen { background: #f2f2f2; }
+  .font-card--helvetica .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+
+  .font-card--optima .font-card__specimen { background: #f5f0e8; }
+  .font-card--optima .font-card__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
+
+  .font-card--papyrus .font-card__specimen { background: #e8dfc8; }
+  .font-card--papyrus .font-card__big { font-family: Papyrus, fantasy; font-weight: 400; }
+
+  .font-card--comic .font-card__specimen { background: #fff9c4; }
+  .font-card--comic .font-card__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; letter-spacing: -0.01em; }
+
+  .font-card__body {
+    padding: 1.25rem 1.75rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .font-card__meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .font-card__tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 0.2rem 0.5rem;
+    opacity: 0.6;
+  }
+  .font-card__name {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .font-card__excerpt {
+    font-size: 0.72rem;
+    line-height: 1.7;
+    opacity: 0.6;
+    flex: 1;
+  }
+  .font-card__read {
+    margin-top: 1rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  /* ── FEATURED (wide card) ────────────────────── */
+  .font-card--featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 600px) { .font-card--featured { grid-template-columns: 1fr; } }
+  .font-card--featured .font-card__specimen {
+    min-height: 240px;
+    border-bottom: none;
+    border-right: 1px solid rgba(0,0,0,0.06);
+  }
+  @media (max-width: 600px) {
+    .font-card--featured .font-card__specimen { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  }
+  .font-card--featured .font-card__big { font-size: clamp(4rem, 8vw, 7rem); }
+
+  /* ── QUOTE ───────────────────────────────────── */
+  .fm-quote {
+    background: var(--sage-mid);
+    padding: clamp(3rem, 7vw, 5rem) var(--page-pad);
+    text-align: center;
+  }
+  .fm-quote blockquote {
+    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 50ch;
+    margin: 0 auto 1rem;
+    font-style: italic;
+  }
+  .fm-quote cite {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+    font-style: normal;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  /* ── WHY ─────────────────────────────────────── */
+  .fm-why {
+    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) { .fm-why { grid-template-columns: 1fr; gap: 2rem; } }
+  .fm-why__num { font-size: 0.65rem; opacity: 0.3; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+  .fm-why__title { font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .fm-why__text { font-size: 0.77rem; line-height: 1.75; opacity: 0.6; }
+
+  /* ── STORY ───────────────────────────────────── */
+  .fm-story {
+    background: var(--off-white);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) { .fm-story { grid-template-columns: 1fr; gap: 2rem; } }
+  .fm-story h2 {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .fm-story h2 em { font-style: italic; }
+  .fm-story__body { font-size: 0.82rem; line-height: 1.85; opacity: 0.7; margin-bottom: 1.25rem; }
+  .fm-story-stats { display: flex; gap: 2.5rem; margin: 2rem 0; }
+  .fm-story-stats span:first-child { font-size: 2rem; display: block; line-height: 1; }
+  .fm-story-stats span:last-child { font-size: 0.7rem; opacity: 0.5; display: block; margin-top: 0.25rem; max-width: 14ch; line-height: 1.4; }
+
+  /* ── FOOTER ──────────────────────────────────── */
+  .fm-footer {
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+  @media (max-width: 600px) { .fm-footer { grid-template-columns: 1fr; } }
+  .fm-footer h3 { font-size: 0.9rem; font-weight: 400; margin-bottom: 0.5rem; }
+  .fm-footer p { font-size: 0.72rem; opacity: 0.55; margin-bottom: 1rem; }
+  .email-form { display: flex; gap: 0; }
+  .email-form input {
+    flex: 1;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-right: none;
+    background: transparent;
+    outline: none;
+  }
+  .email-form button {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 0.65rem 1.1rem;
+    background: var(--black);
+    color: var(--off-white);
+    border: 1px solid var(--black);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+  }
+  .fm-footer__copy { font-size: 0.68rem; opacity: 0.35; margin-top: 1rem; }
+  .social-links { display: flex; gap: 1rem; margin-top: 0.5rem; }
+  .social-links a { font-size: 0.7rem; opacity: 0.45; text-decoration: none; color: var(--black); letter-spacing: 0.08em; }
+  .social-links a:hover { opacity: 1; }
+</style>
   </head>
   <body>
 
-    <!-- SKIP NAV -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
     <!-- HEADER -->
-    <header role="banner">
-      <a href="/" class="logo"
-        aria-label="Fonts Matter, Period. — return to homepage">
-        fonts matter, period<span class="period" aria-hidden="true">.</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#type-history">type history</a>
-        <a href="#about">our story</a>
-        <a href="https://www.instagram.com/fontsmatterperiod"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Follow us on Instagram (opens in new tab)">instagram</a>
-        <a href="https://www.etsy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn nav-cta"
-          aria-label="Shop our merch on Etsy (opens in new tab)">shop etsy →</a>
+    <header class="site-header">
+      <a href="/"><img
+          src="//fontsmatterperiod.com/cdn/shop/files/logo_black.png?v=1759439080&width=420"
+          alt="fonts matter, period."></a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/blogs/fonts">the fonts</a></li>
+          <li><a href="/pages/about">our story</a></li>
+          <li><a href="/pages/contact">contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- MARQUEE — decorative, hidden from screen readers -->
-    <div class="marquee-bar" aria-hidden="true" role="presentation">
-      <div class="marquee-inner">
-        <span>typography isn't decoration</span><span
-          class="marquee-dot">·</span>
-        <span>est. in courier new</span><span class="marquee-dot">·</span>
-        <span>kerning is caring</span><span class="marquee-dot">·</span>
-        <span>serif &gt; sans, fight me</span><span class="marquee-dot">·</span>
-        <span>the medium is the typeface</span><span
-          class="marquee-dot">·</span>
-        <span>300,000+ fonts exist. you have opinions.</span><span
-          class="marquee-dot">·</span>
-        <span>typography isn't decoration</span><span
-          class="marquee-dot">·</span>
-        <span>est. in courier new</span><span class="marquee-dot">·</span>
-        <span>kerning is caring</span><span class="marquee-dot">·</span>
-        <span>serif &gt; sans, fight me</span><span class="marquee-dot">·</span>
-        <span>the medium is the typeface</span><span
-          class="marquee-dot">·</span>
-        <span>300,000+ fonts exist. you have opinions.</span><span
-          class="marquee-dot">·</span>
+    <!-- HERO -->
+    <section style="background: var(--sage);">
+      <div class="fm-hero">
+        <div class="fm-hero__left">
+          <p class="fm-eyebrow">est. in courier new · typography first</p>
+          <h1 class="fm-hero__headline">the type<br>you notice<br>when you
+            <em>shouldn't.</em></h1>
+          <p class="fm-hero__sub">For designers, developers, and writers who
+            believe good design starts before the first word. We write about
+            typefaces the way some people argue about wine — with feelings,
+            opinions, and zero apologies.</p>
+          <div class="fm-hero__ctas">
+            <a href="/blogs/fonts" class="fm-btn fm-btn--solid">read the
+              blog</a>
+            <a href="#our-story" class="fm-btn">our story</a>
+          </div>
+        </div>
+        <div class="fm-hero__right">
+          <div class="hero-specimen">
+            <div class="specimen-word">
+              <span class="spec-courier">Aa</span>
+              <span class="specimen-label">Courier New</span>
+            </div>
+            <div class="specimen-word">
+              <span class="spec-ak"
+                style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:200;">Aa</span>
+              <span class="specimen-label">Akzidenz</span>
+            </div>
+            <div class="specimen-word">
+              <span class="spec-garamond"
+                style="font-family:Garamond,'Times New Roman',serif;font-style:italic;">Aa</span>
+              <span class="specimen-label">Garamond</span>
+            </div>
+            <div class="specimen-word">
+              <span class="spec-times"
+                style="font-family:'Times New Roman',Times,serif;">Aa</span>
+              <span class="specimen-label">Times</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="fm-marquee">
+      <div class="fm-marquee__inner">
+        <span>typography isn't decoration</span><span>·</span>
+        <span>kerning is caring</span><span>·</span>
+        <span>serif > sans — fight me</span><span>·</span>
+        <span>the font is the message</span><span>·</span>
+        <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
+          Baskerville</span><span>·</span>
+        <span>type nerd since before it was cool</span><span>·</span>
+        <span>typography isn't decoration</span><span>·</span>
+        <span>kerning is caring</span><span>·</span>
+        <span>serif > sans — fight me</span><span>·</span>
+        <span>the font is the message</span><span>·</span>
+        <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
+          Baskerville</span><span>·</span>
+        <span>type nerd since before it was cool</span><span>·</span>
       </div>
     </div>
 
-    <!-- MAIN -->
-    <main id="main-content">
-
-      <!-- HERO -->
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero-left">
-          <p class="hero-eyebrow">est. in courier new · typography first</p>
-          <h1 id="hero-heading">typography is<br><em>a point of view.</em></h1>
-          <p class="hero-sub">For people who notice the kerning. Who flinch at
-            Comic Sans. Who understand that a typeface isn't just a font — it
-            carries history, intention, and meaning. This is where we talk about
-            all of it.</p>
-          <div class="hero-ctas">
-            <a href="#type-history" class="btn btn-solid">explore type
-              history</a>
-            <a href="#about" class="btn btn-outline">our story</a>
-          </div>
-        </div>
-
-        <!-- Decorative type specimens — visually interesting, not informational -->
-        <div class="hero-right" aria-hidden="true">
-          <div class="specimen-card">
-            <div class="specimen-label">monospace · 1955</div>
-            <div class="specimen-name">Courier New</div>
-            <div class="specimen-year">Howard "Bud" Kettler</div>
-            <div
-              class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
-          </div>
-          <div class="specimen-card">
-            <div class="specimen-label">transitional · 1722</div>
-            <div class="specimen-name">Caslon</div>
-            <div class="specimen-year">William Caslon I</div>
-            <div
-              class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
-          </div>
-          <div class="specimen-card">
-            <div class="specimen-label">old style · 1495</div>
-            <div class="specimen-name">Bembo</div>
-            <div class="specimen-year">Francesco Griffo</div>
-            <div
-              class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
-          </div>
-          <div class="specimen-card">
-            <div class="specimen-label">grotesque · 1957</div>
-            <div class="specimen-name">Helvetica</div>
-            <div class="specimen-year">Max Miedinger</div>
-            <div
-              class="specimen-alphabet">AaBbCcDdEeFfGgHhIiJjKk<br>LlMmNnOoPpQqRrSsTtUu</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TAGLINE -->
-      <section class="tagline-section"
-        aria-label="Our philosophy on typography">
-        <p class="tagline-text">Typography isn't decoration. It's the message.
-          It's the difference between a whisper and a shout,
-          between trusted and ignored, between remembered and forgotten.</p>
-      </section>
-
-      <!-- MANIFESTO -->
-      <section class="manifesto" aria-labelledby="manifesto-heading">
+    <!-- MANIFESTO -->
+    <div style="background: var(--off-white);">
+      <div class="fm-manifesto">
         <div>
-          <h2 id="manifesto-heading">we're not just another <em>font
-              account.</em></h2>
-          <p>We make content for people who care deeply about craft — the
-            designers, developers, writers, and obsessives who know that the
-            right typeface changes everything. Type history is under-told. We're
-            here to tell it.</p>
+          <h2>we're not just another <em>design blog.</em></h2>
+          <p>We write about typefaces the way critics write about films — with
+            context, history, and actual opinions. No neutral takes. No
+            "it depends." We know what we think about Helvetica, and we'll tell
+            you.</p>
         </div>
-        <div class="stats-grid" role="list"
-          aria-label="Typography by the numbers">
-          <div class="stat-block" role="listitem">
-            <div class="stat-num"
-              aria-label="Three hundred thousand plus">300k+</div>
-            <div class="stat-label">typefaces in existence. you have opinions
-              about at least twelve.</div>
-          </div>
-          <div class="stat-block" role="listitem">
-            <div class="stat-num"
-              aria-label="Zero point zero five seconds">0.05s</div>
-            <div class="stat-label">time to form an opinion. typography is
-              always first.</div>
-          </div>
-          <div class="stat-block" role="listitem">
-            <div class="stat-num" aria-label="Five hundred plus">500+</div>
-            <div class="stat-label">years of type history most people don't know
-              about.</div>
-          </div>
-          <div class="stat-block" role="listitem">
-            <div class="stat-num" aria-label="One hundred percent">100%</div>
-            <div class="stat-label">of our followers have strong feelings about
-              Comic Sans.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TYPE HISTORY -->
-      <section class="type-history" id="type-history"
-        aria-labelledby="type-history-heading">
-        <div class="type-history-header">
-          <span class="section-label" aria-hidden="true">type history</span>
-          <h2 id="type-history-heading">Fonts that changed
-            <em>everything.</em></h2>
-        </div>
-        <div class="type-history-grid">
-
-          <article class="type-card" data-glyph="G">
-            <p class="type-card-era">Old Style · Renaissance</p>
-            <h3 class="type-card-name">Garamond</h3>
-            <p class="type-card-year"><time datetime="1530">c. 1530</time> ·
-              Claude Garamond</p>
-            <p class="type-card-desc">Claude Garamond's types became the
-              foundation for European book printing for over a century. Elegant,
-              readable, and utterly human — cut from the same tradition as the
-              Italian humanist hand. Still one of the most widely used typefaces
-              in the world, which either means it's timeless or everyone's out
-              of ideas.</p>
-          </article>
-
-          <article class="type-card" data-glyph="B">
-            <p class="type-card-era">Didone · Neoclassical</p>
-            <h3 class="type-card-name">Bodoni</h3>
-            <p class="type-card-year"><time datetime="1798">c. 1798</time> ·
-              Giambattista Bodoni</p>
-            <p class="type-card-desc">Bodoni pushed type to the edge of
-              legibility in pursuit of pure geometry — extreme contrast between
-              thick and thin strokes, mathematical precision. Fashion magazines
-              have never recovered. Neither has anyone who's tried to set it at
-              small sizes. It is, objectively, too beautiful to be
-              practical.</p>
-          </article>
-
-          <article class="type-card" data-glyph="F">
-            <p class="type-card-era">Geometric Sans · Modernist</p>
-            <h3 class="type-card-name">Futura</h3>
-            <p class="type-card-year"><time datetime="1927">1927</time> · Paul
-              Renner</p>
-            <p class="type-card-desc">Designed for the future, which is funny
-              because it's been the past for a century and still looks more
-              modern than half of what gets released today. Geometric circles
-              and triangles masquerading as letters. Used on the moon.
-              Volkswagen. Ikea. Your friend's brand that
-              "just does clean design."</p>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- WHY -->
-      <section class="why-section" aria-labelledby="why-heading">
-        <h2 id="why-heading" class="sr-only">Why Fonts Matter, Period.</h2>
-        <div class="why-block">
-          <div class="why-num" aria-hidden="true">01</div>
-          <h3 class="why-title">craft over noise</h3>
-          <p class="why-text">In a world of algorithmically optimized
-            everything, typography is one of the last places pure human judgment
-            lives. We celebrate that — loudly, in Courier New.</p>
-        </div>
-        <div class="why-block">
-          <div class="why-num" aria-hidden="true">02</div>
-          <h3 class="why-title">history first</h3>
-          <p class="why-text">Every typeface has a story. A name behind it, a
-            moment in time, a problem it was trying to solve. We dig into that.
-            Because context is what separates appreciation from obsession.</p>
-        </div>
-        <div class="why-block">
-          <div class="why-num" aria-hidden="true">03</div>
-          <h3 class="why-title">for the obsessed</h3>
-          <p class="why-text">You're here because you notice things other people
-            don't. The tracking on a restaurant menu. The wrong font on a
-            government form. We see you. We are you.</p>
-        </div>
-      </section>
-
-      <!-- QUOTES -->
-      <section class="quote-section" aria-labelledby="quotes-heading">
-        <div>
-          <p class="quote-eyebrow" aria-hidden="true">on typography</p>
-          <h2 id="quotes-heading" class="sr-only">Quotes on typography</h2>
-          <figure>
-            <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
-            <figcaption class="quote-attr">— <cite>Matthew Carter</cite>, type
-              designer · born 1937</figcaption>
-          </figure>
-        </div>
-        <div class="quote-right">
-          <figure class="mini-quote">
-            <blockquote>"Typography is what language looks like."</blockquote>
-            <figcaption>— <cite>Ellen Lupton</cite>, designer &amp;
-              educator</figcaption>
-          </figure>
-          <figure class="mini-quote">
-            <blockquote>"The best type is invisible."</blockquote>
-            <figcaption>— <cite>Beatrice Warde</cite>, typographer ·
-              1900–1969</figcaption>
-          </figure>
-          <figure class="mini-quote">
-            <blockquote>"A typeface is an alphabet on a leash."</blockquote>
-            <figcaption>— attributed to various, disputed (as good things often
-              are)</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- OUR STORY -->
-      <section class="story-section" id="about" aria-labelledby="story-heading">
-        <div class="story-left">
+        <div class="fm-stats">
           <div>
-            <p class="section-label">our story</p>
-            <h2 id="story-heading" class="story-headline">we're from San
-              Diego.<br>we have <em>opinions.</em></h2>
+            <div class="fm-stat__num">300,000+</div>
+            <div class="fm-stat__label">typefaces in existence. you have strong
+              opinions about at least twelve of them.</div>
           </div>
-          <dl class="story-stats">
-            <div class="story-stat">
-              <dt class="sr-only">Years caring about typography</dt>
-              <dd class="story-stat-num">30</dd>
-              <dd class="story-stat-label">years of caring too much about
-                fonts</dd>
-            </div>
-            <div class="story-stat">
-              <dt class="sr-only">Home city</dt>
-              <dd class="story-stat-num">1</dd>
-              <dd class="story-stat-label">city. San Diego. obviously.</dd>
-            </div>
-            <div class="story-stat">
-              <dt class="sr-only">Apologies for kerning opinions</dt>
-              <dd class="story-stat-num">0</dd>
-              <dd class="story-stat-label">apologies for having opinions about
-                kerning</dd>
-            </div>
-          </dl>
+          <div>
+            <div class="fm-stat__num">0.05s</div>
+            <div class="fm-stat__label">how long it takes a viewer to form an
+              opinion. type is always first.</div>
+          </div>
+          <div>
+            <div class="fm-stat__num">1957</div>
+            <div class="fm-stat__label">Akzidenz-Grotesk inspires Helvetica. the
+              argument starts.</div>
+          </div>
         </div>
-        <div class="story-right">
-          <p>fonts matter. started in San Diego, which means we grew up next to
-            the Pacific Ocean and still found time to have strong feelings about
-            typefaces. priorities.</p>
-          <p>this obsession with typography didn't start last year. it's been
-            thirty years of noticing the wrong font on a sign, the bad kerning
-            on a menu, the moment a brand's whole personality collapses because
-            someone picked Arial. we've been the person at the table saying
-            <em>that's not the right typeface</em> since before it was something
-            you could say out loud.</p>
-          <p>and it's not just one of us. there are more people behind this than
-            you'd expect for a brand that talks about fonts for a living. some
-            of us design. some of us write. some of us just show up and say
-            <em>the tracking is off.</em> all of us mean it.</p>
-          <p>follow us on instagram for type history, font opinions, and the
-            occasional righteous take on why certain typefaces deserve
-            retirement.</p>
-          <a href="https://www.instagram.com/fontsmatterperiod"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-solid"
-            style="align-self:flex-start;margin-top:12px;"
-            aria-label="Follow @fontsmatterperiod on Instagram (opens in new tab)">follow
-            @fontsmatterperiod →</a>
-        </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- SHOP — secondary -->
-      <section class="shop-section" aria-labelledby="shop-heading">
-        <div class="shop-copy">
-          <h2 id="shop-heading">wear what you <em>believe</em> in.</h2>
-          <p>For those who want to signal their typographic convictions to the
-            world — logo apparel for designers who notice the smallest details.
-            Printed in Courier New. Deliberate. No explanation required.</p>
+    <!-- THE FONTS BLOG SECTION -->
+    <section
+      style="border-top: 1px solid rgba(0,0,0,0.08); background: #fafaf7;">
+      <div class="fm-blog">
+        <div class="fm-blog__header">
+          <h2>the fonts — a field guide</h2>
+          <a href="/blogs/fonts">all entries →</a>
         </div>
-        <div class="shop-cta-wrap">
-          <a href="https://www.etsy.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-solid"
-            aria-label="Shop Fonts Matter, Period. merch on Etsy (opens in new tab)">shop
-            on etsy →</a>
-          <p class="shop-note">t-shirts · hoodies · long sleeves · via
-            printful</p>
+
+        <div class="fm-blog__grid">
+
+          <!-- FEATURED: Akzidenz-Grotesk -->
+          <a href="/blogs/fonts/akzidenz-grotesk"
+            class="font-card font-card--ak font-card--featured">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Akzidenz</div>
+              <div class="font-card__alpha" style="color:#f8f8f5;">Aa Bb Cc
+                123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Sans-serif</span>
+                <span class="font-card__tag">1896</span>
+                <span class="font-card__tag">Berthold</span>
+                <span class="font-card__tag">featured</span>
+              </div>
+              <div class="font-card__name">Akzidenz-Grotesk — the one that
+                started everything</div>
+              <div class="font-card__excerpt">Before Helvetica. Before Univers.
+                Before the whole Swiss International Style thing became a poster
+                in a design student's dorm, there was Akzidenz-Grotesk. Released
+                in 1896 by the H. Berthold type foundry, this is the quiet
+                original — the one all those modernists were borrowing from when
+                they claimed to be inventing something new.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- TAGLINE — between featured and grid -->
+          <div
+            style="grid-column: 1 / -1; padding: 2rem 0 1rem; border-top: 1px solid rgba(0,0,0,0.07);">
+            <p
+              style="font-size: clamp(0.9rem, 1.8vw, 1.15rem); line-height: 1.75; opacity: 0.72; max-width: 60ch;">Typography
+              isn't decoration. It's the message. It's the difference between a
+              whisper and a shout, between trusted and ignored, between
+              remembered and forgotten.</p>
+          </div>
+
+          <!-- Helvetica -->
+          <a href="/blogs/fonts/helvetica"
+            class="font-card font-card--helvetica">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Helvetica</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Neo-Grotesque</span>
+                <span class="font-card__tag">1957</span>
+                <span class="font-card__tag">Miedinger</span>
+              </div>
+              <div class="font-card__name">Helvetica — the most famous font in
+                the world, for better and worse</div>
+              <div class="font-card__excerpt">It got a documentary. It's on the
+                New York subway, the American Apparel logo, and approximately
+                every corporate rebrand since 1970. Max Miedinger designed it to
+                mean nothing — to be neutral, invisible, universal. The irony is
+                it's now the most recognizable typeface on earth.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Garamond -->
+          <a href="/blogs/fonts/garamond" class="font-card font-card--garamond">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Garamond</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Serif</span>
+                <span class="font-card__tag">1530s</span>
+                <span class="font-card__tag">Old Style</span>
+              </div>
+              <div class="font-card__name">Garamond — five centuries and still
+                the most elegant thing in the room</div>
+              <div class="font-card__excerpt">Claude Garamond cut these
+                letterforms in Paris in the 1530s. They've been in continuous
+                use ever since. If that doesn't tell you something about what
+                timeless design actually looks like, nothing will.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Baskerville -->
+          <a href="/blogs/fonts/baskerville"
+            class="font-card font-card--baskerville">
+            <div class="font-card__specimen">
+              <div class="font-card__big"
+                style="color:#f5ece0;">Baskerville</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Serif</span>
+                <span class="font-card__tag">1757</span>
+                <span class="font-card__tag">Transitional</span>
+              </div>
+              <div class="font-card__name">Baskerville — the typeface Benjamin
+                Franklin tried to debunk</div>
+              <div class="font-card__excerpt">John Baskerville's contemporaries
+                thought his type was harmful to eyesight. Benjamin Franklin used
+                it in a hoax to embarrass a critic. Researchers later found it
+                makes people believe statements more. It is, objectively, one of
+                the most trustworthy things ever drawn.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Futura -->
+          <a href="/blogs/fonts/futura" class="font-card font-card--futura">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Futura</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Geometric Sans</span>
+                <span class="font-card__tag">1927</span>
+                <span class="font-card__tag">Renner</span>
+              </div>
+              <div class="font-card__name">Futura — the font that went to the
+                moon</div>
+              <div class="font-card__excerpt">Literally. The plaque left on the
+                moon by Apollo 11 is set in Futura. Paul Renner designed it as a
+                rejection of ornament — pure geometry, the circle as O, the
+                triangle as A. It looks like the future because it was designed
+                to.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Optima -->
+          <a href="/blogs/fonts/optima" class="font-card font-card--optima">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Optima</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Humanist Sans</span>
+                <span class="font-card__tag">1958</span>
+                <span class="font-card__tag">Zapf</span>
+              </div>
+              <div class="font-card__name">Optima — the typeface that refuses to
+                pick a side</div>
+              <div class="font-card__excerpt">Hermann Zapf designed Optima after
+                sketching letterforms on gravestones in Florence. It has no
+                serifs, but its strokes flare at the terminals like a classical
+                Roman inscription. It is technically a sans-serif that behaves
+                like a serif. The Vietnam Veterans Memorial is set in it. Make
+                of that what you will.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Times New Roman -->
+          <a href="/blogs/fonts/times-new-roman"
+            class="font-card font-card--times">
+            <div class="font-card__specimen">
+              <div class="font-card__big" style="color:#e8e4da;">Times</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Serif</span>
+                <span class="font-card__tag">1932</span>
+                <span class="font-card__tag">Morison</span>
+              </div>
+              <div class="font-card__name">Times New Roman — misunderstood,
+                overused, and actually great</div>
+              <div class="font-card__excerpt">Everyone's default, nobody's first
+                choice. But Stanley Morison designed it for one of the most
+                demanding clients imaginable — The Times of London — and it
+                delivered. The problem isn't the font. It's that nobody respects
+                it anymore.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Papyrus -->
+          <a href="/blogs/fonts/papyrus" class="font-card font-card--papyrus">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Papyrus</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Display</span>
+                <span class="font-card__tag">1982</span>
+                <span class="font-card__tag">Rolston</span>
+              </div>
+              <div class="font-card__name">Papyrus — the font that made a
+                million spa menus illegitimate</div>
+              <div class="font-card__excerpt">Chris Rolston hand-drew Papyrus in
+                1982 on — wait for it — actual papyrus. It is not a bad
+                typeface. It is a very specific typeface used in every wrong
+                context imaginable: day spas, Avatar, Egyptian themed
+                restaurants in strip malls. The font didn't fail us. We failed
+                the font.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
+          <!-- Comic Sans -->
+          <a href="/blogs/fonts/comic-sans" class="font-card font-card--comic">
+            <div class="font-card__specimen">
+              <div class="font-card__big">Comic Sans</div>
+              <div class="font-card__alpha">Aa Bb Cc 123</div>
+            </div>
+            <div class="font-card__body">
+              <div class="font-card__meta">
+                <span class="font-card__tag">Casual</span>
+                <span class="font-card__tag">1994</span>
+                <span class="font-card__tag">Connare</span>
+              </div>
+              <div class="font-card__name">Comic Sans — thirty years of crimes
+                against design</div>
+              <div class="font-card__excerpt">Vincent Connare designed it to
+                look like comic book lettering, for a cartoon dog in a software
+                assistant. It was never meant to leave that context. And yet. It
+                appeared on hospital signs, legal documents, school newsletters,
+                and a Microsoft Bob tutorial. It is the most successfully
+                misused typeface in history, which is an achievement of a
+                kind.</div>
+              <div class="font-card__read">Read more →</div>
+            </div>
+          </a>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- EMAIL SIGNUP -->
-      <section class="email-section" aria-labelledby="email-heading">
-        <h2 id="email-heading">Stay typographically informed.</h2>
-        <p>Type history, font opinions, and things you'll want to know.</p>
-        <form class="email-form" action="/contact" method="post"
-          aria-label="Newsletter signup form">
-          <label for="email-input" class="sr-only">Email address</label>
-          <input
-            id="email-input"
-            type="email"
-            name="email"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-            aria-required="true">
-          <button type="submit">subscribe</button>
-        </form>
-      </section>
+    <!-- QUOTE -->
+    <div class="fm-quote">
+      <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
+      <cite>— Matthew Carter, type designer</cite>
+      <a href="/blogs/fonts" class="fm-btn">read the field guide</a>
+    </div>
 
-    </main><!-- /main -->
+    <!-- WHY -->
+    <div style="border-top: 1px solid rgba(0,0,0,0.08);">
+      <div class="fm-why">
+        <div>
+          <div class="fm-why__num">01</div>
+          <div class="fm-why__title">craft over noise</div>
+          <p class="fm-why__text">In a world of algorithmically optimized
+            everything, typography is one of the last places pure human judgment
+            lives. We celebrate that.</p>
+        </div>
+        <div>
+          <div class="fm-why__num">02</div>
+          <div class="fm-why__title">opinions, not takes</div>
+          <p class="fm-why__text">We don't write "it depends." We write about
+            what we actually believe, what the history actually shows, and what
+            the type community has been arguing about for decades.</p>
+        </div>
+        <div>
+          <div class="fm-why__num">03</div>
+          <div class="fm-why__title">the details matter</div>
+          <p class="fm-why__text">Everything here is set in Courier New.
+            Deliberately. The typeface is the argument — no explanation needed,
+            no decoration required.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY -->
+    <div
+      style="background: var(--sage); border-top: 1px solid rgba(0,0,0,0.08);">
+      <div class="fm-story" id="our-story">
+        <div>
+          <p class="fm-eyebrow" style="margin-bottom: 1.25rem;">our story</p>
+          <h2>we're from San Diego.<br />we have <em>opinions.</em></h2>
+        </div>
+        <div>
+          <p class="fm-story__body">fonts matter. started in San Diego, which
+            means we grew up next to the Pacific Ocean and still found time to
+            have strong feelings about typefaces. priorities.</p>
+          <p class="fm-story__body">this obsession didn't start last year. it's
+            been thirty years of noticing the wrong font on a sign, the bad
+            kerning on a menu, the moment a brand's whole personality collapses
+            because someone picked Arial. we've been the person at the table
+            saying <em>that's not the right typeface</em> since before it was
+            something you could say out loud.</p>
+          <div
+            style="display:flex; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
+            <div><span
+                style="font-size:2rem; display:block; line-height:1;">30</span><span
+                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
+                caring too much about fonts</span></div>
+            <div><span
+                style="font-size:2rem; display:block; line-height:1;">0</span><span
+                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
+                for having opinions about kerning</span></div>
+            <div><span
+                style="font-size:2rem; display:block; line-height:1;">∞</span><span
+                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
+                feelings about Comic Sans</span></div>
+          </div>
+          <a href="/blogs/fonts" class="fm-btn fm-btn--solid"
+            style="margin-top:0.5rem;">read the field guide</a>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER -->
-    <footer role="contentinfo">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo"
-          aria-label="Fonts Matter, Period. — return to homepage">fonts matter,
-          period.</a>
-        <p>Typography education and type culture for people who notice the
-          kerning. Est. in Courier New, somewhere in San Diego.</p>
+    <footer style="border-top: 1px solid rgba(0,0,0,0.08); background: #fff;">
+      <div class="fm-footer">
+        <div>
+          <h3>join the type nerd list.</h3>
+          <p>New font features, opinions, and the occasional hot take on
+            kerning. No spam. No Comic Sans.</p>
+          <div class="email-form">
+            <input type="email" placeholder="your@email.com">
+            <button type="submit">→</button>
+          </div>
+          <p class="fm-footer__copy">© 2026 fonts matter, period. San Diego,
+            CA.</p>
+        </div>
+        <div style="padding-top: 0.25rem;">
+          <p style="font-size:0.72rem; opacity:0.5; margin-bottom:0.75rem;">find
+            us</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/fontsmatterperiod"
+              target="_blank">instagram</a>
+            <a href="https://www.facebook.com/fontsmatterperiod"
+              target="_blank">facebook</a>
+          </div>
+          <div style="margin-top:2rem;">
+            <p style="font-size:0.7rem; opacity:0.4; line-height:1.6;">
+              <a href="/blogs/fonts"
+                style="color:inherit; opacity:1; text-decoration:none;">the
+                fonts</a> ·
+              <a href="/pages/about"
+                style="color:inherit; opacity:1; text-decoration:none;">about</a>
+              ·
+              <a href="/pages/contact"
+                style="color:inherit; opacity:1; text-decoration:none;">contact</a>
+              ·
+              <a href="/policies/privacy-policy"
+                style="color:inherit; opacity:1; text-decoration:none;">privacy</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <nav class="footer-links" aria-label="Explore the site">
-        <h3 class="footer-nav-heading">explore</h3>
-        <ul>
-          <li><a href="#type-history">type history</a></li>
-          <li><a href="#about">our story</a></li>
-          <li><a href="https://www.instagram.com/fontsmatterperiod"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Fonts Matter on Instagram (opens in new tab)">instagram</a></li>
-        </ul>
-      </nav>
-      <nav class="footer-links" aria-label="Shop and policies">
-        <h3 class="footer-nav-heading">the merch</h3>
-        <ul>
-          <li><a href="https://www.etsy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Shop on Etsy (opens in new tab)">etsy shop →</a></li>
-          <li><a href="/policies/privacy-policy">privacy policy</a></li>
-        </ul>
-      </nav>
     </footer>
-
-    <div class="footer-bottom">
-      <p>© <time datetime="2026">2026</time> fonts matter, period. · set in
-        courier new · made in san diego</p>
-      <nav class="social-links" aria-label="Social media links">
-        <a href="https://www.instagram.com/fontsmatterperiod"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Fonts Matter, Period. on Instagram (opens in new tab)">instagram</a>
-      </nav>
-    </div>
 
   </body>
 </html>
