@@ -81,9 +81,9 @@
   }
   .fm-hero__headline em { font-style: italic; }
   .fm-hero__sub {
-    font-size: 0.85rem;
-    line-height: 1.7;
-    opacity: 0.75;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    opacity: 0.86;
     max-width: 38ch;
     margin-bottom: 2rem;
   }
@@ -174,10 +174,10 @@
     margin-bottom: 1rem;
   }
   .fm-manifesto h2 em { font-style: italic; }
-  .fm-manifesto p { font-size: 0.82rem; line-height: 1.8; opacity: 0.72; }
+  .fm-manifesto p { font-size: 0.9rem; line-height: 1.65; opacity: 0.86; }
   .fm-stats { display: flex; flex-direction: column; gap: 1.5rem; }
   .fm-stat__num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1; }
-  .fm-stat__label { font-size: 0.72rem; line-height: 1.5; opacity: 0.55; margin-top: 0.25rem; max-width: 28ch; }
+  .fm-stat__label { font-size: 0.78rem; line-height: 1.5; opacity: 0.72; margin-top: 0.25rem; max-width: 28ch; }
 
   /* ── TAGLINE ─────────────────────────────────── */
   .fm-tagline {
@@ -313,9 +313,9 @@
     line-height: 1.3;
   }
   .font-card__excerpt {
-    font-size: 0.72rem;
-    line-height: 1.7;
-    opacity: 0.6;
+    font-size: 0.78rem;
+    line-height: 1.65;
+    opacity: 0.82;
     flex: 1;
   }
   .font-card__read {
@@ -378,7 +378,7 @@
   @media (max-width: 700px) { .fm-why { grid-template-columns: 1fr; gap: 2rem; } }
   .fm-why__num { font-size: 0.65rem; opacity: 0.3; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
   .fm-why__title { font-size: 0.95rem; margin-bottom: 0.75rem; }
-  .fm-why__text { font-size: 0.77rem; line-height: 1.75; opacity: 0.6; }
+  .fm-why__text { font-size: 0.84rem; line-height: 1.7; opacity: 0.82; }
 
   /* ── STORY ───────────────────────────────────── */
   .fm-story {
@@ -399,7 +399,7 @@
     margin-bottom: 1rem;
   }
   .fm-story h2 em { font-style: italic; }
-  .fm-story__body { font-size: 0.82rem; line-height: 1.85; opacity: 0.7; margin-bottom: 1.25rem; }
+  .fm-story__body { font-size: 0.9rem; line-height: 1.75; opacity: 0.86; margin-bottom: 1.25rem; }
   .fm-story-stats { display: flex; gap: 2.5rem; margin: 2rem 0; }
   .fm-story-stats span:first-child { font-size: 2rem; display: block; line-height: 1; }
   .fm-story-stats span:last-child { font-size: 0.7rem; opacity: 0.5; display: block; margin-top: 0.25rem; max-width: 14ch; line-height: 1.4; }
@@ -450,14 +450,14 @@
 
     <!-- HEADER -->
     <header class="site-header">
-      <a href="/"><img
-          src="//fontsmatterperiod.com/cdn/shop/files/logo_black.png?v=1759439080&width=420"
-          alt="fonts matter, period."></a>
+      <a href="/"
+        style="font-family:'Courier New',Courier,monospace; font-size:0.85rem; font-weight:700; letter-spacing:0.04em; text-decoration:none; color:#0a0a0a;">fonts
+        matter, period.</a>
       <nav>
         <ul class="site-nav">
-          <li><a href="/blogs/fonts">the fonts</a></li>
-          <li><a href="/pages/about">our story</a></li>
-          <li><a href="/pages/contact">contact</a></li>
+          <li><a href="/blog/">the fonts</a></li>
+          <li><a href="#our-story">our story</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -474,8 +474,7 @@
             typefaces the way some people argue about wine — with feelings,
             opinions, and zero apologies.</p>
           <div class="fm-hero__ctas">
-            <a href="/blogs/fonts" class="fm-btn fm-btn--solid">read the
-              blog</a>
+            <a href="/blog/" class="fm-btn fm-btn--solid">read the blog</a>
             <a href="#our-story" class="fm-btn">our story</a>
           </div>
         </div>
@@ -561,14 +560,13 @@
       <div class="fm-blog">
         <div class="fm-blog__header">
           <h2>the fonts — a field guide</h2>
-          <a href="/blogs/fonts">all entries →</a>
+          <a href="/blog/">all entries →</a>
         </div>
 
         <div class="fm-blog__grid">
 
           <!-- FEATURED: Akzidenz-Grotesk -->
-          <a href="/blogs/fonts/akzidenz-grotesk"
-            class="font-card font-card--ak font-card--featured">
+          <a href="/blog/" class="font-card font-card--ak font-card--featured">
             <div class="font-card__specimen">
               <div class="font-card__big">Akzidenz</div>
               <div class="font-card__alpha" style="color:#f8f8f5;">Aa Bb Cc
@@ -594,18 +592,17 @@
           </a>
 
           <!-- TAGLINE — between featured and grid -->
-          <div
+          <!-- <div
             style="grid-column: 1 / -1; padding: 2rem 0 1rem; border-top: 1px solid rgba(0,0,0,0.07);">
             <p
               style="font-size: clamp(0.9rem, 1.8vw, 1.15rem); line-height: 1.75; opacity: 0.72; max-width: 60ch;">Typography
               isn't decoration. It's the message. It's the difference between a
               whisper and a shout, between trusted and ignored, between
               remembered and forgotten.</p>
-          </div>
+          </div> -->
 
           <!-- Helvetica -->
-          <a href="/blogs/fonts/helvetica"
-            class="font-card font-card--helvetica">
+          <a href="/blog/" class="font-card font-card--helvetica">
             <div class="font-card__specimen">
               <div class="font-card__big">Helvetica</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -628,7 +625,7 @@
           </a>
 
           <!-- Garamond -->
-          <a href="/blogs/fonts/garamond" class="font-card font-card--garamond">
+          <a href="/blog/" class="font-card font-card--garamond">
             <div class="font-card__specimen">
               <div class="font-card__big">Garamond</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -650,8 +647,7 @@
           </a>
 
           <!-- Baskerville -->
-          <a href="/blogs/fonts/baskerville"
-            class="font-card font-card--baskerville">
+          <a href="/blog/" class="font-card font-card--baskerville">
             <div class="font-card__specimen">
               <div class="font-card__big"
                 style="color:#f5ece0;">Baskerville</div>
@@ -675,7 +671,7 @@
           </a>
 
           <!-- Futura -->
-          <a href="/blogs/fonts/futura" class="font-card font-card--futura">
+          <a href="/blog/" class="font-card font-card--futura">
             <div class="font-card__specimen">
               <div class="font-card__big">Futura</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -698,7 +694,7 @@
           </a>
 
           <!-- Optima -->
-          <a href="/blogs/fonts/optima" class="font-card font-card--optima">
+          <a href="/blog/" class="font-card font-card--optima">
             <div class="font-card__specimen">
               <div class="font-card__big">Optima</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -722,8 +718,7 @@
           </a>
 
           <!-- Times New Roman -->
-          <a href="/blogs/fonts/times-new-roman"
-            class="font-card font-card--times">
+          <a href="/blog/" class="font-card font-card--times">
             <div class="font-card__specimen">
               <div class="font-card__big" style="color:#e8e4da;">Times</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -746,7 +741,7 @@
           </a>
 
           <!-- Papyrus -->
-          <a href="/blogs/fonts/papyrus" class="font-card font-card--papyrus">
+          <a href="/blog/" class="font-card font-card--papyrus">
             <div class="font-card__specimen">
               <div class="font-card__big">Papyrus</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -770,7 +765,7 @@
           </a>
 
           <!-- Comic Sans -->
-          <a href="/blogs/fonts/comic-sans" class="font-card font-card--comic">
+          <a href="/blog/" class="font-card font-card--comic">
             <div class="font-card__specimen">
               <div class="font-card__big">Comic Sans</div>
               <div class="font-card__alpha">Aa Bb Cc 123</div>
@@ -802,7 +797,7 @@
     <div class="fm-quote">
       <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
       <cite>— Matthew Carter, type designer</cite>
-      <a href="/blogs/fonts" class="fm-btn">read the field guide</a>
+      <a href="/blog/" class="fm-btn">read the field guide</a>
     </div>
 
     <!-- WHY -->
@@ -865,53 +860,170 @@
                 style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
                 feelings about Comic Sans</span></div>
           </div>
-          <a href="/blogs/fonts" class="fm-btn fm-btn--solid"
+          <a href="/blog/" class="fm-btn fm-btn--solid"
             style="margin-top:0.5rem;">read the field guide</a>
         </div>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer style="border-top: 1px solid rgba(0,0,0,0.08); background: #fff;">
-      <div class="fm-footer">
+    <!-- CONTACT + FOOTER -->
+    <div style="background:#e3f1eb; color:#0a0a0a;" id="contact">
+      <div
+        style="max-width:1100px; margin:0 auto; padding:clamp(3rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(3rem,6vw,6rem); align-items:start;">
+
+        <!-- left -->
         <div>
-          <h3>join the type nerd list.</h3>
-          <p>New font features, opinions, and the occasional hot take on
-            kerning. No spam. No Comic Sans.</p>
-          <div class="email-form">
-            <input type="email" placeholder="your@email.com">
-            <button type="submit">→</button>
+          <p
+            style="font-family:'Courier New',Courier,monospace; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(0,0,0,0.4); margin-bottom:1.25rem;">get
+            in touch</p>
+          <h2
+            style="font-family:'Courier New',Courier,monospace; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
+            something.<br><em style="font-style:italic; color:#5a8a72;">we have
+              opinions<br>about everything.</em></h2>
+          <p
+            style="font-size:0.85rem; line-height:1.75; color:rgba(0,0,0,0.6); margin-bottom:2rem;">Whether
+            you want to argue about kerning, pitch a collaboration, or just tell
+            us we're wrong about Comic Sans — we're here for it.</p>
+          <div
+            style="width:32px; height:1px; background:rgba(0,0,0,0.15); margin-bottom:1.75rem;"></div>
+          <div
+            style="font-size:0.72rem; letter-spacing:0.06em; color:rgba(0,0,0,0.45); line-height:2.4;">
+            <div>instagram — <a
+                href="https://www.instagram.com/fontsmatterperiod"
+                target="_blank"
+                style="color:rgba(0,0,0,0.6); text-decoration:none;">@fontsmatterperiod</a></div>
+            <div>based in — San Diego, CA</div>
+            <div>est. — in Courier New</div>
           </div>
-          <p class="fm-footer__copy">© 2026 fonts matter, period. San Diego,
-            CA.</p>
         </div>
-        <div style="padding-top: 0.25rem;">
-          <p style="font-size:0.72rem; opacity:0.5; margin-bottom:0.75rem;">find
-            us</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/fontsmatterperiod"
-              target="_blank">instagram</a>
-            <a href="https://www.facebook.com/fontsmatterperiod"
-              target="_blank">facebook</a>
+
+        <!-- right: form -->
+        <div>
+          <!-- toggle -->
+          <div
+            style="display:flex; border:1px solid rgba(0,0,0,0.15); margin-bottom:2rem;">
+            <button id="btn-general" onclick="switchType('general')"
+              style="flex:1; font-family:'Courier New',Courier,monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:#0a0a0a; color:#f0ede6; border:none; border-right:1px solid rgba(0,0,0,0.15); cursor:pointer;">general
+              / fan mail</button>
+            <button id="btn-press" onclick="switchType('press')"
+              style="flex:1; font-family:'Courier New',Courier,monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
+              & collabs</button>
           </div>
-          <div style="margin-top:2rem;">
-            <p style="font-size:0.7rem; opacity:0.4; line-height:1.6;">
-              <a href="/blogs/fonts"
-                style="color:inherit; opacity:1; text-decoration:none;">the
-                fonts</a> ·
-              <a href="/pages/about"
-                style="color:inherit; opacity:1; text-decoration:none;">about</a>
-              ·
-              <a href="/pages/contact"
-                style="color:inherit; opacity:1; text-decoration:none;">contact</a>
-              ·
-              <a href="/policies/privacy-policy"
-                style="color:inherit; opacity:1; text-decoration:none;">privacy</a>
-            </p>
+
+          <!-- shared input styles via a style block -->
+          <style>
+        .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.85rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
+        .fm-input:focus { border-bottom-color: rgba(0,0,0,0.6); }
+        .fm-input::placeholder { color:rgba(0,0,0,0.3); }
+        .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.45); margin-bottom:0.5rem; }
+        .fm-field { margin-bottom:1.5rem; }
+        .fm-select { appearance:none; cursor:pointer; background:transparent; }
+        .fm-submit { font-family:'Courier New',Courier,monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
+        .fm-submit:hover { background:#333; }
+      </style>
+
+          <!-- general form -->
+          <div id="form-general">
+            <div class="fm-field">
+              <label class="fm-label">name</label>
+              <input type="text" class="fm-input" placeholder="your name">
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">email</label>
+              <input type="email" class="fm-input" placeholder="your@email.com">
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">what's on your mind</label>
+              <textarea class="fm-input" rows="5"
+                placeholder="opinions, questions, arguments welcome."
+                style="resize:none;"></textarea>
+            </div>
+            <div class="fm-field">
+              <label
+                style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.78rem; color:#555; letter-spacing:0.02em;">
+                <input type="checkbox" style="accent-color:#f0ede6;"> join the
+                list — new font features &amp; hot takes
+              </label>
+            </div>
+            <button class="fm-submit">send it →</button>
+          </div>
+
+          <!-- press form -->
+          <div id="form-press" style="display:none;">
+            <div class="fm-field">
+              <label class="fm-label">name</label>
+              <input type="text" class="fm-input" placeholder="your name">
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">email</label>
+              <input type="email" class="fm-input"
+                placeholder="work@publication.com">
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">publication / company</label>
+              <input type="text" class="fm-input"
+                placeholder="where you're from">
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">type of inquiry</label>
+              <select class="fm-input fm-select">
+                <option value>select one</option>
+                <option>press / media feature</option>
+                <option>brand collaboration</option>
+                <option>licensing / usage</option>
+                <option>wholesale</option>
+                <option>other</option>
+              </select>
+            </div>
+            <div class="fm-field">
+              <label class="fm-label">tell us more</label>
+              <textarea class="fm-input" rows="4"
+                placeholder="the pitch, the idea, the ask."
+                style="resize:none;"></textarea>
+            </div>
+            <button class="fm-submit">send it →</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- footer bar -->
+      <div
+        style="border-top:1px solid rgba(0,0,0,0.1); padding:1.5rem var(--page-pad);">
+        <div
+          style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <p
+            style="font-size:0.65rem; letter-spacing:0.06em; color:rgba(0,0,0,0.35);">©
+            2026 fonts matter, period. · San Diego, CA</p>
+          <div style="display:flex; gap:1.5rem;">
+            <a href="/blog/"
+              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">the
+              fonts</a>
+            <a href="https://www.instagram.com/fontsmatterperiod"
+              target="_blank"
+              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">instagram</a>
+            <a href="/policies/privacy-policy"
+              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">privacy</a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+
+    <script>
+  function switchType(type) {
+    const isGeneral = type === 'general';
+    document.getElementById('form-general').style.display = isGeneral ? 'block' : 'none';
+    document.getElementById('form-press').style.display = isGeneral ? 'none' : 'block';
+    const btnG = document.getElementById('btn-general');
+    const btnP = document.getElementById('btn-press');
+    btnG.style.background = isGeneral ? '#0a0a0a' : 'transparent';
+    btnG.style.color = isGeneral ? '#f0ede6' : '#0a0a0a';
+    btnG.style.opacity = isGeneral ? '1' : '0.4';
+    btnP.style.background = isGeneral ? 'transparent' : '#0a0a0a';
+    btnP.style.color = isGeneral ? '#0a0a0a' : '#f0ede6';
+    btnP.style.opacity = isGeneral ? '0.4' : '1';
+  }
+</script>
 
   </body>
 </html>
