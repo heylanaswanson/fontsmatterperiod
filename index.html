@@ -887,7 +887,7 @@
           <div
             style="width:32px; height:1px; background:rgba(0,0,0,0.15); margin-bottom:1.75rem;"></div>
           <div
-            style="font-size:0.72rem; letter-spacing:0.06em; color:rgba(0,0,0,0.45); line-height:2.4;">
+            style="font-size:0.72rem; letter-spacing:0.06em; color:rgba(0,0,0,0.85); line-height:2.4;">
             <div>instagram — <a
                 href="https://www.instagram.com/fontsmatterperiod"
                 target="_blank"
@@ -897,7 +897,7 @@
           </div>
         </div>
 
-        <!-- right: form -->
+        <!-- right: forms -->
         <div>
           <!-- toggle -->
           <div
@@ -907,81 +907,119 @@
               / fan mail</button>
             <button id="btn-press" onclick="switchType('press')"
               style="flex:1; font-family:'Courier New',Courier,monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
-              & collabs</button>
+              &amp; collabs</button>
           </div>
 
-          <!-- shared input styles via a style block -->
           <style>
         .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.85rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
         .fm-input:focus { border-bottom-color: rgba(0,0,0,0.6); }
         .fm-input::placeholder { color:rgba(0,0,0,0.3); }
-        .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.45); margin-bottom:0.5rem; }
+        .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.85); margin-bottom:0.5rem; }
         .fm-field { margin-bottom:1.5rem; }
         .fm-select { appearance:none; cursor:pointer; background:transparent; }
         .fm-submit { font-family:'Courier New',Courier,monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
         .fm-submit:hover { background:#333; }
-      </style>
+        .fm-submit:disabled { opacity:0.5; cursor:default; }
+        .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#3a6e5a; border:1px solid rgba(90,138,114,0.4); background:rgba(90,138,114,0.08); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
+        .fm-error-msg { font-family:'Courier New',Courier,monospace; font-size:0.72rem; color:#8b3a3a; margin-top:0.4rem; display:block; min-height:0; }
+          </style>
 
           <!-- general form -->
           <div id="form-general">
-            <div class="fm-field">
-              <label class="fm-label">name</label>
-              <input type="text" class="fm-input" placeholder="your name">
+            <div class="fm-success" id="success-general">
+              thanks — we got it. opinions incoming.
             </div>
-            <div class="fm-field">
-              <label class="fm-label">email</label>
-              <input type="email" class="fm-input" placeholder="your@email.com">
-            </div>
-            <div class="fm-field">
-              <label class="fm-label">what's on your mind</label>
-              <textarea class="fm-input" rows="5"
-                placeholder="opinions, questions, arguments welcome."
-                style="resize:none;"></textarea>
-            </div>
-            <div class="fm-field">
-              <label
-                style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.78rem; color:#555; letter-spacing:0.02em;">
-                <input type="checkbox" style="accent-color:#f0ede6;"> join the
-                list — new font features &amp; hot takes
-              </label>
-            </div>
-            <button class="fm-submit">send it →</button>
+            <div class="fm-error-msg" id="error-general"></div>
+
+            <form id="fm-form-general">
+              <input type="hidden" name="inquiry_type"
+                value="general / fan mail">
+
+              <div class="fm-field">
+                <label class="fm-label" for="gen-name">name</label>
+                <input type="text" id="gen-name" name="name" class="fm-input"
+                  placeholder="your name" required>
+                <span class="fm-error-msg" data-fs-error="name"></span>
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="gen-email">email</label>
+                <input type="email" id="gen-email" name="email" class="fm-input"
+                  placeholder="your@email.com" required>
+                <span class="fm-error-msg" data-fs-error="email"></span>
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="gen-message">what's on your
+                  mind</label>
+                <textarea id="gen-message" name="message" class="fm-input"
+                  rows="5"
+                  placeholder="opinions, questions, arguments welcome."
+                  style="resize:none;" required data-fs-field></textarea>
+                <span class="fm-error-msg" data-fs-error="message"></span>
+              </div>
+              <div class="fm-field">
+                <label
+                  style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.78rem; color:#555; letter-spacing:0.02em;">
+                  <input type="checkbox" name="join_list" value="yes"
+                    style="accent-color:#0a0a0a;"> join the
+                  list — new font features &amp; hot takes
+                </label>
+              </div>
+              <button type="submit" class="fm-submit" data-fs-submit-btn>send it
+                →</button>
+            </form>
           </div>
 
           <!-- press form -->
           <div id="form-press" style="display:none;">
-            <div class="fm-field">
-              <label class="fm-label">name</label>
-              <input type="text" class="fm-input" placeholder="your name">
+            <div class="fm-success" id="success-press">
+              thanks — we'll be in touch. set in courier new, obviously.
             </div>
-            <div class="fm-field">
-              <label class="fm-label">email</label>
-              <input type="email" class="fm-input"
-                placeholder="work@publication.com">
-            </div>
-            <div class="fm-field">
-              <label class="fm-label">publication / company</label>
-              <input type="text" class="fm-input"
-                placeholder="where you're from">
-            </div>
-            <div class="fm-field">
-              <label class="fm-label">type of inquiry</label>
-              <select class="fm-input fm-select">
-                <option value>select one</option>
-                <option>press / media feature</option>
-                <option>brand collaboration</option>
-                <option>licensing / usage</option>
-                <option>wholesale</option>
-                <option>other</option>
-              </select>
-            </div>
-            <div class="fm-field">
-              <label class="fm-label">tell us more</label>
-              <textarea class="fm-input" rows="4"
-                placeholder="the pitch, the idea, the ask."
-                style="resize:none;"></textarea>
-            </div>
-            <button class="fm-submit">send it →</button>
+            <div class="fm-error-msg" id="error-press"></div>
+
+            <form id="fm-form-press">
+              <input type="hidden" name="inquiry_type" value="press / collabs">
+
+              <div class="fm-field">
+                <label class="fm-label" for="press-name">name</label>
+                <input type="text" id="press-name" name="name" class="fm-input"
+                  placeholder="your name" required>
+                <span class="fm-error-msg" data-fs-error="name"></span>
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="press-email">email</label>
+                <input type="email" id="press-email" name="email"
+                  class="fm-input" placeholder="work@publication.com" required>
+                <span class="fm-error-msg" data-fs-error="email"></span>
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="press-org">publication /
+                  company</label>
+                <input type="text" id="press-org" name="organization"
+                  class="fm-input" placeholder="where you're from">
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="press-type">type of inquiry</label>
+                <select id="press-type" name="inquiry_subtype"
+                  class="fm-input fm-select">
+                  <option value>select one</option>
+                  <option>press / media feature</option>
+                  <option>brand collaboration</option>
+                  <option>licensing / usage</option>
+                  <option>wholesale</option>
+                  <option>other</option>
+                </select>
+              </div>
+              <div class="fm-field">
+                <label class="fm-label" for="press-message">tell us more</label>
+                <textarea id="press-message" name="message" class="fm-input"
+                  rows="4"
+                  placeholder="the pitch, the idea, the ask."
+                  style="resize:none;" required></textarea>
+                <span class="fm-error-msg" data-fs-error="message"></span>
+              </div>
+              <button type="submit" class="fm-submit" data-fs-submit-btn>send it
+                →</button>
+            </form>
           </div>
 
         </div>
@@ -1008,6 +1046,66 @@
         </div>
       </div>
     </div>
+
+    <script>
+  function switchType(type) {
+    const isGeneral = type === 'general';
+    document.getElementById('form-general').style.display = isGeneral ? 'block' : 'none';
+    document.getElementById('form-press').style.display = isGeneral ? 'none' : 'block';
+    const btnG = document.getElementById('btn-general');
+    const btnP = document.getElementById('btn-press');
+    btnG.style.background = isGeneral ? '#0a0a0a' : 'transparent';
+    btnG.style.color = isGeneral ? '#f0ede6' : '#0a0a0a';
+    btnG.style.opacity = isGeneral ? '1' : '0.4';
+    btnP.style.background = isGeneral ? 'transparent' : '#0a0a0a';
+    btnP.style.color = isGeneral ? '#0a0a0a' : '#f0ede6';
+    btnP.style.opacity = isGeneral ? '0.4' : '1';
+  }
+
+  async function submitForm(formEl, successEl, errorEl) {
+    const btn = formEl.querySelector('[data-fs-submit-btn]');
+    btn.disabled = true;
+    errorEl.textContent = '';
+
+    const data = new FormData(formEl);
+
+    try {
+      const res = await fetch('https://formspree.io/f/xrejbkaz', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        formEl.style.display = 'none';
+        successEl.style.display = 'block';
+      } else {
+        const json = await res.json();
+        errorEl.textContent = json.errors
+          ? json.errors.map(e => e.message).join(', ')
+          : 'something went wrong — try again.';
+        btn.disabled = false;
+      }
+    } catch (e) {
+      errorEl.textContent = 'network error — please try again.';
+      btn.disabled = false;
+    }
+  }
+
+  document.getElementById('fm-form-general').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this,
+      document.getElementById('success-general'),
+      document.getElementById('error-general'));
+  });
+
+  document.getElementById('fm-form-press').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this,
+      document.getElementById('success-press'),
+      document.getElementById('error-press'));
+  });
+</script>
 
     <script>
   function switchType(type) {
