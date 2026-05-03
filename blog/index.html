@@ -11,6 +11,16 @@
       content="typography, typeface, font history, Garamond, Baskerville, Futura, Comic Sans, Papyrus, type design, fonts matter">
     <link rel="canonical" href="https://fontsmatterperiod.com/blog/">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+      href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+      href="/android-chrome-512x512.png">
+
     <!-- Open Graph -->
     <meta property="og:title"
       content="The Fonts — A Field Guide to Typography | fonts matter, period.">
@@ -30,6 +40,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LQMTNVXJQ5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQMTNVXJQ5');
+  </script>
+
     <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -78,8 +99,15 @@
     height: 60px;
   }
   .site-nav { display: flex; gap: 2rem; list-style: none; }
-  .site-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; text-decoration: none; color: var(--black); opacity: 0.65; transition: opacity 0.15s; }
-  .site-nav a:hover, .site-nav a.active { opacity: 1; }
+  .site-nav a {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: #444;
+    transition: color 0.15s;
+  }
+  .site-nav a:hover, .site-nav a.active { color: var(--black); }
 
   /* ── PAGE HEADER ── */
   .page-header {
@@ -99,10 +127,10 @@
 
   .page-header__eyebrow {
     font-family: var(--dm);
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #555;
+    color: #777;
     margin-bottom: 1rem;
   }
   .page-header__title {
@@ -116,7 +144,7 @@
   .page-header__desc {
     font-size: 1rem;
     line-height: 1.7;
-    color: #ccc;
+    color: #bbb;
     max-width: 38ch;
     align-self: end;
   }
@@ -138,21 +166,20 @@
   .filter-bar__inner::-webkit-scrollbar { display: none; }
   .filter-btn {
     font-family: var(--dm);
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 1rem 1.25rem;
     background: none;
     border: none;
     border-bottom: 2px solid transparent;
-    color: var(--black);
-    opacity: 0.4;
+    color: #888;
     cursor: pointer;
     white-space: nowrap;
-    transition: opacity 0.15s, border-color 0.15s;
+    transition: color 0.15s, border-color 0.15s;
   }
-  .filter-btn:hover { opacity: 0.8; }
-  .filter-btn.active { opacity: 1; border-bottom-color: var(--black); }
+  .filter-btn:hover { color: var(--black); }
+  .filter-btn.active { color: var(--black); border-bottom-color: var(--black); }
 
   /* ── GRID ── */
   .blog-grid {
@@ -179,7 +206,6 @@
   }
   .entry:hover { border-color: rgba(0,0,0,0.25); transform: translateY(-2px); }
 
-  /* specimen panel */
   .entry__specimen {
     padding: 2.25rem 2rem 1.75rem;
     border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -195,9 +221,9 @@
     position: absolute;
     top: 1.25rem; right: 1.5rem;
     font-family: var(--dm);
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.1em;
-    opacity: 0.3;
+    color: #aaa;
   }
   .entry__big {
     font-size: clamp(2.5rem, 5cqw, 4.5rem);
@@ -210,10 +236,10 @@
   }
   .entry__alpha {
     font-family: var(--dm);
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    opacity: 0.3;
+    color: #999;
   }
 
   /* per-font specimen treatments */
@@ -222,22 +248,22 @@
 
   .entry--comic .entry__specimen { background: #1a1a1a; }
   .entry--comic .entry__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; color: var(--cream); font-size: clamp(2rem, 4vw, 3.5rem); }
-  .entry--comic .entry__alpha { color: var(--cream); }
-  .entry--comic .entry__specimen-num { color: var(--cream); }
+  .entry--comic .entry__alpha { color: #aaa; }
+  .entry--comic .entry__specimen-num { color: #aaa; }
 
   .entry--baskerville .entry__specimen { background: #0a0a0a; }
   .entry--baskerville .entry__big { font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", serif; font-weight: 700; color: var(--cream); letter-spacing: -0.02em; }
-  .entry--baskerville .entry__alpha { color: var(--cream); }
-  .entry--baskerville .entry__specimen-num { color: var(--cream); }
+  .entry--baskerville .entry__alpha { color: #aaa; }
+  .entry--baskerville .entry__specimen-num { color: #aaa; }
 
   .entry--papyrus .entry__specimen { background: #0e0e0e; }
   .entry--papyrus .entry__big { font-family: Papyrus, fantasy; color: #f5f5f5; font-size: clamp(2.2rem, 4.5vw, 4rem); }
-  .entry--papyrus .entry__alpha { color: #f5f5f5; }
+  .entry--papyrus .entry__alpha { color: #aaa; }
   .entry--papyrus .entry__specimen-num { color: #555; }
 
   .entry--futura .entry__specimen { background: #111; }
   .entry--futura .entry__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; color: #fff; letter-spacing: -0.03em; text-transform: uppercase; }
-  .entry--futura .entry__alpha { color: #fff; }
+  .entry--futura .entry__alpha { color: #aaa; }
   .entry--futura .entry__specimen-num { color: #555; }
 
   /* card body */
@@ -245,19 +271,18 @@
   .entry__tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
   .entry__tag {
     font-family: var(--dm);
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    border: 1px solid rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.2);
     padding: 0.18rem 0.5rem;
-    opacity: 0.6;
+    color: #555;
     white-space: nowrap;
   }
-  .entry__title { font-size: 0.92rem; font-weight: 400; line-height: 1.35; margin-bottom: 0.75rem; }
-  .entry__hook { font-size: 0.78rem; line-height: 1.65; opacity: 1; flex: 1; overflow: hidden; }
+  .entry__title { font-size: 1rem; font-weight: 400; line-height: 1.35; margin-bottom: 0.75rem; color: var(--black); }
+  .entry__hook { font-size: 0.92rem; line-height: 1.7; color: #333; flex: 1; overflow: hidden; }
   .entry__hook em { font-style: italic; }
 
-  /* key facts row */
   .entry__facts {
     display: flex;
     gap: 1.25rem;
@@ -266,16 +291,16 @@
     border-top: 1px solid rgba(0,0,0,0.06);
     flex-wrap: wrap;
   }
-  .entry__fact-num { font-size: 1.1rem; display: block; line-height: 1; }
-  .entry__fact-label { font-family: var(--dm); font-size: 0.58rem; letter-spacing: 0.08em; opacity: 0.45; display: block; margin-top: 0.2rem; line-height: 1.3; }
+  .entry__fact-num { font-size: 1.15rem; display: block; line-height: 1; color: var(--black); }
+  .entry__fact-label { font-family: var(--dm); font-size: 0.62rem; letter-spacing: 0.08em; color: #777; display: block; margin-top: 0.2rem; line-height: 1.3; }
 
   .entry__read {
     margin-top: 1.25rem;
     font-family: var(--dm);
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    opacity: 0.35;
+    color: #888;
   }
 
   /* ── COMING SOON cards ── */
@@ -286,12 +311,12 @@
     position: absolute;
     top: 1rem; left: 1.25rem;
     font-family: var(--dm);
-    font-size: 0.58rem;
+    font-size: 0.62rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.2);
     padding: 0.2rem 0.5rem;
-    color: var(--black);
+    color: #555;
   }
 
   /* ── INSTAGRAM CTA ── */
@@ -301,11 +326,11 @@
     padding: clamp(2.5rem, 6vw, 4rem) var(--pad);
     text-align: center;
   }
-  .ig-cta p { font-family: var(--garamond); font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-style: italic; line-height: 1.5; margin-bottom: 1.5rem; opacity: 0.85; }
+  .ig-cta p { font-family: var(--garamond); font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-style: italic; line-height: 1.5; margin-bottom: 1.5rem; color: #ddd; }
   .ig-cta a {
     display: inline-block;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.08em;
     padding: 0.75rem 1.75rem;
     border: 1px solid var(--cream);
@@ -327,21 +352,11 @@
     flex-wrap: wrap;
     max-width: 100%;
   }
-  .fm-footer p { font-family: var(--dm); font-size: 0.65rem; opacity: 0.35; letter-spacing: 0.06em; }
+  .fm-footer p { font-family: var(--dm); font-size: 0.7rem; color: #888; letter-spacing: 0.06em; }
   .fm-footer-links { display: flex; gap: 1.5rem; }
-  .fm-footer-links a { font-family: var(--dm); font-size: 0.65rem; opacity: 0.4; text-decoration: none; color: var(--black); letter-spacing: 0.06em; }
-  .fm-footer-links a:hover { opacity: 1; }
-</style>
-    <!-- Google tag (gtag.js) -->
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LQMTNVXJQ5"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LQMTNVXJQ5');
-</script>
+  .fm-footer-links a { font-family: var(--dm); font-size: 0.7rem; color: #777; text-decoration: none; letter-spacing: 0.06em; transition: color 0.15s; }
+  .fm-footer-links a:hover { color: var(--black); }
+  </style>
   </head>
   <body>
 
@@ -404,7 +419,7 @@
         aria-live="polite">
 
         <article role="listitem">
-          <a href="/blog/garamond/" class="entry entry--garamond"
+          <a href="/blog/" class="entry entry--garamond"
             data-tags="serif beloved"
             aria-label="Garamond — 500 years old. Still everywhere.">
             <div class="entry__specimen">
@@ -447,8 +462,7 @@
         </article>
 
         <article role="listitem">
-          <a href="/blog/comic-sans/" class="entry entry--comic"
-            data-tags="controversial"
+          <a href="/blog/" class="entry entry--comic" data-tags="controversial"
             aria-label="Comic Sans — The most hated font in the world.">
             <div class="entry__specimen">
               <span class="entry__specimen-num">No. 002</span>
@@ -486,7 +500,7 @@
         </article>
 
         <article role="listitem">
-          <a href="/blog/baskerville/" class="entry entry--baskerville"
+          <a href="/blog/" class="entry entry--baskerville"
             data-tags="serif beloved"
             aria-label="Baskerville — The font that makes you believe things.">
             <div class="entry__specimen">
@@ -525,7 +539,7 @@
         </article>
 
         <article role="listitem">
-          <a href="/blog/papyrus/" class="entry entry--papyrus"
+          <a href="/blog/" class="entry entry--papyrus"
             data-tags="display controversial"
             aria-label="Papyrus — Guilty. With a footnote.">
             <div class="entry__specimen">
@@ -564,7 +578,7 @@
         </article>
 
         <article role="listitem">
-          <a href="/blog/futura/" class="entry entry--futura"
+          <a href="/blog/" class="entry entry--futura"
             data-tags="sans-serif beloved"
             aria-label="Futura — The font that went to the moon.">
             <div class="entry__specimen">
@@ -620,8 +634,8 @@
                 the Swiss International Style became a dorm room poster.</div>
             </div>
           </div>
-
         </article>
+
         <article role="listitem">
           <div class="entry entry--soon" data-tags="sans-serif"
             aria-label="Helvetica — coming soon">
@@ -641,8 +655,8 @@
                 York subway and every corporate rebrand since 1970.</div>
             </div>
           </div>
-
         </article>
+
         <article role="listitem">
           <div class="entry entry--soon" data-tags="sans-serif"
             aria-label="Optima — coming soon">
@@ -662,7 +676,6 @@
                 The Vietnam Veterans Memorial is set in it.</div>
             </div>
           </div>
-
         </article>
 
       </div><!-- /blog-grid -->
@@ -672,22 +685,25 @@
         <p>"Type is a beautiful group of letters,<br>not a group of beautiful
           letters."</p>
         <p
-          style="font-family:var(--dm);font-size:0.65rem;letter-spacing:0.1em;opacity:0.4;margin-bottom:1.5rem;">—
+          style="font-family:var(--dm);font-size:0.75rem;letter-spacing:0.1em;color:#888;margin-bottom:1.5rem;">—
           Matthew Carter</p>
-        <a href="https://www.instagram.com/fontsmatterperiod"
-          target="_blank">follow @fontsmatterperiod</a>
+        <a href="https://www.instagram.com/fontsmatterperiod" target="_blank"
+          rel="noopener noreferrer">follow @fontsmatterperiod</a>
       </div>
 
-      <!-- FOOTER -->
-      <footer class="fm-footer">
-        <p>© 2026 fonts matter, period. · San Diego, CA</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="fm-footer" role="contentinfo">
+      <p>© 2026 fonts matter, period. · San Diego, CA</p>
+      <nav aria-label="Footer navigation">
         <div class="fm-footer-links">
           <a href="/">home</a>
           <a href="/#our-story">about</a>
           <a href="/#contact">contact</a>
           <a href="/policies/privacy-policy">privacy</a>
         </div>
-      </main>
+      </nav>
     </footer>
 
     <script>
@@ -698,8 +714,6 @@
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
-
-      // Update button states
       btns.forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-pressed', 'false');
@@ -707,7 +721,6 @@
       btn.classList.add('active');
       btn.setAttribute('aria-pressed', 'true');
 
-      // Filter cards
       let visible = 0;
       cards.forEach(card => {
         const entry = card.querySelector('.entry');
@@ -717,7 +730,6 @@
         if (show) visible++;
       });
 
-      // Update live region count for screen readers
       grid.setAttribute('aria-label', filter === 'all'
         ? `All font entries — ${visible} shown`
         : `Fonts filtered by ${filter} — ${visible} shown`
