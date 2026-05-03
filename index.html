@@ -3,7 +3,64 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>fonts matter, period.</title>
+    <title>fonts matter, period. — Typography for People Who Notice</title>
+    <meta name="description"
+      content="fonts matter, period. is an opinionated typography blog from San Diego. We write about typefaces — Garamond, Baskerville, Futura, Comic Sans — with context, history, and actual opinions.">
+    <meta name="keywords"
+      content="typography, typeface, font history, type design, Courier New, Garamond, Baskerville, Futura, Comic Sans, Papyrus, fonts matter">
+    <link rel="canonical" href="https://fontsmatterperiod.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+      href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+      href="/android-chrome-512x512.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+      content="fonts matter, period. — Typography for People Who Notice">
+    <meta property="og:description"
+      content="An opinionated typography blog from San Diego. We write about typefaces the way some people argue about wine — with feelings, opinions, and zero apologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fontsmatterperiod.com/">
+    <meta property="og:site_name" content="fonts matter, period.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="fonts matter, period.">
+    <meta name="twitter:description"
+      content="Typography for people who notice. Opinionated writing about the world's most important typefaces.">
+    <meta name="twitter:site" content="@fontsmatterperiod">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "fonts matter, period.",
+    "url": "https://fontsmatterperiod.com/",
+    "description": "An opinionated typography blog from San Diego. We write about typefaces with context, history, and actual opinions.",
+    "sameAs": [
+      "https://www.instagram.com/fontsmatterperiod",
+      "https://www.facebook.com/fontsmatterperiod"
+    ]
+  }
+  </script>
+
+    <!-- Google Analytics -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LQMTNVXJQ5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQMTNVXJQ5');
+  </script>
+
     <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,7 +83,23 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── HEADER ─────────────────────────────────── */
+  /* ── SKIP LINK ── */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    background: var(--black);
+    color: var(--off-white);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.1s;
+  }
+  .skip-link:focus { top: 0.5rem; }
+
+  /* ── HEADER ── */
   .site-header {
     position: sticky;
     top: 0;
@@ -39,20 +112,18 @@
     justify-content: space-between;
     height: 60px;
   }
-  .site-header img { height: 28px; width: auto; }
   .site-nav { display: flex; gap: 2rem; list-style: none; }
   .site-nav a {
     font-family: var(--mono);
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     text-decoration: none;
-    color: var(--black);
-    opacity: 0.7;
-    transition: opacity 0.15s;
+    color: #444;
+    transition: color 0.15s;
   }
-  .site-nav a:hover { opacity: 1; }
+  .site-nav a:hover { color: var(--black); }
 
-  /* ── HERO ────────────────────────────────────── */
+  /* ── HERO ── */
   .fm-hero {
     background: var(--sage);
     padding: clamp(3rem, 8vw, 7rem) var(--page-pad);
@@ -65,28 +136,10 @@
   }
   @media (max-width: 700px) { .fm-hero { grid-template-columns: 1fr; gap: 2rem; } }
 
-  .fm-eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    opacity: 0.55;
-    text-transform: uppercase;
-    margin-bottom: 1.25rem;
-  }
-  .fm-hero__headline {
-    font-family: var(--mono);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
-  }
+  .fm-eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; color: #666; text-transform: uppercase; margin-bottom: 1.25rem; }
+  .fm-hero__headline { font-family: var(--mono); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.25rem; }
   .fm-hero__headline em { font-style: italic; }
-  .fm-hero__sub {
-    font-size: 0.9rem;
-    line-height: 1.65;
-    opacity: 0.86;
-    max-width: 38ch;
-    margin-bottom: 2rem;
-  }
+  .fm-hero__sub { font-size: 1rem; line-height: 1.7; color: var(--black); max-width: 38ch; margin-bottom: 2rem; }
   .fm-hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .fm-btn {
@@ -105,12 +158,7 @@
   .fm-btn--solid { background: var(--black); color: var(--off-white); }
   .fm-btn--solid:hover { background: #333; }
 
-  /* hero right — editorial type specimen */
-  .hero-specimen {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .hero-specimen { display: flex; flex-direction: column; gap: 0.5rem; }
   .specimen-word {
     font-size: clamp(2.5rem, 5vw, 5rem);
     font-weight: 400;
@@ -127,7 +175,7 @@
     font-family: var(--sans);
     font-size: 0.6rem;
     letter-spacing: 0.1em;
-    opacity: 0.4;
+    color: #888;
     text-transform: uppercase;
     align-self: flex-end;
     padding-bottom: 0.2rem;
@@ -139,25 +187,13 @@
   .spec-garamond { font-family: Garamond, "Times New Roman", serif; font-style: italic; }
   .spec-times { font-family: "Times New Roman", Times, serif; }
 
-  /* ── MARQUEE ─────────────────────────────────── */
-  .fm-marquee {
-    background: var(--black);
-    color: var(--off-white);
-    padding: 0.9rem 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .fm-marquee__inner {
-    display: inline-flex;
-    gap: 2rem;
-    animation: marquee 28s linear infinite;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-  }
+  /* ── MARQUEE ── */
+  .fm-marquee { background: var(--black); color: var(--off-white); padding: 0.9rem 0; overflow: hidden; white-space: nowrap; }
+  .fm-marquee__inner { display: inline-flex; gap: 2rem; animation: marquee 28s linear infinite; font-size: 0.72rem; letter-spacing: 0.06em; }
   .fm-marquee__inner span:nth-child(even) { color: var(--sage-dark); }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ── MANIFESTO ───────────────────────────────── */
+  /* ── MANIFESTO ── */
   .fm-manifesto {
     padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
     display: grid;
@@ -167,57 +203,20 @@
     margin: 0 auto;
   }
   @media (max-width: 700px) { .fm-manifesto { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-manifesto h2 {
-    font-size: clamp(1.6rem, 3vw, 2.5rem);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
+  .fm-manifesto h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
   .fm-manifesto h2 em { font-style: italic; }
-  .fm-manifesto p { font-size: 0.9rem; line-height: 1.65; opacity: 0.86; }
+  .fm-manifesto p { font-size: 1rem; line-height: 1.7; color: #222; }
   .fm-stats { display: flex; flex-direction: column; gap: 1.5rem; }
   .fm-stat__num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1; }
-  .fm-stat__label { font-size: 0.78rem; line-height: 1.5; opacity: 0.72; margin-top: 0.25rem; max-width: 28ch; }
+  .fm-stat__label { font-size: 0.85rem; line-height: 1.55; color: #444; margin-top: 0.25rem; max-width: 28ch; }
 
-  /* ── TAGLINE ─────────────────────────────────── */
-  .fm-tagline {
-    background: var(--off-white);
-    border-top: 1px solid rgba(0,0,0,0.08);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: clamp(2.5rem, 6vw, 5rem) var(--page-pad);
-    text-align: center;
-  }
-  .fm-tagline p {
-    font-size: clamp(1rem, 2vw, 1.35rem);
-    line-height: 1.75;
-    max-width: 55ch;
-    margin: 0 auto;
-    opacity: 0.8;
-  }
-
-  /* ── BLOG: THE FONTS ─────────────────────────── */
-  .fm-blog {
-    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-  .fm-blog__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding-bottom: 1rem;
-  }
+  /* ── BLOG CARDS ── */
+  .fm-blog { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); max-width: var(--page-max); margin: 0 auto; }
+  .fm-blog__header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1rem; }
   .fm-blog__header h2 { font-size: 1.1rem; font-weight: 400; }
-  .fm-blog__header a { font-size: 0.72rem; opacity: 0.5; text-decoration: none; color: var(--black); }
-  .fm-blog__header a:hover { opacity: 1; }
-
-  .fm-blog__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
+  .fm-blog__header a { font-size: 0.8rem; text-decoration: none; color: #555; }
+  .fm-blog__header a:hover { color: var(--black); }
+  .fm-blog__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 
   .font-card {
     border: 1px solid rgba(0,0,0,0.08);
@@ -238,232 +237,88 @@
     flex-direction: column;
     justify-content: flex-end;
   }
-  .font-card__big {
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
-    line-height: 0.9;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-  }
-  .font-card__alpha {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    opacity: 0.35;
-    text-transform: uppercase;
-  }
-
-  /* per-font specimen styles */
-  .font-card--courier .font-card__specimen { background: #f5f3f0; }
-  .font-card--courier .font-card__big { font-family: "Courier New", Courier, monospace; }
+  .font-card__big { font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 0.9; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .font-card__alpha { font-size: 0.7rem; letter-spacing: 0.15em; opacity: 0.35; text-transform: uppercase; }
 
   .font-card--ak .font-card__specimen { background: #0a0a0a; color: #f8f8f5; }
   .font-card--ak .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; letter-spacing: -0.03em; }
   .font-card--ak .font-card__alpha { opacity: 0.4; color: #f8f8f5; }
-
   .font-card--garamond .font-card__specimen { background: var(--sage); }
   .font-card--garamond .font-card__big { font-family: Garamond, "EB Garamond", "Times New Roman", serif; font-style: italic; }
-
   .font-card--times .font-card__specimen { background: #1a1a2e; color: #e8e4da; }
   .font-card--times .font-card__big { font-family: "Times New Roman", Times, serif; font-weight: 700; letter-spacing: -0.01em; }
   .font-card--times .font-card__alpha { color: #e8e4da; opacity: 0.35; }
-
   .font-card--futura .font-card__specimen { background: #f0ece4; }
   .font-card--futura .font-card__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: 0.05em; }
-
   .font-card--baskerville .font-card__specimen { background: #2a1a0e; color: #f5ece0; }
   .font-card--baskerville .font-card__big { font-family: Baskerville, "Baskerville Old Face", "Palatino Linotype", serif; }
   .font-card--baskerville .font-card__alpha { color: #f5ece0; opacity: 0.35; }
-
   .font-card--helvetica .font-card__specimen { background: #f2f2f2; }
   .font-card--helvetica .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
-
   .font-card--optima .font-card__specimen { background: #f5f0e8; }
   .font-card--optima .font-card__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
-
   .font-card--papyrus .font-card__specimen { background: #e8dfc8; }
   .font-card--papyrus .font-card__big { font-family: Papyrus, fantasy; font-weight: 400; }
-
   .font-card--comic .font-card__specimen { background: #fff9c4; }
   .font-card--comic .font-card__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; letter-spacing: -0.01em; }
 
-  .font-card__body {
-    padding: 1.25rem 1.75rem 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .font-card__meta {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .font-card__tag {
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid rgba(0,0,0,0.15);
-    padding: 0.2rem 0.5rem;
-    opacity: 0.6;
-  }
-  .font-card__name {
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  .font-card__excerpt {
-    font-size: 0.78rem;
-    line-height: 1.65;
-    opacity: 0.82;
-    flex: 1;
-  }
-  .font-card__read {
-    margin-top: 1rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.4;
-  }
+  .font-card__body { padding: 1.25rem 1.75rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .font-card__meta { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .font-card__tag { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; color: #444; }
+  .font-card__name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; color: var(--black); }
+  .font-card__excerpt { font-size: 0.9rem; line-height: 1.7; color: #333; flex: 1; }
+  .font-card__read { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #777; }
 
-  /* ── FEATURED (wide card) ────────────────────── */
-  .font-card--featured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  /* ── FEATURED — <a> is the direct grid child, so grid-column works ── */
+  .font-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
   @media (max-width: 600px) { .font-card--featured { grid-template-columns: 1fr; } }
-  .font-card--featured .font-card__specimen {
-    min-height: 240px;
-    border-bottom: none;
-    border-right: 1px solid rgba(0,0,0,0.06);
-  }
-  @media (max-width: 600px) {
-    .font-card--featured .font-card__specimen { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); }
-  }
+  .font-card--featured .font-card__specimen { min-height: 240px; border-bottom: none; border-right: 1px solid rgba(0,0,0,0.06); }
+  @media (max-width: 600px) { .font-card--featured .font-card__specimen { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); } }
   .font-card--featured .font-card__big { font-size: clamp(4rem, 8vw, 7rem); }
 
-  /* ── QUOTE ───────────────────────────────────── */
-  .fm-quote {
-    background: var(--sage-mid);
-    padding: clamp(3rem, 7vw, 5rem) var(--page-pad);
-    text-align: center;
-  }
-  .fm-quote blockquote {
-    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
-    font-weight: 400;
-    line-height: 1.5;
-    max-width: 50ch;
-    margin: 0 auto 1rem;
-    font-style: italic;
-  }
-  .fm-quote cite {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    opacity: 0.55;
-    font-style: normal;
-    display: block;
-    margin-bottom: 2rem;
-  }
+  /* ── QUOTE ── */
+  .fm-quote { background: var(--sage-mid); padding: clamp(3rem, 7vw, 5rem) var(--page-pad); text-align: center; }
+  .fm-quote blockquote { font-size: clamp(1.1rem, 2.5vw, 1.7rem); font-weight: 400; line-height: 1.5; max-width: 50ch; margin: 0 auto 1rem; font-style: italic; }
+  .fm-quote cite { font-size: 0.8rem; letter-spacing: 0.08em; color: #555; font-style: normal; display: block; margin-bottom: 2rem; }
 
-  /* ── WHY ─────────────────────────────────────── */
-  .fm-why {
-    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
+  /* ── WHY ── */
+  .fm-why { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: var(--page-max); margin: 0 auto; }
   @media (max-width: 700px) { .fm-why { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-why__num { font-size: 0.65rem; opacity: 0.3; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-  .fm-why__title { font-size: 0.95rem; margin-bottom: 0.75rem; }
-  .fm-why__text { font-size: 0.84rem; line-height: 1.7; opacity: 0.82; }
+  .fm-why__num { font-size: 0.7rem; color: #aaa; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+  .fm-why__title { font-size: 1rem; margin-bottom: 0.75rem; color: var(--black); }
+  .fm-why__text { font-size: 0.95rem; line-height: 1.75; color: #333; }
 
-  /* ── STORY ───────────────────────────────────── */
-  .fm-story {
-    background: var(--off-white);
-    border-top: 1px solid rgba(0,0,0,0.08);
-    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 4rem;
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
+  /* ── STORY ── */
+  .fm-story { background: var(--off-white); border-top: 1px solid rgba(0,0,0,0.08); padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; max-width: var(--page-max); margin: 0 auto; }
   @media (max-width: 700px) { .fm-story { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-story h2 {
-    font-size: clamp(1.5rem, 3vw, 2.3rem);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
+  .fm-story h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
   .fm-story h2 em { font-style: italic; }
-  .fm-story__body { font-size: 0.9rem; line-height: 1.75; opacity: 0.86; margin-bottom: 1.25rem; }
-  .fm-story-stats { display: flex; gap: 2.5rem; margin: 2rem 0; }
-  .fm-story-stats span:first-child { font-size: 2rem; display: block; line-height: 1; }
-  .fm-story-stats span:last-child { font-size: 0.7rem; opacity: 0.5; display: block; margin-top: 0.25rem; max-width: 14ch; line-height: 1.4; }
+  .fm-story__body { font-size: 1rem; line-height: 1.8; color: #222; margin-bottom: 1.25rem; }
 
-  /* ── FOOTER ──────────────────────────────────── */
-  .fm-footer {
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-  @media (max-width: 600px) { .fm-footer { grid-template-columns: 1fr; } }
-  .fm-footer h3 { font-size: 0.9rem; font-weight: 400; margin-bottom: 0.5rem; }
-  .fm-footer p { font-size: 0.72rem; opacity: 0.55; margin-bottom: 1rem; }
-  .email-form { display: flex; gap: 0; }
-  .email-form input {
-    flex: 1;
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    padding: 0.65rem 0.9rem;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-right: none;
-    background: transparent;
-    outline: none;
-  }
-  .email-form button {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    padding: 0.65rem 1.1rem;
-    background: var(--black);
-    color: var(--off-white);
-    border: 1px solid var(--black);
-    cursor: pointer;
-    letter-spacing: 0.05em;
-  }
-  .fm-footer__copy { font-size: 0.68rem; opacity: 0.35; margin-top: 1rem; }
-  .social-links { display: flex; gap: 1rem; margin-top: 0.5rem; }
-  .social-links a { font-size: 0.7rem; opacity: 0.45; text-decoration: none; color: var(--black); letter-spacing: 0.08em; }
-  .social-links a:hover { opacity: 1; }
-</style>
-    <!-- Google tag (gtag.js) -->
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LQMTNVXJQ5"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LQMTNVXJQ5');
-</script>
+  /* ── CONTACT FORM ── */
+  .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.95rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
+  .fm-input:focus { border-bottom-color: rgba(0,0,0,0.6); }
+  .fm-input::placeholder { color:rgba(0,0,0,0.3); }
+  .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.85); margin-bottom:0.5rem; }
+  .fm-field { margin-bottom:1.5rem; }
+  .fm-select { appearance:none; cursor:pointer; background:transparent; }
+  .fm-submit { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
+  .fm-submit:hover { background:#333; }
+  .fm-submit:disabled { opacity:0.5; cursor:default; }
+  .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#3a6e5a; border:1px solid rgba(90,138,114,0.4); background:rgba(90,138,114,0.08); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
+  .fm-error-msg { font-family:'Courier New',Courier,monospace; font-size:0.72rem; color:#8b3a3a; margin-top:0.4rem; display:block; min-height:0; }
+  </style>
   </head>
   <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- HEADER -->
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <a href="/"
-        style="font-family:'Courier New',Courier,monospace; font-size:0.85rem; font-weight:700; letter-spacing:0.04em; text-decoration:none; color:#0a0a0a;">fonts
-        matter, period.</a>
-      <nav>
+        style="font-family:'Courier New',Courier,monospace; font-size:1.25rem; font-weight:700; letter-spacing:0.04em; text-decoration:none; color:#0a0a0a;"
+        aria-label="fonts matter, period. — home">fonts matter.</a>
+      <nav aria-label="Main navigation">
         <ul class="site-nav">
           <li><a href="/blog/">the fonts</a></li>
           <li><a href="#our-story">our story</a></li>
@@ -472,426 +327,427 @@
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section style="background: var(--sage);">
-      <div class="fm-hero">
-        <div class="fm-hero__left">
-          <p class="fm-eyebrow">est. in courier new · typography first</p>
-          <h1 class="fm-hero__headline">the type<br>you notice<br>when you
-            <em>shouldn't.</em></h1>
-          <p class="fm-hero__sub">For designers, developers, and writers who
-            believe good design starts before the first word. We write about
-            typefaces the way some people argue about wine — with feelings,
-            opinions, and zero apologies.</p>
-          <div class="fm-hero__ctas">
-            <a href="/blog/" class="fm-btn fm-btn--solid">read the blog</a>
-            <a href="#our-story" class="fm-btn">our story</a>
-          </div>
-        </div>
-        <div class="fm-hero__right">
-          <div class="hero-specimen">
-            <div class="specimen-word">
-              <span class="spec-courier">Aa</span>
-              <span class="specimen-label">Courier New</span>
-            </div>
-            <div class="specimen-word">
-              <span class="spec-ak"
-                style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:200;">Aa</span>
-              <span class="specimen-label">Akzidenz</span>
-            </div>
-            <div class="specimen-word">
-              <span class="spec-garamond"
-                style="font-family:Garamond,'Times New Roman',serif;font-style:italic;">Aa</span>
-              <span class="specimen-label">Garamond</span>
-            </div>
-            <div class="specimen-word">
-              <span class="spec-times"
-                style="font-family:'Times New Roman',Times,serif;">Aa</span>
-              <span class="specimen-label">Times</span>
+    <main id="main-content">
+
+      <!-- HERO -->
+      <section style="background: var(--sage);" aria-label="Introduction">
+        <div class="fm-hero">
+          <div class="fm-hero__left">
+            <p class="fm-eyebrow">est. in courier new · typography first</p>
+            <h1 class="fm-hero__headline">the type<br>you notice<br>when you
+              <em>shouldn't.</em></h1>
+            <p class="fm-hero__sub">For designers, developers, and writers who
+              believe good design starts before the first word. We write about
+              typefaces the way some people argue about wine — with feelings,
+              opinions, and zero apologies.</p>
+            <div class="fm-hero__ctas">
+              <a href="/blog/" class="fm-btn fm-btn--solid">read the blog</a>
+              <a href="#our-story" class="fm-btn">our story</a>
             </div>
           </div>
+          <div class="fm-hero__right" aria-hidden="true">
+            <div class="hero-specimen">
+              <div class="specimen-word">
+                <span class="spec-courier">Aa</span>
+                <span class="specimen-label">Courier New</span>
+              </div>
+              <div class="specimen-word">
+                <span class="spec-ak"
+                  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:200;">Aa</span>
+                <span class="specimen-label">Akzidenz</span>
+              </div>
+              <div class="specimen-word">
+                <span class="spec-garamond"
+                  style="font-family:Garamond,'Times New Roman',serif;font-style:italic;">Aa</span>
+                <span class="specimen-label">Garamond</span>
+              </div>
+              <div class="specimen-word">
+                <span class="spec-times"
+                  style="font-family:'Times New Roman',Times,serif;">Aa</span>
+                <span class="specimen-label">Times</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE (decorative) -->
+      <div class="fm-marquee" aria-hidden="true">
+        <div class="fm-marquee__inner">
+          <span>typography isn't decoration</span><span>·</span>
+          <span>kerning is caring</span><span>·</span>
+          <span>serif > sans — fight me</span><span>·</span>
+          <span>the font is the message</span><span>·</span>
+          <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
+            Baskerville</span><span>·</span>
+          <span>type nerd since before it was cool</span><span>·</span>
+          <span>typography isn't decoration</span><span>·</span>
+          <span>kerning is caring</span><span>·</span>
+          <span>serif > sans — fight me</span><span>·</span>
+          <span>the font is the message</span><span>·</span>
+          <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
+            Baskerville</span><span>·</span>
+          <span>type nerd since before it was cool</span><span>·</span>
         </div>
       </div>
-    </section>
 
-    <!-- MARQUEE -->
-    <div class="fm-marquee">
-      <div class="fm-marquee__inner">
-        <span>typography isn't decoration</span><span>·</span>
-        <span>kerning is caring</span><span>·</span>
-        <span>serif > sans — fight me</span><span>·</span>
-        <span>the font is the message</span><span>·</span>
-        <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
-          Baskerville</span><span>·</span>
-        <span>type nerd since before it was cool</span><span>·</span>
-        <span>typography isn't decoration</span><span>·</span>
-        <span>kerning is caring</span><span>·</span>
-        <span>serif > sans — fight me</span><span>·</span>
-        <span>the font is the message</span><span>·</span>
-        <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
-          Baskerville</span><span>·</span>
-        <span>type nerd since before it was cool</span><span>·</span>
-      </div>
-    </div>
-
-    <!-- MANIFESTO -->
-    <div style="background: var(--off-white);">
-      <div class="fm-manifesto">
-        <div>
-          <h2>we're not just another <em>design blog.</em></h2>
-          <p>We write about typefaces the way critics write about films — with
-            context, history, and actual opinions. No neutral takes. No
-            "it depends." We know what we think about Helvetica, and we'll tell
-            you.</p>
-        </div>
-        <div class="fm-stats">
+      <!-- MANIFESTO -->
+      <section style="background: var(--off-white);"
+        aria-label="About fonts matter">
+        <div class="fm-manifesto">
           <div>
-            <div class="fm-stat__num">300,000+</div>
-            <div class="fm-stat__label">typefaces in existence. you have strong
-              opinions about at least twelve of them.</div>
+            <h2>we're not just another <em>design blog.</em></h2>
+            <p>We write about typefaces the way critics write about films — with
+              context, history, and actual opinions. No neutral takes. No
+              "it depends." We know what we think about Helvetica, and we'll
+              tell you.</p>
+          </div>
+          <div class="fm-stats">
+            <div>
+              <div class="fm-stat__num" aria-label="300,000 plus">300,000+</div>
+              <div class="fm-stat__label">typefaces in existence. you have
+                strong opinions about at least twelve of them.</div>
+            </div>
+            <div>
+              <div class="fm-stat__num">0.05s</div>
+              <div class="fm-stat__label">how long it takes a viewer to form an
+                opinion. type is always first.</div>
+            </div>
+            <div>
+              <div class="fm-stat__num">1957</div>
+              <div class="fm-stat__label">Akzidenz-Grotesk inspires Helvetica.
+                the argument starts.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE FONTS -->
+      <section
+        style="border-top: 1px solid rgba(0,0,0,0.08); background: #fafaf7;"
+        aria-label="The fonts — a field guide">
+        <div class="fm-blog">
+          <div class="fm-blog__header">
+            <h2>the fonts — a field guide</h2>
+            <a href="/blog/">all entries →</a>
+          </div>
+          <div class="fm-blog__grid">
+
+            <a href="/blog/" class="font-card font-card--ak font-card--featured"
+              aria-label="Akzidenz-Grotesk — the one that started everything">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Akzidenz</div>
+                <div class="font-card__alpha" style="color:#f8f8f5;">Aa Bb Cc
+                  123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Sans-serif</span>
+                  <span class="font-card__tag">1896</span>
+                  <span class="font-card__tag">Berthold</span>
+                  <span class="font-card__tag">featured</span>
+                </div>
+                <div class="font-card__name">Akzidenz-Grotesk — the one that
+                  started everything</div>
+                <div class="font-card__excerpt">Before Helvetica. Before
+                  Univers. Before the whole Swiss International Style thing
+                  became a poster in a design student's dorm, there was
+                  Akzidenz-Grotesk. Released in 1896 by the H. Berthold type
+                  foundry, this is the quiet original — the one all those
+                  modernists were borrowing from when they claimed to be
+                  inventing something new.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--helvetica"
+              aria-label="Helvetica — the most famous font in the world">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Helvetica</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Neo-Grotesque</span>
+                  <span class="font-card__tag">1957</span>
+                  <span class="font-card__tag">Miedinger</span>
+                </div>
+                <div class="font-card__name">Helvetica — the most famous font in
+                  the world, for better and worse</div>
+                <div class="font-card__excerpt">It got a documentary. It's on
+                  the New York subway, the American Apparel logo, and
+                  approximately every corporate rebrand since 1970. Max
+                  Miedinger designed it to mean nothing — to be neutral,
+                  invisible, universal. The irony is it's now the most
+                  recognizable typeface on earth.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--garamond"
+              aria-label="Garamond — five centuries and still the most elegant thing in the room">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Garamond</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Serif</span>
+                  <span class="font-card__tag">1530s</span>
+                  <span class="font-card__tag">Old Style</span>
+                </div>
+                <div class="font-card__name">Garamond — five centuries and still
+                  the most elegant thing in the room</div>
+                <div class="font-card__excerpt">Claude Garamond cut these
+                  letterforms in Paris in the 1530s. They've been in continuous
+                  use ever since. If that doesn't tell you something about what
+                  timeless design actually looks like, nothing will.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--baskerville"
+              aria-label="Baskerville — the typeface Benjamin Franklin tried to debunk">
+              <div class="font-card__specimen">
+                <div class="font-card__big"
+                  style="color:#f5ece0;">Baskerville</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Serif</span>
+                  <span class="font-card__tag">1757</span>
+                  <span class="font-card__tag">Transitional</span>
+                </div>
+                <div class="font-card__name">Baskerville — the typeface Benjamin
+                  Franklin tried to debunk</div>
+                <div class="font-card__excerpt">John Baskerville's
+                  contemporaries thought his type was harmful to eyesight.
+                  Benjamin Franklin used it in a hoax to embarrass a critic.
+                  Researchers later found it makes people believe statements
+                  more. It is, objectively, one of the most trustworthy things
+                  ever drawn.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--futura"
+              aria-label="Futura — the font that went to the moon">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Futura</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Geometric Sans</span>
+                  <span class="font-card__tag">1927</span>
+                  <span class="font-card__tag">Renner</span>
+                </div>
+                <div class="font-card__name">Futura — the font that went to the
+                  moon</div>
+                <div class="font-card__excerpt">Literally. The plaque left on
+                  the moon by Apollo 11 is set in Futura. Paul Renner designed
+                  it as a rejection of ornament — pure geometry, the circle as
+                  O, the triangle as A. It looks like the future because it was
+                  designed to.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--optima"
+              aria-label="Optima — the typeface that refuses to pick a side">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Optima</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Humanist Sans</span>
+                  <span class="font-card__tag">1958</span>
+                  <span class="font-card__tag">Zapf</span>
+                </div>
+                <div class="font-card__name">Optima — the typeface that refuses
+                  to pick a side</div>
+                <div class="font-card__excerpt">Hermann Zapf designed Optima
+                  after sketching letterforms on gravestones in Florence. It has
+                  no serifs, but its strokes flare at the terminals like a
+                  classical Roman inscription. It is technically a sans-serif
+                  that behaves like a serif. The Vietnam Veterans Memorial is
+                  set in it. Make of that what you will.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--times"
+              aria-label="Times New Roman — misunderstood, overused, and actually great">
+              <div class="font-card__specimen">
+                <div class="font-card__big" style="color:#e8e4da;">Times</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Serif</span>
+                  <span class="font-card__tag">1932</span>
+                  <span class="font-card__tag">Morison</span>
+                </div>
+                <div class="font-card__name">Times New Roman — misunderstood,
+                  overused, and actually great</div>
+                <div class="font-card__excerpt">Everyone's default, nobody's
+                  first choice. But Stanley Morison designed it for one of the
+                  most demanding clients imaginable — The Times of London — and
+                  it delivered. The problem isn't the font. It's that nobody
+                  respects it anymore.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--papyrus"
+              aria-label="Papyrus — the font that made a million spa menus illegitimate">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Papyrus</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Display</span>
+                  <span class="font-card__tag">1982</span>
+                  <span class="font-card__tag">Rolston</span>
+                </div>
+                <div class="font-card__name">Papyrus — the font that made a
+                  million spa menus illegitimate</div>
+                <div class="font-card__excerpt">Chris Rolston hand-drew Papyrus
+                  in 1982 on — wait for it — actual papyrus. It is not a bad
+                  typeface. It is a very specific typeface used in every wrong
+                  context imaginable: day spas, Avatar, Egyptian themed
+                  restaurants in strip malls. The font didn't fail us. We failed
+                  the font.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--comic"
+              aria-label="Comic Sans — thirty years of crimes against design">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Comic Sans</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta">
+                  <span class="font-card__tag">Casual</span>
+                  <span class="font-card__tag">1994</span>
+                  <span class="font-card__tag">Connare</span>
+                </div>
+                <div class="font-card__name">Comic Sans — thirty years of crimes
+                  against design</div>
+                <div class="font-card__excerpt">Vincent Connare designed it to
+                  look like comic book lettering, for a cartoon dog in a
+                  software assistant. It was never meant to leave that context.
+                  And yet. It appeared on hospital signs, legal documents,
+                  school newsletters, and a Microsoft Bob tutorial. It is the
+                  most successfully misused typeface in history, which is an
+                  achievement of a kind.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE -->
+      <aside class="fm-quote" aria-label="Typography quote">
+        <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
+        <cite>— Matthew Carter, type designer</cite>
+        <a href="/blog/" class="fm-btn">read the field guide</a>
+      </aside>
+
+      <!-- WHY -->
+      <section style="border-top: 1px solid rgba(0,0,0,0.08);"
+        aria-label="Why fonts matter">
+        <div class="fm-why">
+          <div>
+            <div class="fm-why__num" aria-hidden="true">01</div>
+            <h3 class="fm-why__title">craft over noise</h3>
+            <p class="fm-why__text">In a world of algorithmically optimized
+              everything, typography is one of the last places pure human
+              judgment lives. We celebrate that.</p>
           </div>
           <div>
-            <div class="fm-stat__num">0.05s</div>
-            <div class="fm-stat__label">how long it takes a viewer to form an
-              opinion. type is always first.</div>
+            <div class="fm-why__num" aria-hidden="true">02</div>
+            <h3 class="fm-why__title">opinions, not takes</h3>
+            <p class="fm-why__text">We don't write "it depends." We write about
+              what we actually believe, what the history actually shows, and
+              what the type community has been arguing about for decades.</p>
           </div>
           <div>
-            <div class="fm-stat__num">1957</div>
-            <div class="fm-stat__label">Akzidenz-Grotesk inspires Helvetica. the
-              argument starts.</div>
+            <div class="fm-why__num" aria-hidden="true">03</div>
+            <h3 class="fm-why__title">the details matter</h3>
+            <p class="fm-why__text">Everything here is set in Courier New.
+              Deliberately. The typeface is the argument — no explanation
+              needed, no decoration required.</p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- THE FONTS BLOG SECTION -->
-    <section
-      style="border-top: 1px solid rgba(0,0,0,0.08); background: #fafaf7;">
-      <div class="fm-blog">
-        <div class="fm-blog__header">
-          <h2>the fonts — a field guide</h2>
-          <a href="/blog/">all entries →</a>
-        </div>
-
-        <div class="fm-blog__grid">
-
-          <!-- FEATURED: Akzidenz-Grotesk -->
-          <a href="/blog/" class="font-card font-card--ak font-card--featured">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Akzidenz</div>
-              <div class="font-card__alpha" style="color:#f8f8f5;">Aa Bb Cc
-                123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Sans-serif</span>
-                <span class="font-card__tag">1896</span>
-                <span class="font-card__tag">Berthold</span>
-                <span class="font-card__tag">featured</span>
-              </div>
-              <div class="font-card__name">Akzidenz-Grotesk — the one that
-                started everything</div>
-              <div class="font-card__excerpt">Before Helvetica. Before Univers.
-                Before the whole Swiss International Style thing became a poster
-                in a design student's dorm, there was Akzidenz-Grotesk. Released
-                in 1896 by the H. Berthold type foundry, this is the quiet
-                original — the one all those modernists were borrowing from when
-                they claimed to be inventing something new.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!--  TAGLINE — between featured and grid -->
-          <!-- <div
-            style="grid-column: 1 / -1; padding: 2rem 0 1rem; border-top: 1px solid rgba(0,0,0,0.07);">
-            <p
-              style="font-size: clamp(0.9rem, 1.8vw, 1.15rem); line-height: 1.75; opacity: 0.72; max-width: 60ch;">Typography
-              isn't decoration. It's the message. It's the difference between a
-              whisper and a shout, between trusted and ignored, between
-              remembered and forgotten.</p>
-          </div> -->
-
-          <!-- Helvetica -->
-          <a href="/blog/" class="font-card font-card--helvetica">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Helvetica</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Neo-Grotesque</span>
-                <span class="font-card__tag">1957</span>
-                <span class="font-card__tag">Miedinger</span>
-              </div>
-              <div class="font-card__name">Helvetica — the most famous font in
-                the world, for better and worse</div>
-              <div class="font-card__excerpt">It got a documentary. It's on the
-                New York subway, the American Apparel logo, and approximately
-                every corporate rebrand since 1970. Max Miedinger designed it to
-                mean nothing — to be neutral, invisible, universal. The irony is
-                it's now the most recognizable typeface on earth.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Garamond -->
-          <a href="/blog/" class="font-card font-card--garamond">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Garamond</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Serif</span>
-                <span class="font-card__tag">1530s</span>
-                <span class="font-card__tag">Old Style</span>
-              </div>
-              <div class="font-card__name">Garamond — five centuries and still
-                the most elegant thing in the room</div>
-              <div class="font-card__excerpt">Claude Garamond cut these
-                letterforms in Paris in the 1530s. They've been in continuous
-                use ever since. If that doesn't tell you something about what
-                timeless design actually looks like, nothing will.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Baskerville -->
-          <a href="/blog/" class="font-card font-card--baskerville">
-            <div class="font-card__specimen">
-              <div class="font-card__big"
-                style="color:#f5ece0;">Baskerville</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Serif</span>
-                <span class="font-card__tag">1757</span>
-                <span class="font-card__tag">Transitional</span>
-              </div>
-              <div class="font-card__name">Baskerville — the typeface Benjamin
-                Franklin tried to debunk</div>
-              <div class="font-card__excerpt">John Baskerville's contemporaries
-                thought his type was harmful to eyesight. Benjamin Franklin used
-                it in a hoax to embarrass a critic. Researchers later found it
-                makes people believe statements more. It is, objectively, one of
-                the most trustworthy things ever drawn.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Futura -->
-          <a href="/blog/" class="font-card font-card--futura">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Futura</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Geometric Sans</span>
-                <span class="font-card__tag">1927</span>
-                <span class="font-card__tag">Renner</span>
-              </div>
-              <div class="font-card__name">Futura — the font that went to the
-                moon</div>
-              <div class="font-card__excerpt">Literally. The plaque left on the
-                moon by Apollo 11 is set in Futura. Paul Renner designed it as a
-                rejection of ornament — pure geometry, the circle as O, the
-                triangle as A. It looks like the future because it was designed
-                to.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Optima -->
-          <a href="/blog/" class="font-card font-card--optima">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Optima</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Humanist Sans</span>
-                <span class="font-card__tag">1958</span>
-                <span class="font-card__tag">Zapf</span>
-              </div>
-              <div class="font-card__name">Optima — the typeface that refuses to
-                pick a side</div>
-              <div class="font-card__excerpt">Hermann Zapf designed Optima after
-                sketching letterforms on gravestones in Florence. It has no
-                serifs, but its strokes flare at the terminals like a classical
-                Roman inscription. It is technically a sans-serif that behaves
-                like a serif. The Vietnam Veterans Memorial is set in it. Make
-                of that what you will.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Times New Roman -->
-          <a href="/blog/" class="font-card font-card--times">
-            <div class="font-card__specimen">
-              <div class="font-card__big" style="color:#e8e4da;">Times</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Serif</span>
-                <span class="font-card__tag">1932</span>
-                <span class="font-card__tag">Morison</span>
-              </div>
-              <div class="font-card__name">Times New Roman — misunderstood,
-                overused, and actually great</div>
-              <div class="font-card__excerpt">Everyone's default, nobody's first
-                choice. But Stanley Morison designed it for one of the most
-                demanding clients imaginable — The Times of London — and it
-                delivered. The problem isn't the font. It's that nobody respects
-                it anymore.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Papyrus -->
-          <a href="/blog/" class="font-card font-card--papyrus">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Papyrus</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Display</span>
-                <span class="font-card__tag">1982</span>
-                <span class="font-card__tag">Rolston</span>
-              </div>
-              <div class="font-card__name">Papyrus — the font that made a
-                million spa menus illegitimate</div>
-              <div class="font-card__excerpt">Chris Rolston hand-drew Papyrus in
-                1982 on — wait for it — actual papyrus. It is not a bad
-                typeface. It is a very specific typeface used in every wrong
-                context imaginable: day spas, Avatar, Egyptian themed
-                restaurants in strip malls. The font didn't fail us. We failed
-                the font.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-          <!-- Comic Sans -->
-          <a href="/blog/" class="font-card font-card--comic">
-            <div class="font-card__specimen">
-              <div class="font-card__big">Comic Sans</div>
-              <div class="font-card__alpha">Aa Bb Cc 123</div>
-            </div>
-            <div class="font-card__body">
-              <div class="font-card__meta">
-                <span class="font-card__tag">Casual</span>
-                <span class="font-card__tag">1994</span>
-                <span class="font-card__tag">Connare</span>
-              </div>
-              <div class="font-card__name">Comic Sans — thirty years of crimes
-                against design</div>
-              <div class="font-card__excerpt">Vincent Connare designed it to
-                look like comic book lettering, for a cartoon dog in a software
-                assistant. It was never meant to leave that context. And yet. It
-                appeared on hospital signs, legal documents, school newsletters,
-                and a Microsoft Bob tutorial. It is the most successfully
-                misused typeface in history, which is an achievement of a
-                kind.</div>
-              <div class="font-card__read">Read more →</div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE -->
-    <div class="fm-quote">
-      <blockquote>"Type is a beautiful group of letters, not a group of beautiful letters."</blockquote>
-      <cite>— Matthew Carter, type designer</cite>
-      <a href="/blog/" class="fm-btn">read the field guide</a>
-    </div>
-
-    <!-- WHY -->
-    <div style="border-top: 1px solid rgba(0,0,0,0.08);">
-      <div class="fm-why">
-        <div>
-          <div class="fm-why__num">01</div>
-          <div class="fm-why__title">craft over noise</div>
-          <p class="fm-why__text">In a world of algorithmically optimized
-            everything, typography is one of the last places pure human judgment
-            lives. We celebrate that.</p>
-        </div>
-        <div>
-          <div class="fm-why__num">02</div>
-          <div class="fm-why__title">opinions, not takes</div>
-          <p class="fm-why__text">We don't write "it depends." We write about
-            what we actually believe, what the history actually shows, and what
-            the type community has been arguing about for decades.</p>
-        </div>
-        <div>
-          <div class="fm-why__num">03</div>
-          <div class="fm-why__title">the details matter</div>
-          <p class="fm-why__text">Everything here is set in Courier New.
-            Deliberately. The typeface is the argument — no explanation needed,
-            no decoration required.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- STORY -->
-    <div
-      style="background: var(--sage); border-top: 1px solid rgba(0,0,0,0.08);">
-      <div class="fm-story" id="our-story">
-        <div>
-          <p class="fm-eyebrow" style="margin-bottom: 1.25rem;">our story</p>
-          <h2>we're from San Diego.<br />we have <em>opinions.</em></h2>
-        </div>
-        <div>
-          <p class="fm-story__body">fonts matter. started in San Diego, which
-            means we grew up next to the Pacific Ocean and still found time to
-            have strong feelings about typefaces. priorities.</p>
-          <p class="fm-story__body">this obsession didn't start last year. it's
-            been thirty years of noticing the wrong font on a sign, the bad
-            kerning on a menu, the moment a brand's whole personality collapses
-            because someone picked Arial. we've been the person at the table
-            saying <em>that's not the right typeface</em> since before it was
-            something you could say out loud.</p>
-          <div
-            style="display:flex; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
-            <div><span
-                style="font-size:2rem; display:block; line-height:1;">30</span><span
-                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
-                caring too much about fonts</span></div>
-            <div><span
-                style="font-size:2rem; display:block; line-height:1;">0</span><span
-                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
-                for having opinions about kerning</span></div>
-            <div><span
-                style="font-size:2rem; display:block; line-height:1;">∞</span><span
-                style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
-                feelings about Comic Sans</span></div>
+      <!-- STORY -->
+      <section
+        style="background: var(--sage); border-top: 1px solid rgba(0,0,0,0.08);"
+        aria-labelledby="story-heading">
+        <div class="fm-story" id="our-story">
+          <div>
+            <p class="fm-eyebrow" style="margin-bottom: 1.25rem;">our story</p>
+            <h2 id="story-heading">we're from San Diego.<br>we have
+              <em>opinions.</em></h2>
           </div>
-          <a href="/blog/" class="fm-btn fm-btn--solid"
-            style="margin-top:0.5rem;">read the field guide</a>
+          <div>
+            <p class="fm-story__body">fonts matter. started in San Diego, which
+              means we grew up next to the Pacific Ocean and still found time to
+              have strong feelings about typefaces. priorities.</p>
+            <p class="fm-story__body">this obsession didn't start last year.
+              it's been thirty years of noticing the wrong font on a sign, the
+              bad kerning on a menu, the moment a brand's whole personality
+              collapses because someone picked Arial. we've been the person at
+              the table saying <em>that's not the right typeface</em> since
+              before it was something you could say out loud.</p>
+            <div
+              style="display:flex; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
+              <div><span
+                  style="font-size:2rem; display:block; line-height:1;">30</span><span
+                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
+                  caring too much about fonts</span></div>
+              <div><span
+                  style="font-size:2rem; display:block; line-height:1;">0</span><span
+                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
+                  for having opinions about kerning</span></div>
+              <div><span
+                  style="font-size:2rem; display:block; line-height:1;">∞</span><span
+                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
+                  feelings about Comic Sans</span></div>
+            </div>
+            <a href="/blog/" class="fm-btn fm-btn--solid"
+              style="margin-top:0.5rem;">read the field guide</a>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- CONTACT + FOOTER -->
-    <div style="background:#e3f1eb; color:#0a0a0a;" id="contact">
+    </main>
+
+    <!-- CONTACT -->
+    <section style="background:#e3f1eb; color:#0a0a0a;" id="contact"
+      aria-labelledby="contact-heading">
       <div
         style="max-width:1100px; margin:0 auto; padding:clamp(3rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(3rem,6vw,6rem); align-items:start;">
 
-        <!-- left -->
         <div>
           <p
             style="font-family:'Courier New',Courier,monospace; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(0,0,0,0.4); margin-bottom:1.25rem;">get
             in touch</p>
-          <h2
+          <h2 id="contact-heading"
             style="font-family:'Courier New',Courier,monospace; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
             something.<br><em style="font-style:italic; color:#5a8a72;">we have
               opinions<br>about everything.</em></h2>
           <p
-            style="font-size:0.85rem; line-height:1.75; color:rgba(0,0,0,0.6); margin-bottom:2rem;">Whether
+            style="font-size:0.85rem; line-height:1.75; color:rgba(0,0,0,0.9); margin-bottom:2rem;">Whether
             you want to argue about kerning, pitch a collaboration, or just tell
             us we're wrong about Comic Sans — we're here for it.</p>
           <div
@@ -900,78 +756,59 @@
             style="font-size:0.72rem; letter-spacing:0.06em; color:rgba(0,0,0,0.85); line-height:2.4;">
             <div>instagram — <a
                 href="https://www.instagram.com/fontsmatterperiod"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 style="color:rgba(0,0,0,0.6); text-decoration:none;">@fontsmatterperiod</a></div>
             <div>based in — San Diego, CA</div>
             <div>est. — in Courier New</div>
           </div>
         </div>
 
-        <!-- right: forms -->
         <div>
-          <!-- toggle -->
-          <div
+          <div role="group" aria-label="Contact type"
             style="display:flex; border:1px solid rgba(0,0,0,0.15); margin-bottom:2rem;">
             <button id="btn-general" onclick="switchType('general')"
-              style="flex:1; font-family:'Courier New',Courier,monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:#0a0a0a; color:#f0ede6; border:none; border-right:1px solid rgba(0,0,0,0.15); cursor:pointer;">general
+              aria-pressed="true"
+              style="flex:1; font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:#0a0a0a; color:#f0ede6; border:none; border-right:1px solid rgba(0,0,0,0.15); cursor:pointer;">general
               / fan mail</button>
             <button id="btn-press" onclick="switchType('press')"
-              style="flex:1; font-family:'Courier New',Courier,monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
+              aria-pressed="false"
+              style="flex:1; font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
               &amp; collabs</button>
           </div>
 
-          <style>
-        .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.85rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
-        .fm-input:focus { border-bottom-color: rgba(0,0,0,0.6); }
-        .fm-input::placeholder { color:rgba(0,0,0,0.3); }
-        .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.85); margin-bottom:0.5rem; }
-        .fm-field { margin-bottom:1.5rem; }
-        .fm-select { appearance:none; cursor:pointer; background:transparent; }
-        .fm-submit { font-family:'Courier New',Courier,monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
-        .fm-submit:hover { background:#333; }
-        .fm-submit:disabled { opacity:0.5; cursor:default; }
-        .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#3a6e5a; border:1px solid rgba(90,138,114,0.4); background:rgba(90,138,114,0.08); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
-        .fm-error-msg { font-family:'Courier New',Courier,monospace; font-size:0.72rem; color:#8b3a3a; margin-top:0.4rem; display:block; min-height:0; }
-          </style>
-
-          <!-- general form -->
           <div id="form-general">
-            <div class="fm-success" id="success-general">
-              thanks — we got it. opinions incoming.
-            </div>
+            <div class="fm-success" id="success-general">thanks — we got it.
+              opinions incoming.</div>
             <div class="fm-error-msg" id="error-general"></div>
-
-            <form id="fm-form-general">
+            <form id="fm-form-general" novalidate>
               <input type="hidden" name="inquiry_type"
                 value="general / fan mail">
-
               <div class="fm-field">
                 <label class="fm-label" for="gen-name">name</label>
                 <input type="text" id="gen-name" name="name" class="fm-input"
-                  placeholder="your name" required>
+                  placeholder="your name" required autocomplete="name">
                 <span class="fm-error-msg" data-fs-error="name"></span>
               </div>
               <div class="fm-field">
                 <label class="fm-label" for="gen-email">email</label>
                 <input type="email" id="gen-email" name="email" class="fm-input"
-                  placeholder="your@email.com" required>
+                  placeholder="your@email.com" required autocomplete="email">
                 <span class="fm-error-msg" data-fs-error="email"></span>
               </div>
               <div class="fm-field">
                 <label class="fm-label" for="gen-message">what's on your
                   mind</label>
                 <textarea id="gen-message" name="message" class="fm-input"
-                  rows="5"
-                  placeholder="opinions, questions, arguments welcome."
-                  style="resize:none;" required data-fs-field></textarea>
+                  rows="5" placeholder="opinions, questions, arguments welcome."
+                  style="resize:none;" required></textarea>
                 <span class="fm-error-msg" data-fs-error="message"></span>
               </div>
               <div class="fm-field">
                 <label
                   style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.78rem; color:#555; letter-spacing:0.02em;">
                   <input type="checkbox" name="join_list" value="yes"
-                    style="accent-color:#0a0a0a;"> join the
-                  list — new font features &amp; hot takes
+                    style="accent-color:#0a0a0a;"> join the list — new font
+                  features &amp; hot takes
                 </label>
               </div>
               <button type="submit" class="fm-submit" data-fs-submit-btn>send it
@@ -979,33 +816,31 @@
             </form>
           </div>
 
-          <!-- press form -->
           <div id="form-press" style="display:none;">
-            <div class="fm-success" id="success-press">
-              thanks — we'll be in touch. set in courier new, obviously.
-            </div>
+            <div class="fm-success" id="success-press">thanks — we'll be in
+              touch. set in courier new, obviously.</div>
             <div class="fm-error-msg" id="error-press"></div>
-
-            <form id="fm-form-press">
+            <form id="fm-form-press" novalidate>
               <input type="hidden" name="inquiry_type" value="press / collabs">
-
               <div class="fm-field">
                 <label class="fm-label" for="press-name">name</label>
                 <input type="text" id="press-name" name="name" class="fm-input"
-                  placeholder="your name" required>
+                  placeholder="your name" required autocomplete="name">
                 <span class="fm-error-msg" data-fs-error="name"></span>
               </div>
               <div class="fm-field">
                 <label class="fm-label" for="press-email">email</label>
                 <input type="email" id="press-email" name="email"
-                  class="fm-input" placeholder="work@publication.com" required>
+                  class="fm-input" placeholder="work@publication.com" required
+                  autocomplete="email">
                 <span class="fm-error-msg" data-fs-error="email"></span>
               </div>
               <div class="fm-field">
                 <label class="fm-label" for="press-org">publication /
                   company</label>
                 <input type="text" id="press-org" name="organization"
-                  class="fm-input" placeholder="where you're from">
+                  class="fm-input" placeholder="where you're from"
+                  autocomplete="organization">
               </div>
               <div class="fm-field">
                 <label class="fm-label" for="press-type">type of inquiry</label>
@@ -1022,8 +857,7 @@
               <div class="fm-field">
                 <label class="fm-label" for="press-message">tell us more</label>
                 <textarea id="press-message" name="message" class="fm-input"
-                  rows="4"
-                  placeholder="the pitch, the idea, the ask."
+                  rows="4" placeholder="the pitch, the idea, the ask."
                   style="resize:none;" required></textarea>
                 <span class="fm-error-msg" data-fs-error="message"></span>
               </div>
@@ -1031,31 +865,30 @@
                 →</button>
             </form>
           </div>
-
         </div>
       </div>
+    </section>
 
-      <!-- footer bar -->
+    <!-- FOOTER -->
+    <footer role="contentinfo"
+      style="border-top:1px solid rgba(0,0,0,0.1); background:#e3f1eb; padding:1.5rem var(--page-pad);">
       <div
-        style="border-top:1px solid rgba(0,0,0,0.1); padding:1.5rem var(--page-pad);">
-        <div
-          style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-          <p
-            style="font-size:0.65rem; letter-spacing:0.06em; color:rgba(0,0,0,0.35);">©
-            2026 fonts matter, period. · San Diego, CA</p>
-          <div style="display:flex; gap:1.5rem;">
-            <a href="/blog/"
-              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">the
-              fonts</a>
-            <a href="https://www.instagram.com/fontsmatterperiod"
-              target="_blank"
-              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">instagram</a>
-            <a href="/policies/privacy-policy"
-              style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">privacy</a>
-          </div>
-        </div>
+        style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <p
+          style="font-size:0.65rem; letter-spacing:0.06em; color:rgba(0,0,0,0.35);">©
+          2026 fonts matter, period. · San Diego, CA</p>
+        <nav aria-label="Footer navigation" style="display:flex; gap:1.5rem;">
+          <a href="/blog/"
+            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">the
+            fonts</a>
+          <a href="https://www.instagram.com/fontsmatterperiod" target="_blank"
+            rel="noopener noreferrer"
+            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">instagram</a>
+          <a href="/policies/privacy-policy"
+            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">privacy</a>
+        </nav>
       </div>
-    </div>
+    </footer>
 
     <script>
   function switchType(type) {
@@ -1067,25 +900,24 @@
     btnG.style.background = isGeneral ? '#0a0a0a' : 'transparent';
     btnG.style.color = isGeneral ? '#f0ede6' : '#0a0a0a';
     btnG.style.opacity = isGeneral ? '1' : '0.4';
+    btnG.setAttribute('aria-pressed', isGeneral ? 'true' : 'false');
     btnP.style.background = isGeneral ? 'transparent' : '#0a0a0a';
     btnP.style.color = isGeneral ? '#0a0a0a' : '#f0ede6';
     btnP.style.opacity = isGeneral ? '0.4' : '1';
+    btnP.setAttribute('aria-pressed', isGeneral ? 'false' : 'true');
   }
 
   async function submitForm(formEl, successEl, errorEl) {
     const btn = formEl.querySelector('[data-fs-submit-btn]');
     btn.disabled = true;
     errorEl.textContent = '';
-
     const data = new FormData(formEl);
-
     try {
       const res = await fetch('https://formspree.io/f/xrejbkaz', {
         method: 'POST',
         body: data,
         headers: { 'Accept': 'application/json' }
       });
-
       if (res.ok) {
         formEl.style.display = 'none';
         successEl.style.display = 'block';
@@ -1104,33 +936,13 @@
 
   document.getElementById('fm-form-general').addEventListener('submit', function(e) {
     e.preventDefault();
-    submitForm(this,
-      document.getElementById('success-general'),
-      document.getElementById('error-general'));
+    submitForm(this, document.getElementById('success-general'), document.getElementById('error-general'));
   });
 
   document.getElementById('fm-form-press').addEventListener('submit', function(e) {
     e.preventDefault();
-    submitForm(this,
-      document.getElementById('success-press'),
-      document.getElementById('error-press'));
+    submitForm(this, document.getElementById('success-press'), document.getElementById('error-press'));
   });
-</script>
-
-    <script>
-  function switchType(type) {
-    const isGeneral = type === 'general';
-    document.getElementById('form-general').style.display = isGeneral ? 'block' : 'none';
-    document.getElementById('form-press').style.display = isGeneral ? 'none' : 'block';
-    const btnG = document.getElementById('btn-general');
-    const btnP = document.getElementById('btn-press');
-    btnG.style.background = isGeneral ? '#0a0a0a' : 'transparent';
-    btnG.style.color = isGeneral ? '#f0ede6' : '#0a0a0a';
-    btnG.style.opacity = isGeneral ? '1' : '0.4';
-    btnP.style.background = isGeneral ? 'transparent' : '#0a0a0a';
-    btnP.style.color = isGeneral ? '#0a0a0a' : '#f0ede6';
-    btnP.style.opacity = isGeneral ? '0.4' : '1';
-  }
 </script>
 
   </body>
