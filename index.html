@@ -76,64 +76,20 @@
     --page-pad: clamp(1.5rem, 5vw, 4rem);
   }
 
-  body {
-    font-family: var(--mono);
-    background: var(--off-white);
-    color: var(--black);
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: var(--mono); background: var(--off-white); color: var(--black); -webkit-font-smoothing: antialiased; }
 
   /* ── SKIP LINK ── */
-  .skip-link {
-    position: absolute;
-    top: -100%;
-    left: 1rem;
-    background: var(--black);
-    color: var(--off-white);
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    z-index: 9999;
-    transition: top 0.1s;
-  }
+  .skip-link { position: absolute; top: -100%; left: 1rem; background: var(--black); color: var(--off-white); font-family: var(--mono); font-size: 0.75rem; padding: 0.5rem 1rem; text-decoration: none; z-index: 9999; transition: top 0.1s; }
   .skip-link:focus { top: 0.5rem; }
 
   /* ── HEADER ── */
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #fff;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: 0 var(--page-pad);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-  }
+  .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 0 var(--page-pad); display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .site-nav { display: flex; gap: 2rem; list-style: none; }
-  .site-nav a {
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    color: #444;
-    transition: color 0.15s;
-  }
+  .site-nav a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-decoration: none; color: #444; transition: color 0.15s; }
   .site-nav a:hover { color: var(--black); }
 
   /* ── HERO ── */
-  .fm-hero {
-    background: var(--sage);
-    padding: clamp(3rem, 8vw, 7rem) var(--page-pad);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
+  .fm-hero { background: var(--sage); padding: clamp(3rem, 8vw, 7rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: var(--page-max); margin: 0 auto; }
   @media (max-width: 700px) { .fm-hero { grid-template-columns: 1fr; gap: 2rem; } }
 
   .fm-eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; color: #666; text-transform: uppercase; margin-bottom: 1.25rem; }
@@ -142,46 +98,15 @@
   .fm-hero__sub { font-size: 1rem; line-height: 1.7; color: var(--black); max-width: 38ch; margin-bottom: 2rem; }
   .fm-hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  .fm-btn {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border: 1px solid var(--black);
-    color: var(--black);
-    transition: background 0.15s, color 0.15s;
-    cursor: pointer;
-  }
+  .fm-btn { display: inline-block; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; padding: 0.75rem 1.5rem; text-decoration: none; border: 1px solid var(--black); color: var(--black); transition: background 0.15s, color 0.15s; cursor: pointer; }
   .fm-btn:hover { background: var(--black); color: var(--off-white); }
   .fm-btn--solid { background: var(--black); color: var(--off-white); }
   .fm-btn--solid:hover { background: #333; }
 
   .hero-specimen { display: flex; flex-direction: column; gap: 0.5rem; }
-  .specimen-word {
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding-bottom: 0.4rem;
-  }
+  .specimen-word { font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: -0.01em; display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0.4rem; }
   .specimen-word:last-child { border-bottom: none; }
-  .specimen-label {
-    font-family: var(--sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    color: #888;
-    text-transform: uppercase;
-    align-self: flex-end;
-    padding-bottom: 0.2rem;
-    min-width: 60px;
-    text-align: right;
-  }
+  .specimen-label { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.1em; color: #888; text-transform: uppercase; align-self: flex-end; padding-bottom: 0.2rem; min-width: 60px; text-align: right; }
   .spec-courier { font-family: "Courier New", Courier, monospace; }
   .spec-ak { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; }
   .spec-garamond { font-family: Garamond, "Times New Roman", serif; font-style: italic; }
@@ -194,14 +119,7 @@
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* ── MANIFESTO ── */
-  .fm-manifesto {
-    padding: clamp(3rem, 7vw, 6rem) var(--page-pad);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
+  .fm-manifesto { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: var(--page-max); margin: 0 auto; }
   @media (max-width: 700px) { .fm-manifesto { grid-template-columns: 1fr; gap: 2rem; } }
   .fm-manifesto h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
   .fm-manifesto h2 em { font-style: italic; }
@@ -218,47 +136,35 @@
   .fm-blog__header a:hover { color: var(--black); }
   .fm-blog__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 
-  .font-card {
-    border: 1px solid rgba(0,0,0,0.08);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--black);
-    transition: border-color 0.15s, transform 0.15s;
-  }
+  .font-card { border: 1px solid rgba(0,0,0,0.08); background: #fff; display: flex; flex-direction: column; text-decoration: none; color: var(--black); transition: border-color 0.15s, transform 0.15s; }
   .font-card:hover { border-color: rgba(0,0,0,0.3); transform: translateY(-2px); }
-
-  .font-card__specimen {
-    padding: 2rem 1.75rem 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    min-height: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+  .font-card__specimen { padding: 2rem 1.75rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); min-height: 160px; display: flex; flex-direction: column; justify-content: flex-end; }
   .font-card__big { font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 0.9; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-  .font-card__alpha { font-size: 0.7rem; letter-spacing: 0.15em; opacity: 0.35; text-transform: uppercase; }
+  .font-card__alpha { font-size: 0.7rem; letter-spacing: 0.15em; color: #999; text-transform: uppercase; }
 
+  /* per-font specimen styles */
   .font-card--ak .font-card__specimen { background: #0a0a0a; color: #f8f8f5; }
   .font-card--ak .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; letter-spacing: -0.03em; }
-  .font-card--ak .font-card__alpha { opacity: 0.4; color: #f8f8f5; }
+  .font-card--ak .font-card__alpha { color: #666; }
   .font-card--garamond .font-card__specimen { background: var(--sage); }
   .font-card--garamond .font-card__big { font-family: Garamond, "EB Garamond", "Times New Roman", serif; font-style: italic; }
   .font-card--times .font-card__specimen { background: #1a1a2e; color: #e8e4da; }
   .font-card--times .font-card__big { font-family: "Times New Roman", Times, serif; font-weight: 700; letter-spacing: -0.01em; }
-  .font-card--times .font-card__alpha { color: #e8e4da; opacity: 0.35; }
+  .font-card--times .font-card__alpha { color: #888; }
   .font-card--futura .font-card__specimen { background: #f0ece4; }
   .font-card--futura .font-card__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: 0.05em; }
   .font-card--baskerville .font-card__specimen { background: #2a1a0e; color: #f5ece0; }
   .font-card--baskerville .font-card__big { font-family: Baskerville, "Baskerville Old Face", "Palatino Linotype", serif; }
-  .font-card--baskerville .font-card__alpha { color: #f5ece0; opacity: 0.35; }
+  .font-card--baskerville .font-card__alpha { color: #888; }
   .font-card--helvetica .font-card__specimen { background: #f2f2f2; }
   .font-card--helvetica .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
   .font-card--optima .font-card__specimen { background: #f5f0e8; }
   .font-card--optima .font-card__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
   .font-card--papyrus .font-card__specimen { background: #e8dfc8; }
   .font-card--papyrus .font-card__big { font-family: Papyrus, fantasy; font-weight: 400; }
+  .font-card--caslon .font-card__specimen { background: #0a0a0a; color: #f0ede6; }
+  .font-card--caslon .font-card__big { font-family: "Big Caslon", "Libre Caslon Text", Caslon, "Palatino Linotype", Georgia, serif; font-weight: 700; letter-spacing: -0.01em; }
+  .font-card--caslon .font-card__alpha { color: #666; }
   .font-card--comic .font-card__specimen { background: #fff9c4; }
   .font-card--comic .font-card__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; letter-spacing: -0.01em; }
 
@@ -269,7 +175,7 @@
   .font-card__excerpt { font-size: 0.9rem; line-height: 1.7; color: #333; flex: 1; }
   .font-card__read { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #777; }
 
-  /* ── FEATURED — <a> is the direct grid child, so grid-column works ── */
+  /* ── FEATURED ── */
   .font-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
   @media (max-width: 600px) { .font-card--featured { grid-template-columns: 1fr; } }
   .font-card--featured .font-card__specimen { min-height: 240px; border-bottom: none; border-right: 1px solid rgba(0,0,0,0.06); }
@@ -347,25 +253,18 @@
           </div>
           <div class="fm-hero__right" aria-hidden="true">
             <div class="hero-specimen">
-              <div class="specimen-word">
-                <span class="spec-courier">Aa</span>
-                <span class="specimen-label">Courier New</span>
-              </div>
-              <div class="specimen-word">
-                <span class="spec-ak"
-                  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:200;">Aa</span>
-                <span class="specimen-label">Akzidenz</span>
-              </div>
-              <div class="specimen-word">
-                <span class="spec-garamond"
-                  style="font-family:Garamond,'Times New Roman',serif;font-style:italic;">Aa</span>
-                <span class="specimen-label">Garamond</span>
-              </div>
-              <div class="specimen-word">
-                <span class="spec-times"
-                  style="font-family:'Times New Roman',Times,serif;">Aa</span>
-                <span class="specimen-label">Times</span>
-              </div>
+              <div class="specimen-word"><span
+                  class="spec-courier">Aa</span><span
+                  class="specimen-label">Courier New</span></div>
+              <div class="specimen-word"><span class="spec-ak"
+                  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:200;">Aa</span><span
+                  class="specimen-label">Akzidenz</span></div>
+              <div class="specimen-word"><span class="spec-garamond"
+                  style="font-family:Garamond,'Times New Roman',serif;font-style:italic;">Aa</span><span
+                  class="specimen-label">Garamond</span></div>
+              <div class="specimen-word"><span class="spec-times"
+                  style="font-family:'Times New Roman',Times,serif;">Aa</span><span
+                  class="specimen-label">Times</span></div>
             </div>
           </div>
         </div>
@@ -374,20 +273,18 @@
       <!-- MARQUEE (decorative) -->
       <div class="fm-marquee" aria-hidden="true">
         <div class="fm-marquee__inner">
-          <span>typography isn't decoration</span><span>·</span>
-          <span>kerning is caring</span><span>·</span>
-          <span>serif > sans — fight me</span><span>·</span>
-          <span>the font is the message</span><span>·</span>
-          <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
-            Baskerville</span><span>·</span>
-          <span>type nerd since before it was cool</span><span>·</span>
-          <span>typography isn't decoration</span><span>·</span>
-          <span>kerning is caring</span><span>·</span>
-          <span>serif > sans — fight me</span><span>·</span>
-          <span>the font is the message</span><span>·</span>
-          <span>Akzidenz-Grotesk · Courier New · Garamond · Futura ·
-            Baskerville</span><span>·</span>
-          <span>type nerd since before it was cool</span><span>·</span>
+          <span>typography isn't decoration</span><span>·</span><span>kerning is
+            caring</span><span>·</span><span>serif > sans — fight
+            me</span><span>·</span><span>the font is the
+            message</span><span>·</span><span>Akzidenz-Grotesk · Courier New ·
+            Garamond · Futura · Baskerville</span><span>·</span><span>type nerd
+            since before it was cool</span><span>·</span><span>typography isn't
+            decoration</span><span>·</span><span>kerning is
+            caring</span><span>·</span><span>serif > sans — fight
+            me</span><span>·</span><span>the font is the
+            message</span><span>·</span><span>Akzidenz-Grotesk · Courier New ·
+            Garamond · Futura · Baskerville</span><span>·</span><span>type nerd
+            since before it was cool</span><span>·</span>
         </div>
       </div>
 
@@ -437,16 +334,15 @@
               aria-label="Akzidenz-Grotesk — the one that started everything">
               <div class="font-card__specimen">
                 <div class="font-card__big">Akzidenz</div>
-                <div class="font-card__alpha" style="color:#f8f8f5;">Aa Bb Cc
+                <div class="font-card__alpha" style="color:#666;">Aa Bb Cc
                   123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Sans-serif</span>
-                  <span class="font-card__tag">1896</span>
-                  <span class="font-card__tag">Berthold</span>
-                  <span class="font-card__tag">featured</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Sans-serif</span><span
+                    class="font-card__tag">1896</span><span
+                    class="font-card__tag">Berthold</span><span
+                    class="font-card__tag">featured</span></div>
                 <div class="font-card__name">Akzidenz-Grotesk — the one that
                   started everything</div>
                 <div class="font-card__excerpt">Before Helvetica. Before
@@ -467,11 +363,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Neo-Grotesque</span>
-                  <span class="font-card__tag">1957</span>
-                  <span class="font-card__tag">Miedinger</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Neo-Grotesque</span><span
+                    class="font-card__tag">1957</span><span
+                    class="font-card__tag">Miedinger</span></div>
                 <div class="font-card__name">Helvetica — the most famous font in
                   the world, for better and worse</div>
                 <div class="font-card__excerpt">It got a documentary. It's on
@@ -491,11 +386,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Serif</span>
-                  <span class="font-card__tag">1530s</span>
-                  <span class="font-card__tag">Old Style</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Serif</span><span
+                    class="font-card__tag">1530s</span><span
+                    class="font-card__tag">Old Style</span></div>
                 <div class="font-card__name">Garamond — five centuries and still
                   the most elegant thing in the room</div>
                 <div class="font-card__excerpt">Claude Garamond cut these
@@ -514,11 +408,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Serif</span>
-                  <span class="font-card__tag">1757</span>
-                  <span class="font-card__tag">Transitional</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Serif</span><span
+                    class="font-card__tag">1757</span><span
+                    class="font-card__tag">Transitional</span></div>
                 <div class="font-card__name">Baskerville — the typeface Benjamin
                   Franklin tried to debunk</div>
                 <div class="font-card__excerpt">John Baskerville's
@@ -538,11 +431,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Geometric Sans</span>
-                  <span class="font-card__tag">1927</span>
-                  <span class="font-card__tag">Renner</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Geometric Sans</span><span
+                    class="font-card__tag">1927</span><span
+                    class="font-card__tag">Renner</span></div>
                 <div class="font-card__name">Futura — the font that went to the
                   moon</div>
                 <div class="font-card__excerpt">Literally. The plaque left on
@@ -561,11 +453,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Humanist Sans</span>
-                  <span class="font-card__tag">1958</span>
-                  <span class="font-card__tag">Zapf</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Humanist Sans</span><span
+                    class="font-card__tag">1958</span><span
+                    class="font-card__tag">Zapf</span></div>
                 <div class="font-card__name">Optima — the typeface that refuses
                   to pick a side</div>
                 <div class="font-card__excerpt">Hermann Zapf designed Optima
@@ -573,30 +464,7 @@
                   no serifs, but its strokes flare at the terminals like a
                   classical Roman inscription. It is technically a sans-serif
                   that behaves like a serif. The Vietnam Veterans Memorial is
-                  set in it. Make of that what you will.</div>
-                <div class="font-card__read">Read more →</div>
-              </div>
-            </a>
-
-            <a href="/blog/" class="font-card font-card--times"
-              aria-label="Times New Roman — misunderstood, overused, and actually great">
-              <div class="font-card__specimen">
-                <div class="font-card__big" style="color:#e8e4da;">Times</div>
-                <div class="font-card__alpha">Aa Bb Cc 123</div>
-              </div>
-              <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Serif</span>
-                  <span class="font-card__tag">1932</span>
-                  <span class="font-card__tag">Morison</span>
-                </div>
-                <div class="font-card__name">Times New Roman — misunderstood,
-                  overused, and actually great</div>
-                <div class="font-card__excerpt">Everyone's default, nobody's
-                  first choice. But Stanley Morison designed it for one of the
-                  most demanding clients imaginable — The Times of London — and
-                  it delivered. The problem isn't the font. It's that nobody
-                  respects it anymore.</div>
+                  set in it.</div>
                 <div class="font-card__read">Read more →</div>
               </div>
             </a>
@@ -608,11 +476,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Display</span>
-                  <span class="font-card__tag">1982</span>
-                  <span class="font-card__tag">Rolston</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Display</span><span
+                    class="font-card__tag">1982</span><span
+                    class="font-card__tag">Rolston</span></div>
                 <div class="font-card__name">Papyrus — the font that made a
                   million spa menus illegitimate</div>
                 <div class="font-card__excerpt">Chris Rolston hand-drew Papyrus
@@ -625,6 +492,30 @@
               </div>
             </a>
 
+            <a href="/blog/" class="font-card font-card--caslon"
+              aria-label="Caslon — the font that founded a nation">
+              <div class="font-card__specimen">
+                <div class="font-card__big" style="color:#f0ede6;">Caslon</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Serif</span><span
+                    class="font-card__tag">1722</span><span
+                    class="font-card__tag">Old Style</span></div>
+                <div class="font-card__name">Caslon — the font that founded a
+                  nation</div>
+                <div class="font-card__excerpt">The U.S. Declaration of
+                  Independence was set in Caslon. So was the Constitution.
+                  William Caslon started by cutting letters into gun barrels —
+                  and produced a typeface so good that everyone switched
+                  immediately. No other typeface has a saying.
+                  "When in doubt, use Caslon." That's not a catchphrase. It's a
+                  300-year track record.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
             <a href="/blog/" class="font-card font-card--comic"
               aria-label="Comic Sans — thirty years of crimes against design">
               <div class="font-card__specimen">
@@ -632,11 +523,10 @@
                 <div class="font-card__alpha">Aa Bb Cc 123</div>
               </div>
               <div class="font-card__body">
-                <div class="font-card__meta">
-                  <span class="font-card__tag">Casual</span>
-                  <span class="font-card__tag">1994</span>
-                  <span class="font-card__tag">Connare</span>
-                </div>
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Casual</span><span
+                    class="font-card__tag">1994</span><span
+                    class="font-card__tag">Connare</span></div>
                 <div class="font-card__name">Comic Sans — thirty years of crimes
                   against design</div>
                 <div class="font-card__excerpt">Vincent Connare designed it to
@@ -713,15 +603,15 @@
               style="display:flex; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
               <div><span
                   style="font-size:2rem; display:block; line-height:1;">30</span><span
-                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
+                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
                   caring too much about fonts</span></div>
               <div><span
                   style="font-size:2rem; display:block; line-height:1;">0</span><span
-                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
+                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
                   for having opinions about kerning</span></div>
               <div><span
                   style="font-size:2rem; display:block; line-height:1;">∞</span><span
-                  style="font-size:0.7rem; opacity:0.5; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
+                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
                   feelings about Comic Sans</span></div>
             </div>
             <a href="/blog/" class="fm-btn fm-btn--solid"
@@ -737,32 +627,30 @@
       aria-labelledby="contact-heading">
       <div
         style="max-width:1100px; margin:0 auto; padding:clamp(3rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(3rem,6vw,6rem); align-items:start;">
-
         <div>
           <p
-            style="font-family:'Courier New',Courier,monospace; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(0,0,0,0.4); margin-bottom:1.25rem;">get
+            style="font-family:'Courier New',Courier,monospace; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#666; margin-bottom:1.25rem;">get
             in touch</p>
           <h2 id="contact-heading"
             style="font-family:'Courier New',Courier,monospace; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
             something.<br><em style="font-style:italic; color:#5a8a72;">we have
               opinions<br>about everything.</em></h2>
           <p
-            style="font-size:0.85rem; line-height:1.75; color:rgba(0,0,0,0.9); margin-bottom:2rem;">Whether
+            style="font-size:0.9rem; line-height:1.75; color:#222; margin-bottom:2rem;">Whether
             you want to argue about kerning, pitch a collaboration, or just tell
             us we're wrong about Comic Sans — we're here for it.</p>
           <div
             style="width:32px; height:1px; background:rgba(0,0,0,0.15); margin-bottom:1.75rem;"></div>
           <div
-            style="font-size:0.72rem; letter-spacing:0.06em; color:rgba(0,0,0,0.85); line-height:2.4;">
+            style="font-size:0.8rem; letter-spacing:0.06em; color:#333; line-height:2.4;">
             <div>instagram — <a
                 href="https://www.instagram.com/fontsmatterperiod"
                 target="_blank" rel="noopener noreferrer"
-                style="color:rgba(0,0,0,0.6); text-decoration:none;">@fontsmatterperiod</a></div>
+                style="color:#555; text-decoration:none;">@fontsmatterperiod</a></div>
             <div>based in — San Diego, CA</div>
             <div>est. — in Courier New</div>
           </div>
         </div>
-
         <div>
           <div role="group" aria-label="Contact type"
             style="display:flex; border:1px solid rgba(0,0,0,0.15); margin-bottom:2rem;">
@@ -775,7 +663,6 @@
               style="flex:1; font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
               &amp; collabs</button>
           </div>
-
           <div id="form-general">
             <div class="fm-success" id="success-general">thanks — we got it.
               opinions incoming.</div>
@@ -783,84 +670,68 @@
             <form id="fm-form-general" novalidate>
               <input type="hidden" name="inquiry_type"
                 value="general / fan mail">
-              <div class="fm-field">
-                <label class="fm-label" for="gen-name">name</label>
-                <input type="text" id="gen-name" name="name" class="fm-input"
-                  placeholder="your name" required autocomplete="name">
-                <span class="fm-error-msg" data-fs-error="name"></span>
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="gen-email">email</label>
-                <input type="email" id="gen-email" name="email" class="fm-input"
-                  placeholder="your@email.com" required autocomplete="email">
-                <span class="fm-error-msg" data-fs-error="email"></span>
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="gen-message">what's on your
-                  mind</label>
-                <textarea id="gen-message" name="message" class="fm-input"
-                  rows="5" placeholder="opinions, questions, arguments welcome."
-                  style="resize:none;" required></textarea>
-                <span class="fm-error-msg" data-fs-error="message"></span>
-              </div>
-              <div class="fm-field">
-                <label
-                  style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.78rem; color:#555; letter-spacing:0.02em;">
-                  <input type="checkbox" name="join_list" value="yes"
+              <div class="fm-field"><label class="fm-label"
+                  for="gen-name">name</label><input type="text" id="gen-name"
+                  name="name" class="fm-input" placeholder="your name" required
+                  autocomplete="name"><span class="fm-error-msg"
+                  data-fs-error="name"></span></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="gen-email">email</label><input type="email"
+                  id="gen-email" name="email" class="fm-input"
+                  placeholder="your@email.com" required
+                  autocomplete="email"><span class="fm-error-msg"
+                  data-fs-error="email"></span></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="gen-message">what's on your mind</label><textarea
+                  id="gen-message" name="message" class="fm-input" rows="5"
+                  placeholder="opinions, questions, arguments welcome."
+                  style="resize:none;" required></textarea><span
+                  class="fm-error-msg" data-fs-error="message"></span></div>
+              <div class="fm-field"><label
+                  style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.85rem; color:#555; letter-spacing:0.02em;"><input
+                    type="checkbox" name="join_list" value="yes"
                     style="accent-color:#0a0a0a;"> join the list — new font
-                  features &amp; hot takes
-                </label>
-              </div>
+                  features &amp; hot takes</label></div>
               <button type="submit" class="fm-submit" data-fs-submit-btn>send it
                 →</button>
             </form>
           </div>
-
           <div id="form-press" style="display:none;">
             <div class="fm-success" id="success-press">thanks — we'll be in
               touch. set in courier new, obviously.</div>
             <div class="fm-error-msg" id="error-press"></div>
             <form id="fm-form-press" novalidate>
               <input type="hidden" name="inquiry_type" value="press / collabs">
-              <div class="fm-field">
-                <label class="fm-label" for="press-name">name</label>
-                <input type="text" id="press-name" name="name" class="fm-input"
-                  placeholder="your name" required autocomplete="name">
-                <span class="fm-error-msg" data-fs-error="name"></span>
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="press-email">email</label>
-                <input type="email" id="press-email" name="email"
-                  class="fm-input" placeholder="work@publication.com" required
-                  autocomplete="email">
-                <span class="fm-error-msg" data-fs-error="email"></span>
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="press-org">publication /
-                  company</label>
-                <input type="text" id="press-org" name="organization"
+              <div class="fm-field"><label class="fm-label"
+                  for="press-name">name</label><input type="text"
+                  id="press-name" name="name" class="fm-input"
+                  placeholder="your name" required autocomplete="name"><span
+                  class="fm-error-msg" data-fs-error="name"></span></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="press-email">email</label><input type="email"
+                  id="press-email" name="email" class="fm-input"
+                  placeholder="work@publication.com" required
+                  autocomplete="email"><span class="fm-error-msg"
+                  data-fs-error="email"></span></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="press-org">publication / company</label><input
+                  type="text" id="press-org" name="organization"
                   class="fm-input" placeholder="where you're from"
-                  autocomplete="organization">
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="press-type">type of inquiry</label>
-                <select id="press-type" name="inquiry_subtype"
-                  class="fm-input fm-select">
-                  <option value>select one</option>
-                  <option>press / media feature</option>
-                  <option>brand collaboration</option>
-                  <option>licensing / usage</option>
-                  <option>wholesale</option>
-                  <option>other</option>
-                </select>
-              </div>
-              <div class="fm-field">
-                <label class="fm-label" for="press-message">tell us more</label>
-                <textarea id="press-message" name="message" class="fm-input"
-                  rows="4" placeholder="the pitch, the idea, the ask."
-                  style="resize:none;" required></textarea>
-                <span class="fm-error-msg" data-fs-error="message"></span>
-              </div>
+                  autocomplete="organization"></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="press-type">type of inquiry</label><select
+                  id="press-type" name="inquiry_subtype"
+                  class="fm-input fm-select"><option value>select
+                    one</option><option>press / media
+                    feature</option><option>brand
+                    collaboration</option><option>licensing /
+                    usage</option><option>wholesale</option><option>other</option></select></div>
+              <div class="fm-field"><label class="fm-label"
+                  for="press-message">tell us more</label><textarea
+                  id="press-message" name="message" class="fm-input" rows="4"
+                  placeholder="the pitch, the idea, the ask."
+                  style="resize:none;" required></textarea><span
+                  class="fm-error-msg" data-fs-error="message"></span></div>
               <button type="submit" class="fm-submit" data-fs-submit-btn>send it
                 →</button>
             </form>
@@ -874,18 +745,17 @@
       style="border-top:1px solid rgba(0,0,0,0.1); background:#e3f1eb; padding:1.5rem var(--page-pad);">
       <div
         style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-        <p
-          style="font-size:0.65rem; letter-spacing:0.06em; color:rgba(0,0,0,0.35);">©
-          2026 fonts matter, period. · San Diego, CA</p>
+        <p style="font-size:0.7rem; letter-spacing:0.06em; color:#777;">© 2026
+          fonts matter, period. · San Diego, CA</p>
         <nav aria-label="Footer navigation" style="display:flex; gap:1.5rem;">
           <a href="/blog/"
-            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">the
+            style="font-size:0.7rem; color:#666; text-decoration:none; letter-spacing:0.06em;">the
             fonts</a>
           <a href="https://www.instagram.com/fontsmatterperiod" target="_blank"
             rel="noopener noreferrer"
-            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">instagram</a>
+            style="font-size:0.7rem; color:#666; text-decoration:none; letter-spacing:0.06em;">instagram</a>
           <a href="/policies/privacy-policy"
-            style="font-size:0.65rem; color:rgba(0,0,0,0.4); text-decoration:none; letter-spacing:0.06em;">privacy</a>
+            style="font-size:0.7rem; color:#666; text-decoration:none; letter-spacing:0.06em;">privacy</a>
         </nav>
       </div>
     </footer>
@@ -913,36 +783,18 @@
     errorEl.textContent = '';
     const data = new FormData(formEl);
     try {
-      const res = await fetch('https://formspree.io/f/xrejbkaz', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        formEl.style.display = 'none';
-        successEl.style.display = 'block';
-      } else {
+      const res = await fetch('https://formspree.io/f/xrejbkaz', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      if (res.ok) { formEl.style.display = 'none'; successEl.style.display = 'block'; }
+      else {
         const json = await res.json();
-        errorEl.textContent = json.errors
-          ? json.errors.map(e => e.message).join(', ')
-          : 'something went wrong — try again.';
+        errorEl.textContent = json.errors ? json.errors.map(e => e.message).join(', ') : 'something went wrong — try again.';
         btn.disabled = false;
       }
-    } catch (e) {
-      errorEl.textContent = 'network error — please try again.';
-      btn.disabled = false;
-    }
+    } catch (e) { errorEl.textContent = 'network error — please try again.'; btn.disabled = false; }
   }
 
-  document.getElementById('fm-form-general').addEventListener('submit', function(e) {
-    e.preventDefault();
-    submitForm(this, document.getElementById('success-general'), document.getElementById('error-general'));
-  });
-
-  document.getElementById('fm-form-press').addEventListener('submit', function(e) {
-    e.preventDefault();
-    submitForm(this, document.getElementById('success-press'), document.getElementById('error-press'));
-  });
+  document.getElementById('fm-form-general').addEventListener('submit', function(e) { e.preventDefault(); submitForm(this, document.getElementById('success-general'), document.getElementById('error-general')); });
+  document.getElementById('fm-form-press').addEventListener('submit', function(e) { e.preventDefault(); submitForm(this, document.getElementById('success-press'), document.getElementById('error-press')); });
 </script>
 
   </body>
