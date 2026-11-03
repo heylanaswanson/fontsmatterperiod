@@ -37,8 +37,10 @@
     <meta name="twitter:description"
       content="Not a neutral overview. Every typeface gets an opinion, a history, and an argument.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cinzel:wght@700&family=DM+Mono:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=GFS+Didot&family=Libre+Franklin:wght@700&family=Montserrat:wght@700&display=swap"
       rel="stylesheet">
 
     <!-- Google Analytics -->
@@ -58,7 +60,7 @@
     --black: #0a0a0a;
     --cream: #f0ede6;
     --off-white: #f8f8f5;
-    --sage: #e3f1eb;
+    --sage: #e3eff2;
     --mono: "Courier New", Courier, monospace;
     --garamond: "EB Garamond", Garamond, serif;
     --dm: "DM Mono", monospace;
@@ -111,7 +113,7 @@
   .entry--garamond .entry__big { font-family: var(--garamond); font-weight: 800; font-style: italic; }
 
   .entry--comic .entry__specimen { background: #1a1a1a; }
-  .entry--comic .entry__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; color: var(--cream); font-size: clamp(2rem, 4vw, 3.5rem); }
+  .entry--comic .entry__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; color: var(--cream); font-size: clamp(1.8rem, 3.6cqw, 3.1rem); }
   .entry--comic .entry__alpha { color: #aaa; }
   .entry--comic .entry__specimen-num { color: #aaa; }
 
@@ -145,12 +147,61 @@
   .entry--optima .entry__specimen { background: #f5f0e8; }
   .entry--optima .entry__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
 
+  .entry--times .entry__specimen { background: #1a1a2e; }
+  .entry--times .entry__big { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #e8e4da; letter-spacing: -0.01em; }
+  .entry--times .entry__alpha { color: #8a8a9a; }
+  .entry--times .entry__specimen-num { color: #6a6a7a; }
+
+  .entry--franklin .entry__specimen { background: #e8e4dc; }
+  .entry--franklin .entry__big { font-family: "Libre Franklin", "Franklin Gothic Medium", "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; font-size: clamp(1.9rem, 4cqw, 3.2rem); }
+
+  .entry--arial .entry__specimen { background: #1e1e1e; }
+  .entry--arial .entry__big { font-family: Arial, "Arial Nova", Helvetica, sans-serif; font-weight: 700; color: #f8f8f5; letter-spacing: -0.03em; }
+  .entry--arial .entry__alpha { color: #999; }
+  .entry--arial .entry__specimen-num { color: #666; }
+
+  .entry--didot .entry__specimen { background: #f8f4ee; }
+  .entry--didot .entry__big { font-family: "GFS Didot", Didot, "Didot LT Std", "Bodoni Moda", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+
+  .entry--bodoni .entry__specimen { background: #fff; }
+  .entry--bodoni .entry__big { font-family: "Bodoni Moda", "Bodoni MT", "Bodoni 72", Didot, Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
+
+  .entry--gill .entry__specimen { background: #182418; }
+  .entry--gill .entry__big { font-family: "Gill Sans", "Gill Sans MT", Lato, Calibri, sans-serif; font-weight: 400; color: #e8f0ea; letter-spacing: -0.01em; }
+  .entry--gill .entry__alpha { color: #8aaa96; }
+  .entry--gill .entry__specimen-num { color: #6a8a78; }
+
+  .entry--eurostile .entry__specimen { background: #060e1a; }
+  .entry--eurostile .entry__big { font-family: Eurostile, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-weight: 700; color: #dde8f2; letter-spacing: 0.02em; font-size: clamp(1.9rem, 4cqw, 3.3rem); }
+  .entry--eurostile .entry__alpha { color: #7a94ae; }
+  .entry--eurostile .entry__specimen-num { color: #5a7490; }
+
+  .entry--gotham .entry__specimen { background: #f2f0eb; }
+  .entry--gotham .entry__big { font-family: Gotham, Montserrat, "Century Gothic", Futura, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+  .entry--trajan .entry__specimen { background: #1a1208; }
+  .entry--trajan .entry__big { font-family: "Trajan Pro", Cinzel, "Palatino Linotype", Times, serif; font-weight: 700; color: #f0e8d0; letter-spacing: 0.04em; text-transform: uppercase; font-size: clamp(2rem, 4.2cqw, 3.5rem); }
+  .entry--trajan .entry__alpha { color: #a89878; }
+  .entry--trajan .entry__specimen-num { color: #8a7a60; }
+
+  .entry--copperplate .entry__specimen { background: #0e1c18; }
+  .entry--copperplate .entry__big { font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight: 400; color: #deeae6; letter-spacing: 0.08em; text-transform: uppercase; font-size: clamp(1.8rem, 3.8cqw, 3rem); }
+  .entry--copperplate .entry__alpha { color: #7a9c8e; }
+  .entry--copperplate .entry__specimen-num { color: #5a8070; }
+
+  /* the house font — sage plate, reserved for this one */
+  .entry--courier .entry__specimen { background: var(--sage); }
+  .entry--courier .entry__big { font-family: "Courier New", Courier, monospace; font-weight: 700; letter-spacing: -0.03em; font-size: clamp(1.9rem, 4cqw, 3.3rem); }
+  .entry--courier .entry__alpha { color: #577f8d; }
+  .entry--courier .entry__specimen-num { color: #7a9eac; }
+
   /* card body */
   .entry__body { padding: 1.25rem 1.75rem 1.5rem; flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
   .entry__tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
   .entry__tag { font-family: var(--dm); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.2); padding: 0.18rem 0.5rem; color: #555; white-space: nowrap; }
   .entry__title { font-size: 1rem; font-weight: 400; line-height: 1.35; margin-bottom: 0.75rem; color: var(--black); }
-  .entry__hook { font-size: 0.92rem; line-height: 1.7; color: #333; flex: 1; overflow: hidden; }
+  /* reading prose — matches the homepage field guide and the article pages */
+  .entry__hook { font-family: var(--garamond); font-size: 1.08rem; line-height: 1.55; color: #2a2a2a; flex: 1; overflow: hidden; }
   .entry__hook em { font-style: italic; }
 
   .entry__facts { display: flex; gap: 1.25rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); flex-wrap: wrap; }
@@ -161,7 +212,7 @@
   /* ── INSTAGRAM CTA ── */
   .ig-cta { background: var(--black); color: var(--cream); padding: clamp(2.5rem, 6vw, 4rem) var(--pad); text-align: center; }
   .ig-cta p { font-family: var(--garamond); font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-style: italic; line-height: 1.5; margin-bottom: 1.5rem; color: #ddd; }
-  .ig-cta a { display: inline-block; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; padding: 0.75rem 1.75rem; border: 1px solid var(--cream); color: var(--cream); text-decoration: none; transition: background 0.15s, color 0.15s; }
+  .ig-cta a { display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; padding: 0.75rem 1.75rem; border: 1px solid var(--cream); color: var(--cream); text-decoration: none; transition: background 0.15s, color 0.15s; }
   .ig-cta a:hover { background: var(--cream); color: var(--black); }
 
   /* ── FOOTER ── */
@@ -232,7 +283,7 @@
 
         <!-- 001 GARAMOND -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--garamond"
+          <a href="/blog/garamond/" class="entry entry--garamond"
             data-tags="serif beloved"
             aria-label="Garamond — 500 years old. Still everywhere.">
             <div class="entry__specimen">
@@ -267,7 +318,7 @@
 
         <!-- 002 COMIC SANS -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--comic" data-tags="controversial"
+          <a href="/blog/comic-sans/" class="entry entry--comic" data-tags="controversial"
             aria-label="Comic Sans — The most hated font in the world.">
             <div class="entry__specimen">
               <span class="entry__specimen-num">No. 002</span>
@@ -300,7 +351,7 @@
 
         <!-- 003 BASKERVILLE -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--baskerville"
+          <a href="/blog/baskerville/" class="entry entry--baskerville"
             data-tags="serif beloved"
             aria-label="Baskerville — The font that makes you believe things.">
             <div class="entry__specimen">
@@ -334,7 +385,7 @@
 
         <!-- 004 PAPYRUS -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--papyrus"
+          <a href="/blog/papyrus/" class="entry entry--papyrus"
             data-tags="display controversial"
             aria-label="Papyrus — Guilty. With a footnote.">
             <div class="entry__specimen">
@@ -368,7 +419,7 @@
 
         <!-- 005 FUTURA -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--futura"
+          <a href="/blog/futura/" class="entry entry--futura"
             data-tags="sans-serif beloved"
             aria-label="Futura — The font that went to the moon.">
             <div class="entry__specimen">
@@ -399,7 +450,7 @@
 
         <!-- 006 CASLON -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--caslon" data-tags="serif beloved"
+          <a href="/blog/caslon/" class="entry entry--caslon" data-tags="serif beloved"
             aria-label="Caslon — The font that founded a nation.">
             <div class="entry__specimen">
               <span class="entry__specimen-num">No. 006</span>
@@ -434,7 +485,7 @@
 
         <!-- 007 AKZIDENZ-GROTESK -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--akzidenz"
+          <a href="/blog/akzidenz-grotesk/" class="entry entry--akzidenz"
             data-tags="sans-serif beloved"
             aria-label="Akzidenz-Grotesk — the one that started everything.">
             <div class="entry__specimen">
@@ -472,7 +523,7 @@
 
         <!-- 008 HELVETICA -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--helvetica"
+          <a href="/blog/helvetica/" class="entry entry--helvetica"
             data-tags="sans-serif beloved controversial"
             aria-label="Helvetica — the most famous font in the world.">
             <div class="entry__specimen">
@@ -509,7 +560,7 @@
 
         <!-- 009 OPTIMA -->
         <article role="listitem">
-          <a href="/blog/" class="entry entry--optima"
+          <a href="/blog/optima/" class="entry entry--optima"
             data-tags="sans-serif beloved"
             aria-label="Optima — the typeface that refuses to pick a side.">
             <div class="entry__specimen">
@@ -539,6 +590,388 @@
                 <div><span class="entry__fact-num">1982</span><span
                     class="entry__fact-label">Vietnam
                     Veterans<br>Memorial</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 010 TIMES NEW ROMAN -->
+        <article role="listitem">
+          <a href="/blog/times-new-roman/" class="entry entry--times" data-tags="serif"
+            aria-label="Times New Roman — it was never meant to be beautiful.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 010</span>
+              <div class="entry__big">Times</div>
+              <div class="entry__alpha">Aa Bb Cc · 1931</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Serif</span><span
+                  class="entry__tag">1931</span><span
+                  class="entry__tag">Morison</span></div>
+              <div class="entry__title">It was never meant to be beautiful. It
+                was meant to be cheap.</div>
+              <div class="entry__hook">The Times of London commissioned it in
+                1931 with one brief: fit more words per column inch. Not
+                elegance. Not prestige. Economy. Stanley Morison directed it,
+                Victor Lardent drew it, and it first set the paper the following
+                year. It then became the default of academia, law, and
+                bureaucracy worldwide — a cost-cutting measure mistaken for a
+                standard.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1931</span><span
+                    class="entry__fact-label">commissioned<br>by The
+                    Times</span></div>
+                <div><span class="entry__fact-num">40yr</span><span
+                    class="entry__fact-label">the paper's<br>house
+                    face</span></div>
+                <div><span class="entry__fact-num">#1</span><span
+                    class="entry__fact-label">default on<br>every word
+                    processor</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 011 FRANKLIN GOTHIC -->
+        <article role="listitem">
+          <a href="/blog/franklin-gothic/" class="entry entry--franklin" data-tags="sans-serif"
+            aria-label="Franklin Gothic — he designed 221 typefaces. You've never heard his name.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 011</span>
+              <div class="entry__big">Franklin</div>
+              <div class="entry__alpha">Aa Bb Cc · 1902</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Grotesque</span><span
+                  class="entry__tag">1902</span><span
+                  class="entry__tag">Benton</span></div>
+              <div class="entry__title">He designed 221 typefaces. You've never
+                heard his name.</div>
+              <div class="entry__hook">Morris Fuller Benton was the most
+                prolific type designer in American history — head of design at
+                American Type Founders for over three decades. Franklin Gothic,
+                named for Benjamin Franklin, became the voice of the American
+                newspaper headline and the political poster. Heavy, condensed,
+                impossible to ignore. Benton got no credit on any of it.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">221</span><span
+                    class="entry__fact-label">typefaces<br>designed</span></div>
+                <div><span class="entry__fact-num">1902</span><span
+                    class="entry__fact-label">American<br>Type
+                    Founders</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 012 ARIAL -->
+        <article role="listitem">
+          <a href="/blog/arial/" class="entry entry--arial"
+            data-tags="sans-serif controversial"
+            aria-label="Arial — the font that took Helvetica's job. Legally.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 012</span>
+              <div class="entry__big">Arial</div>
+              <div class="entry__alpha">Aa Bb Cc · 1982</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Neo-Grotesque</span><span
+                  class="entry__tag">1982</span><span
+                  class="entry__tag">Monotype</span></div>
+              <div class="entry__title">The font that took Helvetica's job.
+                Legally.</div>
+              <div class="entry__hook">Monotype needed a Helvetica that nobody
+                had to license. Robin Nicholas and Patricia Saunders built Arial
+                with identical character widths, so text set in one reflows
+                correctly in the other — metrically a clone, visually a
+                near-miss. Microsoft shipped it with Windows 3.1 in 1992.
+                Designers noticed immediately. Everyone else never did.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1982</span><span
+                    class="entry__fact-label">drawn as a<br>Helvetica
+                    substitute</span></div>
+                <div><span class="entry__fact-num">1992</span><span
+                    class="entry__fact-label">shipped with<br>Windows
+                    3.1</span></div>
+                <div><span class="entry__fact-num">100%</span><span
+                    class="entry__fact-label">metric match,<br>different
+                    letters</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 013 DIDOT -->
+        <article role="listitem">
+          <a href="/blog/didot/" class="entry entry--didot" data-tags="serif"
+            aria-label="Didot — everyone says Vogue's logo is Bodoni. It isn't.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 013</span>
+              <div class="entry__big">Didot</div>
+              <div class="entry__alpha">Aa Bb Cc · 1784</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Didone</span><span
+                  class="entry__tag">1784</span><span class="entry__tag">F.
+                  Didot</span></div>
+              <div class="entry__title">Everyone says Vogue's logo is Bodoni. It
+                isn't. The mix-up makes total sense.</div>
+              <div class="entry__hook">Firmin Didot cut these hairline serifs
+                and extreme stroke contrasts in Paris. Giambattista Bodoni
+                reached nearly identical conclusions in Italy at nearly the same
+                time, working independently. The two faces are the reason an
+                entire category — Didone — is named after both of them. Vogue
+                has used a Didot since the 1950s. Designers will still correct
+                you about it.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1784</span><span
+                    class="entry__fact-label">Paris,<br>Firmin
+                    Didot</span></div>
+                <div><span class="entry__fact-num">2</span><span
+                    class="entry__fact-label">foundries, one<br>idea,
+                    independently</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 014 BODONI -->
+        <article role="listitem">
+          <a href="/blog/bodoni/" class="entry entry--bodoni" data-tags="serif"
+            aria-label="Bodoni — hard to read. Used by Vogue for a century anyway.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 014</span>
+              <div class="entry__big">Bodoni</div>
+              <div class="entry__alpha">Aa Bb Cc · 1798</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Didone</span><span
+                  class="entry__tag">1798</span><span class="entry__tag">G.
+                  Bodoni</span></div>
+              <div class="entry__title">Hard to read. Used by fashion for a
+                century anyway. Nobody is changing it.</div>
+              <div class="entry__hook">Giambattista Bodoni drew letters for
+                display, not for paragraphs. The violent jump between thick
+                stems and hairline serifs dazzles at poster size and dissolves
+                into glare at body size. Fashion publishing worked out early
+                that this is the point: something that looks expensive at a
+                glance and resists being read too closely is exactly the
+                brief.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1798</span><span
+                    class="entry__fact-label">Parma,<br>Italy</span></div>
+                <div><span class="entry__fact-num">∞</span><span
+                    class="entry__fact-label">fashion mastheads<br>since
+                    then</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 015 GILL SANS -->
+        <article role="listitem">
+          <a href="/blog/gill-sans/" class="entry entry--gill"
+            data-tags="sans-serif controversial"
+            aria-label="Gill Sans — beautiful typeface. Monstrous designer. Still everywhere.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 015</span>
+              <div class="entry__big">Gill Sans</div>
+              <div class="entry__alpha">Aa Bb Cc · 1928</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span class="entry__tag">Humanist
+                  Sans</span><span class="entry__tag">1928</span><span
+                  class="entry__tag">Eric Gill</span></div>
+              <div class="entry__title">Beautiful typeface. Monstrous designer.
+                Still everywhere.</div>
+              <div class="entry__hook">Eric Gill studied under Edward Johnston,
+                whose Underground lettering shaped London, then drew Gill Sans
+                for Monotype in 1928. It became British Railways, Penguin Books,
+                and the BBC. A 1989 biography drawing on his own diaries
+                established that he was also a serial abuser. The type community
+                has never resolved what to do with that, and the typeface is
+                still on your screen.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1928</span><span
+                    class="entry__fact-label">Monotype,<br>England</span></div>
+                <div><span class="entry__fact-num">1989</span><span
+                    class="entry__fact-label">biography
+                    changed<br>everything</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 016 EUROSTILE -->
+        <article role="listitem">
+          <a href="/blog/eurostile/" class="entry entry--eurostile" data-tags="sans-serif"
+            aria-label="Eurostile — the typeface that made the future a rectangle.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 016</span>
+              <div class="entry__big">Eurostile</div>
+              <div class="entry__alpha">Aa Bb Cc · 1962</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span class="entry__tag">Geometric
+                  Sans</span><span class="entry__tag">1962</span><span
+                  class="entry__tag">Novarese</span></div>
+              <div class="entry__title">The typeface that made the future a
+                rectangle.</div>
+              <div class="entry__hook">Aldo Novarese took Microgramma — a
+                caps-only face he'd built a decade earlier — and gave it a
+                lowercase. The result squares off every curve just enough to
+                read as engineered rather than drawn. Every spacecraft console,
+                sci-fi title card, and hi-fi faceplate of the next twenty years
+                used it. The Space Age had a typeface, and this was it.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1962</span><span
+                    class="entry__fact-label">Nebiolo,<br>Turin</span></div>
+                <div><span class="entry__fact-num">1952</span><span
+                    class="entry__fact-label">Microgramma<br>came
+                    first</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 017 GOTHAM -->
+        <article role="listitem">
+          <a href="/blog/gotham/" class="entry entry--gotham"
+            data-tags="sans-serif beloved"
+            aria-label="Gotham — the font that won a presidential election.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 017</span>
+              <div class="entry__big">Gotham</div>
+              <div class="entry__alpha">Aa Bb Cc · 2000</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span class="entry__tag">Geometric
+                  Sans</span><span class="entry__tag">2000</span><span
+                  class="entry__tag">Frere-Jones</span></div>
+              <div class="entry__title">The font that won a presidential
+                election.</div>
+              <div class="entry__hook">GQ commissioned Tobias Frere-Jones to
+                find a typeface in New York itself — the painted signs, the
+                building facades, the lettering of the Port Authority Bus
+                Terminal. No designer had drawn it; the city had. Then the Obama
+                campaign set HOPE in it in 2008, and every candidate, startup,
+                and city government in America wanted to sound exactly that
+                trustworthy.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">2000</span><span
+                    class="entry__fact-label">commissioned<br>by GQ</span></div>
+                <div><span class="entry__fact-num">2008</span><span
+                    class="entry__fact-label">the campaign<br>that made
+                    it</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 018 TRAJAN -->
+        <article role="listitem">
+          <a href="/blog/trajan/" class="entry entry--trajan" data-tags="display"
+            aria-label="Trajan — carved in stone in 113 AD. Now on every movie poster.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 018</span>
+              <div class="entry__big">Trajan</div>
+              <div class="entry__alpha">Aa Bb Cc · 1989</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span class="entry__tag">Display
+                  Serif</span><span class="entry__tag">1989</span><span
+                  class="entry__tag">Twombly</span></div>
+              <div class="entry__title">Carved in stone in 113 AD. Now on every
+                movie poster.</div>
+              <div class="entry__hook">Carol Twombly drew Trajan from the
+                inscription at the base of Trajan's Column in Rome — letterforms
+                cut around 113 AD and still considered the high point of Roman
+                monumental capitals. There is no lowercase, because there was no
+                lowercase. Hollywood found it and never let go. If a poster
+                needs to feel important, this is the shortcut.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">113</span><span
+                    class="entry__fact-label">AD, the
+                    original<br>inscription</span></div>
+                <div><span class="entry__fact-num">0</span><span
+                    class="entry__fact-label">lowercase
+                    letters,<br>by design</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 019 COPPERPLATE GOTHIC -->
+        <article role="listitem">
+          <a href="/blog/copperplate-gothic/" class="entry entry--copperplate" data-tags="display"
+            aria-label="Copperplate Gothic — capitals only. No excuses.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 019</span>
+              <div class="entry__big">Copper</div>
+              <div class="entry__alpha">Aa Bb Cc · 1901</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Display</span><span
+                  class="entry__tag">1901</span><span
+                  class="entry__tag">Goudy</span></div>
+              <div class="entry__title">Capitals only. No excuses.</div>
+              <div class="entry__hook">Frederic Goudy gave Copperplate Gothic
+                serifs so small they read less as serifs than as the mark a
+                graver leaves in metal — which is the whole idea, since it was
+                built for engraved stationery. There is no true lowercase. It
+                has communicated authority, permanence, and a certain inability
+                to relax from law firm letterheads for over a century.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1901</span><span
+                    class="entry__fact-label">American<br>Type
+                    Founders</span></div>
+                <div><span class="entry__fact-num">120+</span><span
+                    class="entry__fact-label">years on<br>business
+                    cards</span></div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- 020 COURIER NEW -->
+        <article role="listitem">
+          <a href="/blog/courier-new/" class="entry entry--courier"
+            data-tags="monospace beloved"
+            aria-label="Courier New — every screenplay you have ever loved is set in this.">
+            <div class="entry__specimen">
+              <span class="entry__specimen-num">No. 020</span>
+              <div class="entry__big">Courier</div>
+              <div class="entry__alpha">Aa Bb Cc · 1955</div>
+            </div>
+            <div class="entry__body">
+              <div class="entry__tags"><span
+                  class="entry__tag">Monospace</span><span
+                  class="entry__tag">1955</span><span
+                  class="entry__tag">Kettler</span><span
+                  class="entry__tag">house font</span></div>
+              <div class="entry__title">Every screenplay you have ever loved is
+                set in this. One page, one minute.</div>
+              <div class="entry__hook">Howard Kettler drew Courier for IBM's
+                typewriters in 1955. <em>IBM never locked it down</em>, so it
+                spread to every competitor, every machine, and eventually every
+                operating system on earth. It is the house font of this entire
+                site, and the reason a screenwriter can hand you 110 pages and
+                tell you the film runs an hour and fifty.</div>
+              <div class="entry__facts">
+                <div><span class="entry__fact-num">1955</span><span
+                    class="entry__fact-label">drawn for IBM<br>typewriters</span></div>
+                <div><span class="entry__fact-num">1:1</span><span
+                    class="entry__fact-label">page to minute<br>of screen
+                    time</span></div>
+                <div><span class="entry__fact-num">2004</span><span
+                    class="entry__fact-label">State Dept<br>dropped
+                    it</span></div>
               </div>
             </div>
           </a>
@@ -587,7 +1020,7 @@
       let visible = 0;
       cards.forEach(card => {
         const entry = card.querySelector('.entry');
-        const tags = entry ? (entry.dataset.tags || '') : '';
+        const tags = entry ? (entry.dataset.tags || '').split(/\s+/) : [];
         const show = filter === 'all' || tags.includes(filter);
         card.style.display = show ? '' : 'none';
         if (show) visible++;

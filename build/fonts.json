@@ -1,0 +1,655 @@
+[
+  {
+    "slug": "garamond",
+    "num": "001",
+    "name": "Garamond",
+    "specimen": "Garamond",
+    "mod": "garamond",
+    "category": "Serif",
+    "year": "1530",
+    "designer": "Claude Garamond",
+    "origin": "Paris, France",
+    "tags": [
+      "serif",
+      "beloved"
+    ],
+    "title": "500 years old. Still everywhere.",
+    "hook": "Claude Garamond cut these letters for the French king. They became the most copied typeface in history. 18+ versions exist — none are exact. The most common one (ITC Garamond) is considered a distortion. Adobe Garamond Pro and EB Garamond are the ones that got it right.",
+    "renderedIn": "EB Garamond (Google Fonts)",
+    "facts": [
+      {
+        "num": "24%",
+        "label": "less ink than Times New Roman"
+      },
+      {
+        "num": "18+",
+        "label": "versions called \"Garamond\""
+      },
+      {
+        "num": "500",
+        "label": "years in continuous use"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "comic-sans",
+    "num": "002",
+    "name": "Comic Sans",
+    "specimen": "Comic Sans",
+    "mod": "comic",
+    "category": "Casual",
+    "year": "1994",
+    "designer": "Vincent Connare",
+    "origin": "Microsoft, Redmond",
+    "tags": [
+      "controversial"
+    ],
+    "title": "The most hated font in the world. Let's talk about why that's wrong.",
+    "hook": "Vincent Connare designed it in a weekend — because he was annoyed that a cartoon dog in Microsoft Bob was speaking in Times New Roman. It was never meant to leave that context. NASA used it for the Curiosity Mars rover announcement anyway. Make of that what you will.",
+    "renderedIn": "Comic Sans MS (system)",
+    "facts": [
+      {
+        "num": "1994",
+        "label": "designed for Microsoft Bob"
+      },
+      {
+        "num": "#1",
+        "label": "most misused font in history"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "baskerville",
+    "num": "003",
+    "name": "Baskerville",
+    "specimen": "Baskerville",
+    "mod": "baskerville",
+    "category": "Serif",
+    "year": "1757",
+    "designer": "John Baskerville",
+    "origin": "Birmingham, England",
+    "tags": [
+      "serif",
+      "beloved"
+    ],
+    "title": "The font that makes you believe things.",
+    "hook": "John Baskerville invented his own ink, redesigned the printing press, and redesigned the paper — all to serve this typeface. In 2012, filmmaker Errol Morris ran an experiment in the New York Times: the same statement rated more true when set in Baskerville than any other font tested. He died thinking he'd failed.",
+    "renderedIn": "Libre Baskerville / system Baskerville",
+    "facts": [
+      {
+        "num": "#1",
+        "label": "most trusted typeface tested"
+      },
+      {
+        "num": "1757",
+        "label": "Birmingham, England"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "papyrus",
+    "num": "004",
+    "name": "Papyrus",
+    "specimen": "Papyrus",
+    "mod": "papyrus",
+    "category": "Display",
+    "year": "1982",
+    "designer": "Chris Costello",
+    "origin": "Drawn by hand",
+    "tags": [
+      "display",
+      "controversial"
+    ],
+    "title": "Guilty. With a footnote.",
+    "hook": "Chris Costello drew it by hand over six months — on actual papyrus. Genuinely impressive craft. Then Microsoft bundled it into Office in 1996. Then James Cameron used it for Avatar in 2009. Ryan Gosling never recovered. Neither did we. The font is not the problem. The choices were.",
+    "renderedIn": "Papyrus (system)",
+    "facts": [
+      {
+        "num": "6mo",
+        "label": "drawn by hand by Costello"
+      },
+      {
+        "num": "2009",
+        "label": "Avatar. $237M budget."
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "futura",
+    "num": "005",
+    "name": "Futura",
+    "specimen": "FUTURA",
+    "mod": "futura",
+    "category": "Geometric Sans",
+    "year": "1927",
+    "designer": "Paul Renner",
+    "origin": "Bauer Type Foundry, Frankfurt",
+    "tags": [
+      "sans-serif",
+      "beloved"
+    ],
+    "title": "The font that went to the moon.",
+    "hook": "Literally. The plaque left on the lunar surface by Apollo 11 is set in Futura. Paul Renner designed it in 1927 as pure geometry — circles, triangles, lines. No calligraphic history, no human hand, just math. NASA, IKEA, Volkswagen, Louis Vuitton. Still running the world.",
+    "renderedIn": "Century Gothic / system Futura",
+    "facts": [
+      {
+        "num": "1969",
+        "label": "landed on the moon"
+      },
+      {
+        "num": "~100",
+        "label": "years old, still everywhere"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "caslon",
+    "num": "006",
+    "name": "Caslon",
+    "specimen": "Caslon",
+    "mod": "caslon",
+    "category": "Serif",
+    "year": "1722",
+    "designer": "William Caslon",
+    "origin": "London, England",
+    "tags": [
+      "serif",
+      "beloved"
+    ],
+    "title": "The font that founded a nation.",
+    "hook": "The U.S. Declaration of Independence was set in Caslon. So was the Constitution. William Caslon started by cutting letters into gun barrels — and produced a typeface so good that everyone switched to it immediately. No other typeface has a saying. \"When in doubt, use Caslon.\" That's a 300-year track record of working in almost every context.",
+    "renderedIn": "Big Caslon / Libre Caslon Text",
+    "facts": [
+      {
+        "num": "1722",
+        "label": "London, William Caslon"
+      },
+      {
+        "num": "2x",
+        "label": "revived after being forgotten"
+      },
+      {
+        "num": "300",
+        "label": "years in continuous use"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "akzidenz-grotesk",
+    "num": "007",
+    "name": "Akzidenz-Grotesk",
+    "specimen": "Akzidenz",
+    "mod": "akzidenz",
+    "category": "Sans-serif",
+    "year": "1896",
+    "designer": "H. Berthold type foundry",
+    "origin": "Berlin, Germany",
+    "tags": [
+      "sans-serif",
+      "beloved"
+    ],
+    "title": "Before Helvetica. Before all of it.",
+    "hook": "Released in 1896 by the H. Berthold type foundry in Berlin, Akzidenz-Grotesk is the quiet original — the one all those Swiss modernists were borrowing from when they claimed to be inventing something new. Helvetica didn't appear until 1957. That's 61 years of Akzidenz doing the work first.",
+    "renderedIn": "Helvetica Neue (closest available)",
+    "facts": [
+      {
+        "num": "1896",
+        "label": "Berlin, H. Berthold"
+      },
+      {
+        "num": "61yr",
+        "label": "head start on Helvetica"
+      },
+      {
+        "num": "1957",
+        "label": "Helvetica finally arrives"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "helvetica",
+    "num": "008",
+    "name": "Helvetica",
+    "specimen": "Helvetica",
+    "mod": "helvetica",
+    "category": "Neo-Grotesque",
+    "year": "1957",
+    "designer": "Max Miedinger",
+    "origin": "Münchenbuchsee, Switzerland",
+    "tags": [
+      "sans-serif",
+      "beloved",
+      "controversial"
+    ],
+    "title": "The most famous font in the world. For better and for worse.",
+    "hook": "It got a documentary. It's on the New York subway, the American Apparel logo, and approximately every corporate rebrand since 1970. Max Miedinger designed it to mean nothing — to be neutral, invisible, universal. The irony is it's now the most recognizable typeface on earth. Invisibility failed spectacularly.",
+    "renderedIn": "Helvetica Neue (system)",
+    "facts": [
+      {
+        "num": "1957",
+        "label": "Münchenbuchsee, Switzerland"
+      },
+      {
+        "num": "1",
+        "label": "documentary made about it"
+      },
+      {
+        "num": "~∞",
+        "label": "corporate rebrands since 1970"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "optima",
+    "num": "009",
+    "name": "Optima",
+    "specimen": "Optima",
+    "mod": "optima",
+    "category": "Humanist Sans",
+    "year": "1958",
+    "designer": "Hermann Zapf",
+    "origin": "Frankfurt, Germany",
+    "tags": [
+      "sans-serif",
+      "beloved"
+    ],
+    "title": "The typeface that refuses to pick a side.",
+    "hook": "Hermann Zapf sketched the letterforms on gravestones in Florence in 1950. Optima has no serifs — but its strokes flare at the terminals like a classical Roman inscription. It is technically a sans-serif that behaves like a serif. The Vietnam Veterans Memorial is set in it. So is the Estée Lauder logo. Make of that what you will.",
+    "renderedIn": "Optima (system)",
+    "facts": [
+      {
+        "num": "1958",
+        "label": "Frankfurt, Hermann Zapf"
+      },
+      {
+        "num": "0",
+        "label": "serifs. Feels like it has some."
+      },
+      {
+        "num": "1982",
+        "label": "Vietnam Veterans Memorial"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "times-new-roman",
+    "num": "010",
+    "name": "Times New Roman",
+    "specimen": "Times",
+    "mod": "times",
+    "category": "Serif",
+    "year": "1931",
+    "designer": "Stanley Morison & Victor Lardent",
+    "origin": "The Times / Monotype, London",
+    "tags": [
+      "serif"
+    ],
+    "title": "It was never meant to be beautiful. It was meant to be cheap.",
+    "hook": "The Times of London commissioned it in 1931 with one brief: fit more words per column inch. Not elegance. Not prestige. Economy. Stanley Morison directed it, Victor Lardent drew it, and it first set the paper the following year. It then became the default of academia, law, and bureaucracy worldwide — a cost-cutting measure mistaken for a standard.",
+    "renderedIn": "Times New Roman (system)",
+    "facts": [
+      {
+        "num": "1931",
+        "label": "commissioned by The Times"
+      },
+      {
+        "num": "40yr",
+        "label": "the paper's house face"
+      },
+      {
+        "num": "#1",
+        "label": "default on every word processor"
+      }
+    ],
+    "body": [
+      {
+        "heading": "The complaint that started it",
+        "text": "In 1929 Stanley Morison — typographic adviser to Monotype, and a man constitutionally incapable of letting a bad letterform go — wrote that The Times of London was badly printed and set in a typeface that was behind the times. The paper's response was essentially: fine, you do it. Morison did not draw type himself. He directed. The actual drawing fell to Victor Lardent, a lettering artist in the paper's advertising department, working from Morison's specifications and a sample of Plantin as a starting point."
+      },
+      {
+        "heading": "The brief was economy, not beauty",
+        "text": "Every decision in Times New Roman serves one goal: more words in less space, still legible on cheap newsprint at speed. The letterforms are narrow. The x-height is large, so the face reads bigger than its point size and can be set smaller. The serifs are short and sharply cut, which survives the ink spread of high-speed rotary printing better than a delicate serif would. None of this is about elegance. It is a set of engineering answers to the problem of a newspaper column."
+      },
+      {
+        "heading": "Why it became the default of everything",
+        "text": "The Times first set the paper in it on 3 October 1932, and kept it as the house face for about forty years. Monotype then licensed it widely, and it arrived on the IBM Selectric, then on early laser printers, then as a Microsoft core font shipped with Windows. By the 1990s it was the thing a blank document opened in. An entire generation of academic papers, legal filings, and government forms is set in it — not because anyone chose it, but because nobody changed it."
+      },
+      {
+        "heading": "The verdict",
+        "text": "Times New Roman is not a bad typeface. It is an extremely good solution to a problem almost nobody has anymore. Nothing you write on a screen is competing for column inches on newsprint, so the compression that made it brilliant in 1932 now just makes it feel tight and a little grey. The crime is not using it. The crime is using it by default and calling that a decision."
+      }
+    ],
+    "genuine": true
+  },
+  {
+    "slug": "franklin-gothic",
+    "num": "011",
+    "name": "Franklin Gothic",
+    "specimen": "Franklin",
+    "mod": "franklin",
+    "category": "Grotesque",
+    "year": "1902",
+    "designer": "Morris Fuller Benton",
+    "origin": "American Type Founders",
+    "tags": [
+      "sans-serif"
+    ],
+    "title": "He designed 221 typefaces. You've never heard his name.",
+    "hook": "Morris Fuller Benton was the most prolific type designer in American history — head of design at American Type Founders for over three decades. Franklin Gothic, named for Benjamin Franklin, became the voice of the American newspaper headline and the political poster. Heavy, condensed, impossible to ignore. Benton got no credit on any of it.",
+    "renderedIn": "Libre Franklin (Google Fonts)",
+    "facts": [
+      {
+        "num": "221",
+        "label": "typefaces designed"
+      },
+      {
+        "num": "1902",
+        "label": "American Type Founders"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "arial",
+    "num": "012",
+    "name": "Arial",
+    "specimen": "Arial",
+    "mod": "arial",
+    "category": "Neo-Grotesque",
+    "year": "1982",
+    "designer": "Robin Nicholas & Patricia Saunders",
+    "origin": "Monotype, England",
+    "tags": [
+      "sans-serif",
+      "controversial"
+    ],
+    "title": "The font that took Helvetica's job. Legally.",
+    "hook": "Monotype needed a Helvetica that nobody had to license. Robin Nicholas and Patricia Saunders built Arial with identical character widths, so text set in one reflows correctly in the other — metrically a clone, visually a near-miss. Microsoft shipped it with Windows 3.1 in 1992. Designers noticed immediately. Everyone else never did.",
+    "renderedIn": "Arial (system)",
+    "facts": [
+      {
+        "num": "1982",
+        "label": "drawn as a Helvetica substitute"
+      },
+      {
+        "num": "1992",
+        "label": "shipped with Windows 3.1"
+      },
+      {
+        "num": "100%",
+        "label": "metric match, different letters"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "didot",
+    "num": "013",
+    "name": "Didot",
+    "specimen": "Didot",
+    "mod": "didot",
+    "category": "Didone",
+    "year": "1784",
+    "designer": "Firmin Didot",
+    "origin": "Paris, France",
+    "tags": [
+      "serif"
+    ],
+    "title": "Everyone says Vogue's logo is Bodoni. It isn't. The mix-up makes total sense.",
+    "hook": "Firmin Didot cut these hairline serifs and extreme stroke contrasts in Paris. Giambattista Bodoni reached nearly identical conclusions in Italy at nearly the same time, working independently. The two faces are the reason an entire category — Didone — is named after both of them. Vogue has used a Didot since the 1950s. Designers will still correct you about it.",
+    "renderedIn": "GFS Didot (Google Fonts)",
+    "facts": [
+      {
+        "num": "1784",
+        "label": "Paris, Firmin Didot"
+      },
+      {
+        "num": "2",
+        "label": "foundries, one idea, independently"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "bodoni",
+    "num": "014",
+    "name": "Bodoni",
+    "specimen": "Bodoni",
+    "mod": "bodoni",
+    "category": "Didone",
+    "year": "1798",
+    "designer": "Giambattista Bodoni",
+    "origin": "Parma, Italy",
+    "tags": [
+      "serif"
+    ],
+    "title": "Hard to read. Used by fashion for a century anyway. Nobody is changing it.",
+    "hook": "Giambattista Bodoni drew letters for display, not for paragraphs. The violent jump between thick stems and hairline serifs dazzles at poster size and dissolves into glare at body size. Fashion publishing worked out early that this is the point: something that looks expensive at a glance and resists being read too closely is exactly the brief.",
+    "renderedIn": "Bodoni Moda (Google Fonts)",
+    "facts": [
+      {
+        "num": "1798",
+        "label": "Parma, Italy"
+      },
+      {
+        "num": "∞",
+        "label": "fashion mastheads since then"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "gill-sans",
+    "num": "015",
+    "name": "Gill Sans",
+    "specimen": "Gill Sans",
+    "mod": "gill",
+    "category": "Humanist Sans",
+    "year": "1928",
+    "designer": "Eric Gill",
+    "origin": "Monotype, England",
+    "tags": [
+      "sans-serif",
+      "controversial"
+    ],
+    "title": "Beautiful typeface. Monstrous designer. Still everywhere.",
+    "hook": "Eric Gill studied under Edward Johnston, whose Underground lettering shaped London, then drew Gill Sans for Monotype in 1928. It became British Railways, Penguin Books, and the BBC. A 1989 biography drawing on his own diaries established that he was also a serial abuser. The type community has never resolved what to do with that, and the typeface is still on your screen.",
+    "renderedIn": "Gill Sans (system)",
+    "facts": [
+      {
+        "num": "1928",
+        "label": "Monotype, England"
+      },
+      {
+        "num": "1989",
+        "label": "biography changed everything"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "eurostile",
+    "num": "016",
+    "name": "Eurostile",
+    "specimen": "Eurostile",
+    "mod": "eurostile",
+    "category": "Geometric Sans",
+    "year": "1962",
+    "designer": "Aldo Novarese",
+    "origin": "Nebiolo, Turin",
+    "tags": [
+      "sans-serif"
+    ],
+    "title": "The typeface that made the future a rectangle.",
+    "hook": "Aldo Novarese took Microgramma — a caps-only face he'd built a decade earlier — and gave it a lowercase. The result squares off every curve just enough to read as engineered rather than drawn. Every spacecraft console, sci-fi title card, and hi-fi faceplate of the next twenty years used it. The Space Age had a typeface, and this was it.",
+    "renderedIn": "Eurostile (system)",
+    "facts": [
+      {
+        "num": "1962",
+        "label": "Nebiolo, Turin"
+      },
+      {
+        "num": "1952",
+        "label": "Microgramma came first"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "gotham",
+    "num": "017",
+    "name": "Gotham",
+    "specimen": "Gotham",
+    "mod": "gotham",
+    "category": "Geometric Sans",
+    "year": "2000",
+    "designer": "Tobias Frere-Jones",
+    "origin": "Hoefler & Frere-Jones, New York",
+    "tags": [
+      "sans-serif",
+      "beloved"
+    ],
+    "title": "The font that won a presidential election.",
+    "hook": "GQ commissioned Tobias Frere-Jones to find a typeface in New York itself — the painted signs, the building facades, the lettering of the Port Authority Bus Terminal. No designer had drawn it; the city had. Then the Obama campaign set HOPE in it in 2008, and every candidate, startup, and city government in America wanted to sound exactly that trustworthy.",
+    "renderedIn": "Montserrat (closest free equivalent)",
+    "facts": [
+      {
+        "num": "2000",
+        "label": "commissioned by GQ"
+      },
+      {
+        "num": "2008",
+        "label": "the campaign that made it"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "trajan",
+    "num": "018",
+    "name": "Trajan",
+    "specimen": "Trajan",
+    "mod": "trajan",
+    "category": "Display Serif",
+    "year": "1989",
+    "designer": "Carol Twombly",
+    "origin": "Adobe",
+    "tags": [
+      "display"
+    ],
+    "title": "Carved in stone in 113 AD. Now on every movie poster.",
+    "hook": "Carol Twombly drew Trajan from the inscription at the base of Trajan's Column in Rome — letterforms cut around 113 AD and still considered the high point of Roman monumental capitals. There is no lowercase, because there was no lowercase. Hollywood found it and never let go. If a poster needs to feel important, this is the shortcut.",
+    "renderedIn": "Cinzel (Google Fonts)",
+    "facts": [
+      {
+        "num": "113",
+        "label": "AD, the original inscription"
+      },
+      {
+        "num": "0",
+        "label": "lowercase letters, by design"
+      }
+    ],
+    "body": []
+  },
+  {
+    "slug": "copperplate-gothic",
+    "num": "019",
+    "name": "Copperplate Gothic",
+    "specimen": "Copper",
+    "mod": "copperplate",
+    "category": "Display",
+    "year": "1901",
+    "designer": "Frederic W. Goudy",
+    "origin": "American Type Founders",
+    "tags": [
+      "display"
+    ],
+    "title": "Capitals only. No excuses.",
+    "hook": "Frederic Goudy gave Copperplate Gothic serifs so small they read less as serifs than as the mark a graver leaves in metal — which is the whole idea, since it was built for engraved stationery. There is no true lowercase. It has communicated authority, permanence, and a certain inability to relax from law firm letterheads for over a century.",
+    "renderedIn": "Copperplate (system, macOS)",
+    "facts": [
+      {
+        "num": "1901",
+        "label": "American Type Founders"
+      },
+      {
+        "num": "120+",
+        "label": "years on business cards"
+      }
+    ],
+    "body": [],
+    "genuine": true
+  },
+  {
+    "slug": "courier-new",
+    "num": "020",
+    "name": "Courier New",
+    "specimen": "Courier",
+    "mod": "courier",
+    "category": "Monospace",
+    "year": "1955",
+    "designer": "Howard \"Bud\" Kettler",
+    "origin": "IBM, New York",
+    "tags": [
+      "monospace",
+      "beloved"
+    ],
+    "title": "Every screenplay you have ever loved is set in this. One page, one minute.",
+    "hook": "Howard Kettler drew Courier for IBM's typewriters in 1955. IBM never locked it down, so it spread to every competitor, every machine, and eventually every operating system on earth. It is the house font of this entire site, and the reason a screenwriter can hand you 110 pages and tell you the film runs an hour and fifty.",
+    "renderedIn": "Courier New (system)",
+    "facts": [
+      {
+        "num": "1955",
+        "label": "drawn for IBM typewriters"
+      },
+      {
+        "num": "1:1",
+        "label": "page to minute of screen time"
+      },
+      {
+        "num": "2004",
+        "label": "the year the State Department dropped it"
+      }
+    ],
+    "body": [
+      {
+        "heading": "It was built for a machine, not for a page",
+        "text": "A typewriter carriage advances the same distance after every key, so every character has to occupy the same width. That is the entire constraint, and it is a brutal one. An <em>i</em> gets the same room as an <em>m</em>. Kettler's answer was to let the narrow letters sit in generous space and give the wide ones flat, spreading serifs to fill their slot. Nothing in Courier is decorative. Every oddity in it — the gappy lowercase, the slab serifs on the <em>i</em>, the wide-open counters — is a solution to a mechanical problem."
+      },
+      {
+        "heading": "IBM never locked it down",
+        "text": "This is the part that matters. IBM had the design and did not secure exclusive rights to it, and Courier escaped into the industry. Competing typewriter manufacturers used it. Then it became a standard on daisy-wheel printers, then a core font on the Macintosh and Windows, then the default for plain text and code almost everywhere. One of the most widely distributed typefaces of the twentieth century generated effectively nothing for the company that commissioned it. Whether that was generosity or an oversight depends on who is telling the story."
+      },
+      {
+        "heading": "One page, one minute",
+        "text": "Screenplays are set in 12-point Courier, and the reason is arithmetic rather than taste. Because every character is the same width and the margins are fixed by convention, a correctly formatted page holds a near-constant amount of dialogue and action — which converts to roughly one minute of screen time. That is why a reader can weigh a script in their hand and know the runtime, and why every studio still rejects submissions in anything else. It is the only typeface in wide use whose job is to measure time."
+      },
+      {
+        "heading": "Courier is not Courier New",
+        "text": "The Courier on your computer is probably not Kettler's. Monotype redrew it as Courier New, thinning the strokes considerably, and that is the cut bundled with Windows and the one most people have actually read. Set the two side by side and the original looks like it was struck onto the page while the New looks like a photocopy of it. If you want Kettler's weight, you want Courier Std or Nimbus Mono. This is the single most common substitution nobody notices."
+      },
+      {
+        "heading": "Why this site wears it, and where it doesn't",
+        "text": "A typeface built entirely from constraints, with zero ornament, is the clearest possible argument that typography is not decoration. Courier has no mood to sell you. So it is the voice of this site — the logo, the labels, the tags, the eyebrows, every part that tells you where you are. It is <em>not</em> what you are reading right now, because monospace is a poor surface for a thousand words and pretending otherwise would be exactly the unexamined default this whole entry is about. Using a typeface for what it is actually good at is not a betrayal of it. That is the entire skill."
+      }
+    ],
+    "genuine": true
+  }
+]
