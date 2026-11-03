@@ -1,0 +1,201 @@
+/* ══════════════════════════════════════════════════════════════
+   fonts matter, period. — shared styles for individual font pages
+   Edit this file once; every generated page picks up the change.
+   ══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0a;
+  --cream: #f0ede6;
+  --off-white: #f8f8f5;
+  --sage: #e3eff2;
+  --mono: "Courier New", Courier, monospace;
+  --garamond: "EB Garamond", Garamond, serif;
+  --dm: "DM Mono", monospace;
+  --page-max: 1100px;
+  --read-max: 68ch;
+  --pad: clamp(1.5rem, 5vw, 4rem);
+}
+
+body {
+  font-family: var(--mono);
+  background: var(--off-white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link { position: absolute; top: -100%; left: 1rem; background: var(--black); color: var(--cream); font-family: var(--mono); font-size: 0.75rem; padding: 0.5rem 1rem; text-decoration: none; z-index: 9999; transition: top 0.1s; }
+.skip-link:focus { top: 0.5rem; }
+
+:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; }
+
+/* ── HEADER ── */
+.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 0 var(--pad); display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.site-header__logo { font-family: var(--mono); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; text-decoration: none; color: var(--black); }
+.site-nav { display: flex; gap: 2rem; list-style: none; }
+.site-nav a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-decoration: none; color: #444; transition: color 0.15s; }
+.site-nav a:hover, .site-nav a.active { color: var(--black); }
+
+/* ── BREADCRUMB ── */
+.crumb { max-width: var(--page-max); margin: 0 auto; padding: 1.25rem var(--pad) 0; font-family: var(--dm); font-size: 0.7rem; letter-spacing: 0.08em; color: #888; }
+.crumb a { color: #888; text-decoration: none; }
+.crumb a:hover { color: var(--black); }
+.crumb span { margin: 0 0.5rem; color: #ccc; }
+
+/* ── HERO SPECIMEN ── */
+.font-hero { max-width: var(--page-max); margin: 1.25rem auto 0; padding: 0 var(--pad); }
+.font-hero__plate { position: relative; padding: clamp(3rem, 8vw, 5.5rem) clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(220px, 32vw, 340px); overflow: hidden; container-type: inline-size; }
+.font-hero__num { position: absolute; top: 1.5rem; right: 1.75rem; font-family: var(--dm); font-size: 0.7rem; letter-spacing: 0.1em; color: #aaa; }
+.font-hero__big { font-size: clamp(3rem, 13cqw, 9rem); line-height: 0.88; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
+.font-hero__alpha { font-family: var(--dm); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: #999; margin-top: 0.9rem; }
+
+/* ── TITLE BLOCK ── */
+.font-intro { max-width: var(--page-max); margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem) var(--pad) 0; }
+.font-intro__eyebrow { font-family: var(--dm); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 1rem; }
+.font-intro__name { font-family: var(--garamond); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+.font-intro__title { font-size: clamp(1rem, 2vw, 1.3rem); line-height: 1.45; color: #333; max-width: 46ch; margin-bottom: 2rem; }
+
+.font-meta { display: flex; gap: 2.5rem; flex-wrap: wrap; padding: 1.5rem 0; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1); }
+.font-meta__item dt { font-family: var(--dm); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 0.35rem; }
+.font-meta__item dd { font-size: 0.9rem; line-height: 1.4; color: var(--black); }
+
+/* ── FACTS ── */
+.font-facts { max-width: var(--page-max); margin: 0 auto; padding: clamp(2rem, 4vw, 3rem) var(--pad) 0; display: flex; gap: clamp(2rem, 5vw, 4rem); flex-wrap: wrap; }
+.font-facts__num { font-family: var(--garamond); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; display: block; line-height: 1; }
+.font-facts__label { font-family: var(--dm); font-size: 0.68rem; letter-spacing: 0.06em; color: #777; display: block; margin-top: 0.4rem; line-height: 1.4; max-width: 18ch; }
+
+/* ── ARTICLE BODY ── */
+.font-body { max-width: var(--page-max); margin: 0 auto; padding: clamp(2.5rem, 5vw, 4rem) var(--pad) 0; }
+.font-body__lede { font-family: var(--garamond); font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.55; color: #222; max-width: var(--read-max); padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(0,0,0,0.1); }
+.font-body h2 { font-family: var(--garamond); font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin: 2.75rem 0 0.9rem; max-width: var(--read-max); }
+.font-body h2:first-of-type { margin-top: 0; }
+/* Body copy is EB Garamond, not Courier New. Monospace defeats word-shape
+   recognition, which is a fine trade for a 40-word card excerpt and a bad one
+   across a 900-word article. Courier stays on everything that signals the
+   brand — logo, nav, eyebrows, tags, labels, the card hooks on the index. */
+.font-body p { font-family: var(--garamond); font-size: 1.22rem; line-height: 1.68; color: #1f1f1f; max-width: 36em; margin-bottom: 1.25rem; }
+.font-body em { font-style: italic; }
+
+/* ── IN-PROGRESS NOTICE (fonts with no body copy yet) ── */
+.font-stub { max-width: var(--read-max); margin: 0 0 1rem; padding: 1.25rem 1.5rem; border: 1px dashed rgba(0,0,0,0.25); background: rgba(0,0,0,0.02); font-size: 0.88rem; line-height: 1.7; color: #555; }
+
+/* ── SUBSTITUTION NOTE ── */
+.font-sub { max-width: var(--page-max); margin: clamp(2.5rem, 5vw, 4rem) auto 0; padding: 0 var(--pad); }
+.font-sub__inner { max-width: var(--read-max); padding: 1.1rem 1.4rem; background: var(--sage); font-family: var(--dm); font-size: 0.72rem; line-height: 1.7; color: #2a414a; letter-spacing: 0.02em; }
+
+/* ── PREV / NEXT ── */
+.font-pager { max-width: var(--page-max); margin: clamp(3rem, 6vw, 4.5rem) auto 0; padding: 2rem var(--pad) 0; border-top: 1px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.font-pager a { text-decoration: none; color: var(--black); max-width: 20rem; }
+.font-pager__dir { font-family: var(--dm); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #999; display: block; margin-bottom: 0.4rem; }
+.font-pager__name { font-family: var(--garamond); font-size: 1.3rem; font-weight: 700; line-height: 1.2; }
+.font-pager a:hover .font-pager__name { text-decoration: underline; }
+.font-pager__next { text-align: right; margin-left: auto; }
+
+/* ── INSTAGRAM CTA ── */
+.ig-cta { background: var(--black); color: var(--cream); padding: clamp(2.5rem, 6vw, 4rem) var(--pad); text-align: center; margin-top: clamp(3rem, 6vw, 5rem); }
+.ig-cta p { font-family: var(--garamond); font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-style: italic; line-height: 1.5; margin-bottom: 1.5rem; color: #ddd; }
+/* .ig-cta p sets italic for the pull quote; this label must outrank it */
+.ig-cta p.ig-cta__attr { font-family: var(--dm); font-size: 0.75rem; font-style: normal; letter-spacing: 0.1em; color: #888; margin-bottom: 1.5rem; }
+.ig-cta a { display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; padding: 0.75rem 1.75rem; border: 1px solid var(--cream); color: var(--cream); text-decoration: none; transition: background 0.15s, color 0.15s; }
+.ig-cta a:hover { background: var(--cream); color: var(--black); }
+
+/* ── FOOTER ── */
+.fm-footer { border-top: 1px solid rgba(0,0,0,0.08); background: #fff; padding: clamp(2rem, 4vw, 3rem) var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.fm-footer p { font-family: var(--dm); font-size: 0.7rem; color: #888; letter-spacing: 0.06em; }
+.fm-footer-links { display: flex; gap: 1.5rem; }
+.fm-footer-links a { font-family: var(--dm); font-size: 0.7rem; color: #777; text-decoration: none; letter-spacing: 0.06em; transition: color 0.15s; }
+.fm-footer-links a:hover { color: var(--black); }
+
+/* ══════════════════════════════════════════════════════════════
+   PER-FONT SPECIMEN TREATMENTS
+   Same modifiers as the field guide index, applied to the hero
+   plate. Add a new font here and in fonts.json.
+   ══════════════════════════════════════════════════════════════ */
+
+.fp--garamond .font-hero__plate { background: #f0ede6; }
+.fp--garamond .font-hero__big { font-family: var(--garamond); font-weight: 800; }
+
+.fp--comic .font-hero__plate { background: #1a1a1a; }
+.fp--comic .font-hero__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; color: var(--cream); font-size: clamp(2.4rem, 10cqw, 6.5rem); }
+.fp--comic .font-hero__alpha, .fp--comic .font-hero__num { color: #aaa; }
+
+.fp--baskerville .font-hero__plate { background: #0a0a0a; }
+.fp--baskerville .font-hero__big { font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", serif; font-weight: 700; color: var(--cream); }
+.fp--baskerville .font-hero__alpha, .fp--baskerville .font-hero__num { color: #aaa; }
+
+.fp--papyrus .font-hero__plate { background: #0e0e0e; }
+.fp--papyrus .font-hero__big { font-family: Papyrus, fantasy; color: #f5f5f5; font-size: clamp(2.6rem, 11cqw, 7.5rem); }
+.fp--papyrus .font-hero__alpha { color: #aaa; }
+.fp--papyrus .font-hero__num { color: #555; }
+
+.fp--futura .font-hero__plate { background: #111; }
+.fp--futura .font-hero__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; color: #fff; letter-spacing: -0.03em; text-transform: uppercase; }
+.fp--futura .font-hero__alpha { color: #aaa; }
+.fp--futura .font-hero__num { color: #555; }
+
+.fp--caslon .font-hero__plate { background: #f0ede6; }
+.fp--caslon .font-hero__big { font-family: "Big Caslon", "Libre Caslon Text", Caslon, "Palatino Linotype", Georgia, serif; font-weight: 700; letter-spacing: -0.01em; }
+
+.fp--akzidenz .font-hero__plate { background: #0a0a0a; }
+.fp--akzidenz .font-hero__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; letter-spacing: -0.04em; color: #f8f8f5; }
+.fp--akzidenz .font-hero__alpha, .fp--akzidenz .font-hero__num { color: #555; }
+
+.fp--helvetica .font-hero__plate { background: #f2f2f2; }
+.fp--helvetica .font-hero__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+
+.fp--optima .font-hero__plate { background: #f5f0e8; }
+.fp--optima .font-hero__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
+
+.fp--times .font-hero__plate { background: #1a1a2e; }
+.fp--times .font-hero__big { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #e8e4da; letter-spacing: -0.01em; }
+.fp--times .font-hero__alpha { color: #8a8a9a; }
+.fp--times .font-hero__num { color: #6a6a7a; }
+
+.fp--franklin .font-hero__plate { background: #e8e4dc; }
+.fp--franklin .font-hero__big { font-family: "Libre Franklin", "Franklin Gothic Medium", "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; font-size: clamp(2.4rem, 10cqw, 6.6rem); }
+
+.fp--arial .font-hero__plate { background: #1e1e1e; }
+.fp--arial .font-hero__big { font-family: Arial, "Arial Nova", Helvetica, sans-serif; font-weight: 700; color: #f8f8f5; letter-spacing: -0.03em; }
+.fp--arial .font-hero__alpha { color: #999; }
+.fp--arial .font-hero__num { color: #666; }
+
+.fp--didot .font-hero__plate { background: #f8f4ee; }
+.fp--didot .font-hero__big { font-family: "GFS Didot", Didot, "Didot LT Std", "Bodoni Moda", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+
+.fp--bodoni .font-hero__plate { background: #fff; }
+.fp--bodoni .font-hero__big { font-family: "Bodoni Moda", "Bodoni MT", "Bodoni 72", Didot, Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
+
+.fp--gill .font-hero__plate { background: #182418; }
+.fp--gill .font-hero__big { font-family: "Gill Sans", "Gill Sans MT", Lato, Calibri, sans-serif; font-weight: 400; color: #e8f0ea; letter-spacing: -0.01em; }
+.fp--gill .font-hero__alpha { color: #8aaa96; }
+.fp--gill .font-hero__num { color: #6a8a78; }
+
+.fp--eurostile .font-hero__plate { background: #060e1a; }
+.fp--eurostile .font-hero__big { font-family: Eurostile, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-weight: 700; color: #dde8f2; letter-spacing: 0.02em; font-size: clamp(2.4rem, 10cqw, 6.8rem); }
+.fp--eurostile .font-hero__alpha { color: #7a94ae; }
+.fp--eurostile .font-hero__num { color: #5a7490; }
+
+.fp--gotham .font-hero__plate { background: #f2f0eb; }
+.fp--gotham .font-hero__big { font-family: Gotham, Montserrat, "Century Gothic", Futura, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+.fp--trajan .font-hero__plate { background: #1a1208; }
+.fp--trajan .font-hero__big { font-family: "Trajan Pro", Cinzel, "Palatino Linotype", Times, serif; font-weight: 700; color: #f0e8d0; letter-spacing: 0.04em; text-transform: uppercase; font-size: clamp(2.5rem, 10.5cqw, 7rem); }
+.fp--trajan .font-hero__alpha { color: #a89878; }
+.fp--trajan .font-hero__num { color: #8a7a60; }
+
+.fp--copperplate .font-hero__plate { background: #0e1c18; }
+.fp--copperplate .font-hero__big { font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight: 400; color: #deeae6; letter-spacing: 0.08em; text-transform: uppercase; font-size: clamp(2.2rem, 9cqw, 6rem); }
+.fp--copperplate .font-hero__alpha { color: #7a9c8e; }
+.fp--copperplate .font-hero__num { color: #5a8070; }
+
+/* the house font — sage plate, reserved for this one */
+.fp--courier .font-hero__plate { background: var(--sage); }
+.fp--courier .font-hero__big { font-family: "Courier New", Courier, monospace; font-weight: 700; letter-spacing: -0.03em; color: var(--black); font-size: clamp(2.4rem, 10cqw, 6.8rem); }
+.fp--courier .font-hero__alpha { color: #577f8d; }
+.fp--courier .font-hero__num { color: #7a9eac; }
+
+/* ── MOTION / CONTRAST PREFERENCES ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{name}} — {{title}} | fonts matter, period.</title>
+    <meta name="description" content="{{metaDescription}}">
+    <meta name="keywords" content="{{name}}, {{category}}, {{designer}}, {{year}}, typography, typeface, font history, fonts matter">
+    <link rel="canonical" href="https://fontsmatterperiod.com/blog/{{slug}}/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{name}} — {{title}}">
+    <meta property="og:description" content="{{metaDescription}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fontsmatterperiod.com/blog/{{slug}}/">
+    <meta property="og:site_name" content="fonts matter, period.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{name}} — {{title}}">
+    <meta name="twitter:description" content="{{metaDescription}}">
+    <meta name="twitter:site" content="@fontsmatterperiod">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{name}} — {{title}}",
+      "description": "{{metaDescription}}",
+      "about": {
+        "@type": "Thing",
+        "name": "{{name}}",
+        "description": "{{category}} typeface, {{year}}, designed by {{designer}}"
+      },
+      "author": { "@type": "Organization", "name": "fonts matter, period." },
+      "publisher": {
+        "@type": "Organization",
+        "name": "fonts matter, period.",
+        "url": "https://fontsmatterperiod.com/"
+      },
+      "mainEntityOfPage": "https://fontsmatterperiod.com/blog/{{slug}}/",
+      "isPartOf": {
+        "@type": "Blog",
+        "name": "The Fonts — A Field Guide",
+        "url": "https://fontsmatterperiod.com/blog/"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fontsmatterperiod.com/" },
+        { "@type": "ListItem", "position": 2, "name": "The Fonts", "item": "https://fontsmatterperiod.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "{{name}}", "item": "https://fontsmatterperiod.com/blog/{{slug}}/" }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cinzel:wght@700&family=DM+Mono:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=GFS+Didot&family=Libre+Franklin:wght@700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/blog/font-page.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQMTNVXJQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LQMTNVXJQ5');
+    </script>
+  </head>
+
+  <body class="fp--{{mod}}">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+      <a href="/" class="site-header__logo"
+        aria-label="fonts matter, period. — home">fonts matter.</a>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav">
+          <li><a href="/blog/" class="active">the fonts</a></li>
+          <li><a href="/#our-story">our story</a></li>
+          <li><a href="/#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="/">home</a><span>/</span><a href="/blog/">the fonts</a><span>/</span>{{nameLower}}
+    </nav>
+
+    <main id="main-content">
+      <article>
+
+        <!-- HERO SPECIMEN -->
+        <div class="font-hero">
+          <div class="font-hero__plate">
+            <span class="font-hero__num">No. {{num}}</span>
+            <div class="font-hero__big" aria-hidden="true">{{specimen}}</div>
+            <div class="font-hero__alpha">Aa Bb Cc · {{year}}</div>
+          </div>
+        </div>
+
+        <!-- TITLE + META -->
+        <div class="font-intro">
+          <p class="font-intro__eyebrow">field guide · no. {{num}}</p>
+          <h1 class="font-intro__name">{{name}}</h1>
+          <p class="font-intro__title">{{title}}</p>
+
+          <dl class="font-meta">
+            <div class="font-meta__item">
+              <dt>Classification</dt>
+              <dd>{{category}}</dd>
+            </div>
+            <div class="font-meta__item">
+              <dt>Year</dt>
+              <dd><time datetime="{{year}}">{{year}}</time></dd>
+            </div>
+            <div class="font-meta__item">
+              <dt>Designer</dt>
+              <dd>{{designer}}</dd>
+            </div>
+            <div class="font-meta__item">
+              <dt>Origin</dt>
+              <dd>{{origin}}</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- FACTS -->
+        <div class="font-facts">
+          {{facts}}
+        </div>
+
+        <!-- BODY -->
+        <div class="font-body">
+          <p class="font-body__lede">{{hook}}</p>
+          {{body}}
+        </div>
+
+        <!-- SPECIMEN SUBSTITUTION NOTE -->
+        <aside class="font-sub">
+          <p class="font-sub__inner">{{subNote}}</p>
+        </aside>
+
+        <!-- PREV / NEXT -->
+        <nav class="font-pager" aria-label="More fonts">
+          {{prev}}
+          {{next}}
+        </nav>
+
+      </article>
+
+      <div class="ig-cta">
+        <p>"Type is a beautiful group of letters,<br>not a group of beautiful
+          letters."</p>
+        <p class="ig-cta__attr">— Matthew Carter</p>
+        <a href="https://www.instagram.com/fontsmatterperiod" target="_blank"
+          rel="noopener noreferrer">follow @fontsmatterperiod</a>
+      </div>
+    </main>
+
+    <footer class="fm-footer" role="contentinfo">
+      <p>© {{yearNow}} fonts matter, period. · San Diego, CA</p>
+      <nav aria-label="Footer navigation">
+        <div class="fm-footer-links">
+          <a href="/">home</a>
+          <a href="/blog/">the fonts</a>
+          <a href="/#our-story">about</a>
+          <a href="/#contact">contact</a>
+          <a href="/policies/privacy-policy">privacy</a>
+        </div>
+      </nav>
+    </footer>
+
+  </body>
+</html>
