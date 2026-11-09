@@ -651,5 +651,59 @@
       }
     ],
     "genuine": true
+  },
+  {
+    "slug": "poppins",
+    "num": "021",
+    "name": "Poppins",
+    "specimen": "Poppins",
+    "mod": "poppins",
+    "category": "Geometric Sans",
+    "year": "2014",
+    "designer": "Pinhorn, Kale & team",
+    "origin": "Indian Type Foundry, Ahmedabad",
+    "tags": [
+      "sans-serif"
+    ],
+    "title": "On a trillion screens. Never on the list.",
+    "hook": "Six people drew it in-house at Indian Type Foundry between 2013 and 2016. It landed on a trillion screens — and on almost zero curated design portfolios. A font nobody paid for doesn't read as a decision. It reads as what was already there.",
+    "renderedIn": "Poppins (Google Fonts)",
+    "genuine": true,
+    "facts": [
+      {
+        "num": "1T",
+        "label": "views on Google Fonts"
+      },
+      {
+        "num": "#8",
+        "label": "all-time on Google Fonts"
+      },
+      {
+        "num": "6",
+        "label": "designers at ITF, 2013–16"
+      }
+    ],
+    "body": [
+      {
+        "heading": "A trillion views. Almost no credit.",
+        "text": "Google Fonts analytics puts Poppins eighth all-time. Creative Boom's 2026 designer survey has it in the top three, next to Helvetica and Futura. Then look at what designers actually ship. Typewolf tracks type across three thousand curated design sites. Poppins isn't in its top fifteen. What is: <em>Apercu, GT America, Founders Grotesk, Canela, Graphik</em> — licensed faces from independent foundries, nearly all of them paid. The gap between what the web sees most and what designers put in their portfolios is the whole story of this entry."
+      },
+      {
+        "heading": "The hierarchy runs the other way",
+        "text": "Indian Type Foundry opened in Ahmedabad in 2009. Poppins was an internal project from 2013 to 2016, released on Google Fonts under the SIL Open Font License. Latin and Devanagari were drawn together on a shared height system — and here the convention most multi-script families follow was quietly inverted. In most families the non-Latin script is bent to fit Latin letterforms. In Poppins, the Latin capitals sit <em>shorter</em> than the Devanagari characters, and the Latin x-height was raised to meet the Devanagari base. The script that had to accommodate was the one most Western designers assume is the default."
+      },
+      {
+        "heading": "Geometry, with corrections you don't see",
+        "text": "Poppins looks pure. Near-monolinear strokes, letterforms built out of circles, the geometric sans tradition carried on from Futura and Avenir. But the stroke joints do work. Where strokes meet — inside the shoulder of an <em>n</em>, at the apex of an <em>A</em>, at the tangents of an <em>O</em> — there are small optical thinnings so the joins don't read heavier than the strokes themselves. That labor is invisible by design, and that is the second reason Poppins doesn't get credited. If a typeface looks like software defaults, you don't picture six people deciding things."
+      },
+      {
+        "heading": "Free is what cost it the credit",
+        "text": "No download gate. No license fee. No commissioning client to tell the story. Poppins is the default in hundreds of thousands of Bootstrap and Tailwind starter kits, the fallback choice of every SaaS landing page from 2017 onward, the easy pick when a template needs a sans. Which means when a designer sees Poppins on a site, the first thought is not <em>someone chose this</em>. The first thought is <em>this is what came with it</em>. That's a storytelling problem, not a design problem. The design is fine. The typeface arrived with no price tag, so the work inside it reads as free of work."
+      },
+      {
+        "heading": "Six names worth knowing",
+        "text": "Jonny Pinhorn drew the Latin — Reading-trained, previously designed Karla for Google Fonts, three years at ITF on Indic scripts. Ninad Kale drew the Devanagari — a diploma student at ITF when he cut the Devanagari of Poppins Extrabold. Shiva Nallaperumal, Michelle Parmar, Rahul Gajjar and Liang Hai extended the family through weights and italics. The reason you know Garamond is Claude Garamond. The reason you know Caslon is William Caslon. The reason Poppins doesn't carry a name attached to it is not that there are none. There are six."
+      }
+    ]
   }
 ]
