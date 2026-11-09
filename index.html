@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>fonts matter, period. — Typography for People Who Notice</title>
     <meta name="description"
-      content="fonts matter, period. is an opinionated typography blog from San Diego. We write about typefaces — Garamond, Baskerville, Futura, Comic Sans — with context, history, and actual opinions.">
+      content="fonts matter, period. is a typography field guide from San Diego. We write about the typefaces we live with — Garamond, Baskerville, Futura, Poppins — their history, their craft, and when to reach for them.">
     <meta name="keywords"
       content="typography, typeface, font history, type design, Courier New, Garamond, Baskerville, Futura, Comic Sans, Papyrus, Poppins, fonts matter">
     <link rel="canonical" href="https://fontsmatterperiod.com/">
@@ -24,17 +24,23 @@
     <meta property="og:title"
       content="fonts matter, period. — Typography for People Who Notice">
     <meta property="og:description"
-      content="An opinionated typography blog from San Diego. We write about typefaces the way some people argue about wine — with feelings, opinions, and zero apologies.">
+      content="A typography field guide from San Diego. We write about the typefaces we live with every day — where they came from, why they feel the way they do, and when to reach for them.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fontsmatterperiod.com/">
     <meta property="og:site_name" content="fonts matter, period.">
+    <meta property="og:image" content="https://fontsmatterperiod.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="fonts matter, period.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="fonts matter, period.">
     <meta name="twitter:description"
-      content="Typography for people who notice. Opinionated writing about the world's most important typefaces.">
+      content="Typography for people who notice. Thoughtful writing about the world's most important typefaces.">
     <meta name="twitter:site" content="@fontsmatterperiod">
+    <meta name="twitter:image" content="https://fontsmatterperiod.com/og-image.png">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -43,7 +49,7 @@
     "@type": "WebSite",
     "name": "fonts matter, period.",
     "url": "https://fontsmatterperiod.com/",
-    "description": "An opinionated typography blog from San Diego. We write about typefaces with context, history, and actual opinions.",
+    "description": "A typography field guide from San Diego. We write about typefaces with history, craft, and a considered point of view.",
     "sameAs": [
       "https://www.instagram.com/fontsmatterperiod"
     ]
@@ -53,7 +59,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet">
 
     <!-- Google Analytics -->
@@ -70,194 +76,158 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --black: #0a0a0a;
-    --off-white: #f8f8f5;
-    /* ── PALETTE ──
-       Change these four and the whole page follows: hero, quote band,
-       contact, footer, marquee accents, the Garamond card specimen. */
-    --sage: #e3eff2;
-    --sage-mid: #d3e4ea;
-    --sage-dark: #a6c7d2;
-    --sage-accent: #577f8d;
-    --mono: "Courier New", Courier, monospace;
-    --garamond: "EB Garamond", Garamond, serif;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    --page-max: 1200px;
-    --page-pad: clamp(1.5rem, 5vw, 4rem);
+    --ink:#141414; --paper:#ffffff; --paper2:#fafafa;
+    --gray:#6b6b6b; --gray-soft:#9a9a9a;
+    --line:#e8e8e8; --line-soft:#f0f0f0;
+    --blue:#eef4f7; --blue2:#d3e4ea; --blue-ink:#406b78;
+    --salmon:#f0957f; --salmon-soft:#f8d2c7; --salmon-ink:#c05636;
+    /* legacy palette names kept so inline var() usages stay on-system */
+    --black:#141414; --off-white:#ffffff;
+    --sage:#eef4f7; --sage-mid:#f4f8fa; --sage-dark:#a9c6d0; --sage-accent:#c05636;
+    --brand:"EB Garamond", Garamond, serif;
+    --mono:var(--brand);
+    --garamond:"EB Garamond", Garamond, serif;
+    --read:"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --page-max:1200px;
+    --page-pad:clamp(1.5rem, 5vw, 4.5rem);
   }
 
-  body { font-family: var(--mono); background: var(--off-white); color: var(--black); -webkit-font-smoothing: antialiased; }
+  body { font-family:var(--read); background:var(--paper); color:var(--ink); -webkit-font-smoothing:antialiased; }
 
-  /* ── SKIP LINK ── */
-  .skip-link { position: absolute; top: -100%; left: 1rem; background: var(--black); color: var(--off-white); font-family: var(--mono); font-size: 0.75rem; padding: 0.5rem 1rem; text-decoration: none; z-index: 9999; transition: top 0.1s; }
-  .skip-link:focus { top: 0.5rem; }
+  .skip-link { position:absolute; top:-100%; left:1rem; background:var(--ink); color:#fff; font-family:var(--read); font-size:.75rem; padding:.5rem 1rem; text-decoration:none; z-index:9999; transition:top .1s; }
+  .skip-link:focus { top:.5rem; }
 
   /* ── HEADER ── */
-  .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 0 var(--page-pad); display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .site-nav { display: flex; gap: 2rem; list-style: none; }
-  .site-nav a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-decoration: none; color: #444; transition: color 0.15s; }
-  .site-nav a:hover { color: var(--black); }
+  .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); padding:0 var(--page-pad); display:flex; align-items:center; justify-content:space-between; height:76px; }
+  .site-nav { display:flex; gap:34px; list-style:none; }
+  .site-nav a { font-family:var(--brand); font-size:1.05rem; color:var(--gray); text-decoration:none; transition:color .15s; }
+  .site-nav a:hover { color:var(--salmon-ink); }
 
   /* ── HERO ── */
-  .fm-hero { background: var(--sage); padding: clamp(3rem, 8vw, 7rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: var(--page-max); margin: 0 auto; }
-  @media (max-width: 700px) { .fm-hero { grid-template-columns: 1fr; gap: 2rem; } }
+  .fm-hero { background:transparent; padding:clamp(3.5rem,8vw,7.5rem) var(--page-pad) clamp(3rem,6vw,5.5rem); display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(2.5rem,5vw,5rem); align-items:center; max-width:var(--page-max); margin:0 auto; }
+  @media (max-width:820px){ .fm-hero { grid-template-columns:1fr; gap:2.5rem; } }
+  .fm-eyebrow { font-family:var(--brand); font-size:.95rem; letter-spacing:.24em; color:var(--salmon-ink); text-transform:uppercase; margin-bottom:1.6rem; }
+  .fm-hero__headline { font-family:var(--brand); font-size:clamp(2.6rem,5.2vw,4.6rem); font-weight:500; line-height:1.04; letter-spacing:-.015em; margin-bottom:1.5rem; color:var(--ink); }
+  .fm-hero__headline em { font-style:italic; color:var(--salmon-ink); }
+  .fm-hero__sub { font-family:var(--read); font-size:1.06rem; line-height:1.68; color:var(--gray); max-width:38ch; margin-bottom:2.2rem; }
+  .fm-hero__ctas { display:flex; align-items:center; gap:1.75rem; flex-wrap:wrap; }
 
-  .fm-eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; color: #666; text-transform: uppercase; margin-bottom: 1.25rem; }
-  .fm-hero__headline { font-family: var(--mono); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.25rem; }
-  .fm-hero__headline em { font-style: italic; }
-  /* ── READING PROSE IS GARAMOND ──
-     Courier New stays on everything that signals the brand — logo, nav,
-     headlines, eyebrows, labels, tags, stat numbers, buttons, form fields.
-     Anything that is a sentence read for its content is set in Garamond.
-     Sizes run ~20% larger than the Courier values they replaced, because
-     Garamond has a much smaller x-height at the same nominal size. */
-  .fm-hero__sub { font-family: var(--garamond); font-size: 1.22rem; line-height: 1.6; color: var(--black); max-width: 34em; margin-bottom: 2rem; }
-  .fm-hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .fm-btn { display:inline-block; font-family:var(--brand); font-weight:600; font-size:1.05rem; letter-spacing:0; padding:.8rem 1.9rem; text-decoration:none; border:1px solid var(--ink); color:var(--ink); border-radius:2px; transition:background .15s, color .15s, border-color .15s; cursor:pointer; }
+  .fm-btn:hover { background:var(--ink); color:#fff; }
+  .fm-btn--solid { background:var(--ink); color:#fff; }
+  .fm-btn--solid:hover { background:var(--salmon-ink); border-color:var(--salmon-ink); }
 
-  .fm-btn { display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; padding: 0.75rem 1.5rem; text-decoration: none; border: 1px solid var(--black); color: var(--black); transition: background 0.15s, color 0.15s; cursor: pointer; }
-  .fm-btn:hover { background: var(--black); color: var(--off-white); }
-  .fm-btn--solid { background: var(--black); color: var(--off-white); }
-  .fm-btn--solid:hover { background: #333; }
-
-  .hero-specimen { display: flex; flex-direction: column; gap: 0.5rem; }
-  .specimen-word { font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: -0.01em; display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0.4rem; }
-  .specimen-word:last-child { border-bottom: none; }
-  .specimen-label { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.1em; color: #888; text-transform: uppercase; align-self: flex-end; padding-bottom: 0.2rem; min-width: 60px; text-align: right; }
-  .spec-courier { font-family: "Courier New", Courier, monospace; }
-  .spec-ak { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; }
-  .spec-garamond { font-family: Garamond, "Times New Roman", serif; font-style: italic; }
-  .spec-times { font-family: "Times New Roman", Times, serif; }
+  /* hero specimen stack */
+  .hero-specimen { display:flex; flex-direction:column; gap:.4rem; }
+  .specimen-word { font-size:clamp(2.3rem,4.5vw,4rem); font-weight:400; line-height:1; letter-spacing:-.01em; display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:.5rem; color:var(--ink); }
+  .specimen-word:last-child { border-bottom:none; }
+  .specimen-label { font-family:var(--read); font-size:.6rem; letter-spacing:.14em; color:var(--gray-soft); text-transform:uppercase; align-self:flex-end; padding-bottom:.25rem; min-width:60px; text-align:right; }
+  .spec-courier { font-family:"Courier New", Courier, monospace; }
+  .spec-ak { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:300; }
+  .spec-garamond { font-family:"EB Garamond", Garamond, serif; font-style:italic; }
+  .spec-times { font-family:"Times New Roman", Times, serif; }
 
   /* ── MARQUEE ── */
-  .fm-marquee { background: var(--black); color: var(--off-white); padding: 0.9rem 0; overflow: hidden; white-space: nowrap; }
-  .fm-marquee__inner { display: inline-flex; gap: 2rem; animation: marquee 28s linear infinite; font-size: 0.72rem; letter-spacing: 0.06em; }
-  .fm-marquee__inner span:nth-child(even) { color: var(--sage-dark); }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .fm-marquee { background:var(--paper2); color:var(--gray); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:.9rem 0; overflow:hidden; white-space:nowrap; }
+  .fm-marquee__inner { display:inline-flex; gap:1.5rem; animation:marquee 30s linear infinite; font-family:var(--read); font-size:.74rem; letter-spacing:.06em; }
+  .fm-marquee__inner span:nth-child(even) { color:var(--salmon); }
+  @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 
   /* ── MANIFESTO ── */
-  .fm-manifesto { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: var(--page-max); margin: 0 auto; }
-  @media (max-width: 700px) { .fm-manifesto { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-manifesto h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
-  .fm-manifesto h2 em { font-style: italic; }
-  .fm-manifesto p { font-family: var(--garamond); font-size: 1.22rem; line-height: 1.62; color: #1f1f1f; }
-  .fm-stats { display: flex; flex-direction: column; gap: 1.5rem; }
-  .fm-stat__num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1; }
-  .fm-stat__label { font-size: 0.85rem; line-height: 1.55; color: #444; margin-top: 0.25rem; max-width: 28ch; }
+  .fm-manifesto { padding:clamp(3.5rem,7vw,6.5rem) var(--page-pad); display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(2.5rem,5vw,5rem); max-width:var(--page-max); margin:0 auto; align-items:center; }
+  @media (max-width:760px){ .fm-manifesto { grid-template-columns:1fr; gap:2rem; } }
+  .fm-manifesto h2 { font-family:var(--brand); font-size:clamp(1.8rem,3.2vw,2.7rem); font-weight:500; line-height:1.14; letter-spacing:-.01em; margin-bottom:1rem; }
+  .fm-manifesto h2 em { font-style:italic; color:var(--salmon-ink); }
+  .fm-manifesto p { font-family:var(--read); font-size:1.04rem; line-height:1.66; color:var(--gray); }
+  .fm-stats { display:flex; flex-direction:column; gap:2rem; }
+  .fm-stat__num { font-family:var(--brand); font-size:clamp(2.2rem,3.6vw,3rem); font-weight:500; line-height:1; color:var(--ink); }
+  .fm-stat__num::after { content:""; display:block; width:34px; height:2px; background:var(--salmon); margin-top:.85rem; }
+  .fm-stat__label { font-family:var(--read); font-size:.9rem; line-height:1.55; color:var(--gray); margin-top:.85rem; max-width:30ch; }
 
   /* ── BLOG CARDS ── */
-  .fm-blog { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); max-width: var(--page-max); margin: 0 auto; }
-  .fm-blog__header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1rem; }
-  .fm-blog__header h2 { font-size: 1.1rem; font-weight: 400; }
-  .fm-blog__header a { font-size: 0.8rem; text-decoration: none; color: #555; }
-  .fm-blog__header a:hover { color: var(--black); }
-  .fm-blog__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+  .fm-blog { padding:clamp(2rem,5vw,4rem) var(--page-pad) clamp(4rem,8vw,7rem); max-width:var(--page-max); margin:0 auto; }
+  .fm-blog__header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:2.8rem; border-bottom:1px solid var(--line); padding-bottom:1.2rem; }
+  .fm-blog__header h2 { font-family:var(--brand); font-size:clamp(1.6rem,3vw,2.4rem); font-weight:500; letter-spacing:-.01em; }
+  .fm-blog__header a { font-family:var(--brand); font-size:1.05rem; text-decoration:none; color:var(--salmon-ink); white-space:nowrap; }
+  .fm-blog__header a:hover { color:var(--ink); }
+  .fm-blog__grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(288px, 1fr)); gap:1.75rem; }
 
-  .font-card { border: 1px solid rgba(0,0,0,0.08); background: #fff; display: flex; flex-direction: column; text-decoration: none; color: var(--black); transition: border-color 0.15s, transform 0.15s; }
-  .font-card:hover { border-color: rgba(0,0,0,0.3); transform: translateY(-2px); }
-  .font-card__specimen { padding: 2rem 1.75rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); min-height: 160px; display: flex; flex-direction: column; justify-content: flex-end; }
-  .font-card__big { font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 0.9; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-  .font-card__alpha { font-size: 0.7rem; letter-spacing: 0.15em; color: #999; text-transform: uppercase; }
+  .font-card { border:1px solid var(--line); background:var(--paper); display:flex; flex-direction:column; text-decoration:none; color:var(--ink); transition:border-color .18s, transform .18s; }
+  .font-card:hover { border-color:var(--salmon); transform:translateY(-3px); }
+  .font-card__specimen { background:var(--paper); padding:2rem 1.9rem 1.5rem; border-bottom:1px solid var(--line-soft); min-height:158px; display:flex; flex-direction:column; justify-content:flex-end; }
+  .font-card__big { font-size:clamp(2.8rem,5vw,4.2rem); line-height:.9; font-weight:400; letter-spacing:-.02em; margin-bottom:.5rem; color:var(--ink) !important; }
+  .font-card__alpha { font-family:var(--read); font-size:.66rem; letter-spacing:.16em; color:var(--gray-soft) !important; text-transform:uppercase; }
 
-  /* per-font specimen styles */
-  .font-card--ak .font-card__specimen { background: #0a0a0a; color: #f8f8f5; }
-  .font-card--ak .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; letter-spacing: -0.03em; }
-  .font-card--ak .font-card__alpha { color: #666; }
-  .font-card--garamond .font-card__specimen { background: var(--sage); }
-  .font-card--garamond .font-card__big { font-family: Garamond, "EB Garamond", "Times New Roman", serif; font-style: italic; }
-  .font-card--times .font-card__specimen { background: #1a1a2e; color: #e8e4da; }
-  .font-card--times .font-card__big { font-family: "Times New Roman", Times, serif; font-weight: 700; letter-spacing: -0.01em; }
-  .font-card--times .font-card__alpha { color: #888; }
-  .font-card--futura .font-card__specimen { background: #f0ece4; }
-  .font-card--futura .font-card__big { font-family: "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: 0.05em; }
-  .font-card--baskerville .font-card__specimen { background: #2a1a0e; color: #f5ece0; }
-  .font-card--baskerville .font-card__big { font-family: Baskerville, "Baskerville Old Face", "Palatino Linotype", serif; }
-  .font-card--baskerville .font-card__alpha { color: #888; }
-  .font-card--helvetica .font-card__specimen { background: #f2f2f2; }
-  .font-card--helvetica .font-card__big { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
-  .font-card--optima .font-card__specimen { background: #f5f0e8; }
-  .font-card--optima .font-card__big { font-family: Optima, "Optima Nova", Candara, sans-serif; font-weight: 400; letter-spacing: 0.01em; }
-  .font-card--papyrus .font-card__specimen { background: #e8dfc8; }
-  .font-card--papyrus .font-card__big { font-family: Papyrus, fantasy; font-weight: 400; }
-  .font-card--caslon .font-card__specimen { background: #0a0a0a; color: #f0ede6; }
-  .font-card--caslon .font-card__big { font-family: "Big Caslon", "Libre Caslon Text", Caslon, "Palatino Linotype", Georgia, serif; font-weight: 700; letter-spacing: -0.01em; }
-  .font-card--caslon .font-card__alpha { color: #666; }
-  .font-card--comic .font-card__specimen { background: #fff9c4; }
-  .font-card--comic .font-card__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; letter-spacing: -0.01em; }
+  /* per-font faces only — airy white panels, ink specimens */
+  .font-card--ak .font-card__big { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:200; letter-spacing:-.03em; }
+  .font-card--garamond .font-card__big { font-family:"EB Garamond", Garamond, serif; font-style:italic; font-weight:600; }
+  .font-card--times .font-card__big { font-family:"Times New Roman", Times, serif; font-weight:700; letter-spacing:-.01em; }
+  .font-card--futura .font-card__big { font-family:"Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight:400; letter-spacing:.05em; }
+  .font-card--baskerville .font-card__big { font-family:Baskerville, "Baskerville Old Face", "Palatino Linotype", serif; }
+  .font-card--helvetica .font-card__big { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; letter-spacing:-.03em; }
+  .font-card--optima .font-card__big { font-family:Optima, "Optima Nova", Candara, sans-serif; font-weight:400; letter-spacing:.01em; }
+  .font-card--papyrus .font-card__big { font-family:Papyrus, fantasy; font-weight:400; }
+  .font-card--caslon .font-card__big { font-family:"Big Caslon", "Libre Caslon Text", Caslon, "Palatino Linotype", Georgia, serif; font-weight:700; letter-spacing:-.01em; }
+  .font-card--comic .font-card__big { font-family:"Comic Sans MS", "Comic Sans", cursive; font-weight:700; letter-spacing:-.01em; }
+  .font-card--franklin .font-card__big { font-family:"Franklin Gothic Medium", "Franklin Gothic Book", "Arial Narrow", Impact, sans-serif; font-weight:700; letter-spacing:-.03em; text-transform:uppercase; font-size:clamp(2.3rem,4vw,3.4rem); }
+  .font-card--arial .font-card__big { font-family:Arial, "Arial Nova", Helvetica, sans-serif; font-weight:700; letter-spacing:-.03em; }
+  .font-card--didot .font-card__big { font-family:Didot, "Didot LT Std", "GFS Didot", "Bodoni MT", Georgia, serif; font-weight:400; letter-spacing:-.01em; }
+  .font-card--bodoni .font-card__big { font-family:"Bodoni MT", "Bodoni 72", Didot, "Didot LT Std", Georgia, serif; font-weight:700; letter-spacing:-.02em; }
+  .font-card--gill .font-card__big { font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; font-weight:400; letter-spacing:-.01em; }
+  .font-card--eurostile .font-card__big { font-family:"Eurostile", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-weight:700; letter-spacing:.02em; }
+  .font-card--gotham .font-card__big { font-family:"Gotham", "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight:700; letter-spacing:-.02em; }
+  .font-card--trajan .font-card__big { font-family:"Trajan Pro", Cinzel, "Palatino Linotype", Times, serif; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+  .font-card--copperplate .font-card__big { font-family:Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight:400; letter-spacing:.1em; text-transform:uppercase; }
+  .font-card--poppins .font-card__big { font-family:"Poppins", sans-serif; font-weight:700; letter-spacing:-.03em; }
 
-  /* ── new fonts ── */
-  .font-card--franklin .font-card__specimen { background: #e8e4dc; }
-  .font-card--franklin .font-card__big { font-family: "Franklin Gothic Medium", "Franklin Gothic Book", "Arial Narrow", Impact, sans-serif; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; font-size: clamp(2.2rem, 3.8vw, 3.4rem); }
-  .font-card--arial .font-card__specimen { background: #1e1e1e; color: #f8f8f5; }
-  .font-card--arial .font-card__big { font-family: Arial, "Arial Nova", Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
-  .font-card--arial .font-card__alpha { color: #666; }
-  .font-card--didot .font-card__specimen { background: #f8f4ee; }
-  .font-card--didot .font-card__big { font-family: Didot, "Didot LT Std", "GFS Didot", "Bodoni MT", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
-  .font-card--bodoni .font-card__specimen { background: #fff; }
-  .font-card--bodoni .font-card__big { font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT Std", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
-  .font-card--gill .font-card__specimen { background: #182418; color: #e8f0ea; }
-  .font-card--gill .font-card__big { font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: -0.01em; }
-  .font-card--gill .font-card__alpha { color: #9ab; }
-  .font-card--eurostile .font-card__specimen { background: #060e1a; color: #dde8f2; }
-  .font-card--eurostile .font-card__big { font-family: "Eurostile", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: 0.02em; font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
-  .font-card--eurostile .font-card__alpha { color: #4a6a8a; }
-  .font-card--gotham .font-card__specimen { background: #f2f0eb; }
-  .font-card--gotham .font-card__big { font-family: "Gotham", "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: -0.02em; }
-  .font-card--trajan .font-card__specimen { background: #1a1208; color: #f0e8d0; }
-  .font-card--trajan .font-card__big { font-family: "Trajan Pro", Cinzel, "Palatino Linotype", Times, serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: clamp(2.3rem, 4.3vw, 3.7rem); }
-  .font-card--trajan .font-card__alpha { color: #8a7a60; }
-  .font-card--copperplate .font-card__specimen { background: #0e1c18; color: #deeae6; }
-  .font-card--copperplate .font-card__big { font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
-  .font-card--copperplate .font-card__alpha { color: #5a8070; }
-  .font-card--poppins .font-card__specimen { background: #eef0f2; }
-  .font-card--poppins .font-card__big { font-family: Poppins, "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: -0.03em; }
-  .font-card--poppins .font-card__alpha { color: #6a7a85; }
+  .font-card__body { padding:1.35rem 1.9rem 1.6rem; flex:1; display:flex; flex-direction:column; }
+  .font-card__meta { display:flex; gap:.6rem; margin-bottom:.85rem; flex-wrap:wrap; }
+  .font-card__tag { font-family:var(--read); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-soft); }
+  .font-card__tag:not(:last-child)::after { content:"·"; margin-left:.6rem; color:var(--line); }
+  .font-card__name { font-family:var(--brand); font-size:1.3rem; font-weight:500; margin-bottom:.6rem; line-height:1.25; color:var(--ink); }
+  .font-card__excerpt { font-family:var(--read); font-size:.96rem; line-height:1.58; color:var(--gray); flex:1; }
+  .font-card__read { margin-top:1.1rem; font-family:var(--brand); font-size:1rem; color:var(--salmon-ink); }
 
-  .font-card__body { padding: 1.25rem 1.75rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
-  .font-card__meta { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
-  .font-card__tag { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; color: #444; }
-  .font-card__name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; color: var(--black); }
-  .font-card__excerpt { font-family: var(--garamond); font-size: 1.08rem; line-height: 1.55; color: #2a2a2a; flex: 1; }
-  .font-card__read { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #777; }
-
-  /* ── FEATURED ── */
-  .font-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
-  @media (max-width: 600px) { .font-card--featured { grid-template-columns: 1fr; } }
-  .font-card--featured .font-card__specimen { min-height: 240px; border-bottom: none; border-right: 1px solid rgba(0,0,0,0.06); }
-  @media (max-width: 600px) { .font-card--featured .font-card__specimen { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); } }
-  .font-card--featured .font-card__big { font-size: clamp(4rem, 8vw, 7rem); }
+  /* featured */
+  .font-card--featured { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; }
+  @media (max-width:600px){ .font-card--featured { grid-template-columns:1fr; } }
+  .font-card--featured .font-card__specimen { min-height:248px; border-bottom:none; border-right:1px solid var(--line-soft); background:var(--blue); padding:2.5rem 2rem; }
+  @media (max-width:600px){ .font-card--featured .font-card__specimen { border-right:none; border-bottom:1px solid var(--line-soft); } }
+  .font-card--featured .font-card__big { font-size:clamp(3.6rem,7vw,6rem); }
+  .font-card--featured .font-card__body { justify-content:center; }
 
   /* ── QUOTE ── */
-  .fm-quote { background: var(--sage-mid); padding: clamp(3rem, 7vw, 5rem) var(--page-pad); text-align: center; }
-  .fm-quote blockquote { font-family: var(--garamond); font-size: clamp(1.3rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.45; max-width: 42em; margin: 0 auto 1rem; font-style: italic; }
-  .fm-quote cite { font-size: 0.8rem; letter-spacing: 0.08em; color: #555; font-style: normal; display: block; margin-bottom: 2rem; }
+  .fm-quote { background:var(--paper); border-top:1px solid var(--line); padding:clamp(4rem,8vw,6.5rem) var(--page-pad); text-align:center; }
+  .fm-quote blockquote { font-family:var(--brand); font-size:clamp(1.6rem,3.2vw,2.5rem); font-weight:500; line-height:1.4; max-width:24ch; margin:0 auto 1rem; font-style:italic; color:var(--ink); }
+  .fm-quote cite { font-family:var(--read); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gray-soft); font-style:normal; display:block; margin-bottom:2rem; }
 
   /* ── WHY ── */
-  .fm-why { padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: var(--page-max); margin: 0 auto; }
-  @media (max-width: 700px) { .fm-why { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-why__num { font-size: 0.7rem; color: #aaa; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-  .fm-why__title { font-size: 1rem; margin-bottom: 0.75rem; color: var(--black); }
-  .fm-why__text { font-family: var(--garamond); font-size: 1.15rem; line-height: 1.6; color: #2a2a2a; }
+  .fm-why { padding:clamp(3.5rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(2rem,4vw,3.5rem); max-width:var(--page-max); margin:0 auto; }
+  @media (max-width:760px){ .fm-why { grid-template-columns:1fr; gap:2.25rem; } }
+  .fm-why__num { font-family:var(--read); font-size:.72rem; color:var(--salmon-ink); letter-spacing:.14em; margin-bottom:1rem; }
+  .fm-why__title { font-family:var(--brand); font-size:1.35rem; font-weight:500; margin-bottom:.75rem; color:var(--ink); }
+  .fm-why__text { font-family:var(--read); font-size:1rem; line-height:1.62; color:var(--gray); }
 
   /* ── STORY ── */
-  .fm-story { background: var(--off-white); border-top: 1px solid rgba(0,0,0,0.08); padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; max-width: var(--page-max); margin: 0 auto; }
-  @media (max-width: 700px) { .fm-story { grid-template-columns: 1fr; gap: 2rem; } }
-  .fm-story h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
-  .fm-story h2 em { font-style: italic; }
-  .fm-story__body { font-family: var(--garamond); font-size: 1.22rem; line-height: 1.65; color: #1f1f1f; margin-bottom: 1.25rem; }
+  .fm-story { background:var(--sage); border-top:1px solid var(--line); padding:clamp(3.5rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(2.5rem,5vw,5rem); max-width:var(--page-max); margin:0 auto; }
+  @media (max-width:760px){ .fm-story { grid-template-columns:1fr; gap:2rem; } }
+  .fm-story h2 { font-family:var(--brand); font-size:clamp(1.7rem,3vw,2.5rem); font-weight:500; line-height:1.14; margin-bottom:1rem; }
+  .fm-story h2 em { font-style:italic; color:var(--salmon-ink); }
+  .fm-story__body { font-family:var(--read); font-size:1.04rem; line-height:1.7; color:var(--gray); margin-bottom:1.25rem; }
 
   /* ── CONTACT FORM ── */
-  .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.95rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
-  .fm-input:focus { border-bottom-color: rgba(0,0,0,0.6); }
-  .fm-input::placeholder { color:rgba(0,0,0,0.3); }
-  .fm-label { display:block; font-family:'Courier New',Courier,monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(0,0,0,0.85); margin-bottom:0.5rem; }
-  .fm-field { margin-bottom:1.5rem; }
+  .fm-input { width:100%; font-family:var(--read); font-size:.98rem; background:transparent; border:none; border-bottom:1px solid rgba(20,20,20,.18); color:var(--ink); padding:.7rem 0; outline:none; transition:border-color .15s; line-height:1.5; }
+  .fm-input:focus { border-bottom-color:var(--salmon); }
+  .fm-input::placeholder { color:rgba(20,20,20,.3); }
+  .fm-label { display:block; font-family:var(--brand); font-size:.95rem; letter-spacing:.02em; color:var(--ink); margin-bottom:.4rem; }
+  .fm-field { margin-bottom:1.6rem; }
   .fm-select { appearance:none; cursor:pointer; background:transparent; }
-  .fm-submit { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
-  .fm-submit:hover { background:#333; }
-  .fm-submit:disabled { opacity:0.5; cursor:default; }
-  .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#35596b; border:1px solid rgba(87,127,141,0.45); background:rgba(87,127,141,0.09); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
-  .fm-error-msg { font-family:'Courier New',Courier,monospace; font-size:0.72rem; color:#8b3a3a; margin-top:0.4rem; display:block; min-height:0; }
-  @media (max-width: 760px) { .fm-contact { grid-template-columns: 1fr !important; } }
+  .fm-submit { font-family:var(--brand); font-weight:600; font-size:1.02rem; letter-spacing:0; padding:.85rem 2.1rem; background:var(--ink); color:#fff; border:none; cursor:pointer; border-radius:2px; transition:background .15s; }
+  .fm-submit:hover { background:var(--salmon-ink); }
+  .fm-submit:disabled { opacity:.5; cursor:default; }
+  .fm-success { font-family:var(--read); font-size:.9rem; color:var(--blue-ink); border:1px solid var(--blue2); background:var(--blue); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
+  .fm-error-msg { font-family:var(--read); font-size:.72rem; color:var(--salmon-ink); margin-top:.4rem; display:block; min-height:0; }
+  @media (max-width:760px){ .fm-contact { grid-template-columns:1fr !important; } }
   </style>
   </head>
   <body>
@@ -267,7 +237,7 @@
     <!-- HEADER -->
     <header class="site-header" role="banner">
       <a href="/"
-        style="font-family:'Courier New',Courier,monospace; font-size:1.25rem; font-weight:700; letter-spacing:0.04em; text-decoration:none; color:#0a0a0a;"
+        style="font-family:var(--brand); font-size:1.25rem; font-weight:700; letter-spacing:0.04em; text-decoration:none; color:#0a0a0a;"
         aria-label="fonts matter, period. — home">fonts matter.</a>
       <nav aria-label="Main navigation">
         <ul class="site-nav">
@@ -284,13 +254,13 @@
       <section style="background: var(--sage);" aria-label="Introduction">
         <div class="fm-hero">
           <div class="fm-hero__left">
-            <p class="fm-eyebrow">est. in courier new · typography first</p>
+            <p class="fm-eyebrow">typography for people who notice</p>
             <h1 class="fm-hero__headline">the type<br>you notice<br>when you
               <em>shouldn't.</em></h1>
             <p class="fm-hero__sub">For designers, developers, and writers who
-              believe good design starts before the first word. We write about
-              typefaces the way some people argue about wine — with feelings,
-              opinions, and zero apologies.</p>
+              believe good design starts before the first word. A field guide to
+              the typefaces we live with every day — where they came from, why
+              they feel the way they do, and when to reach for them.</p>
             <div class="fm-hero__ctas">
               <a href="/blog/" class="fm-btn fm-btn--solid">read the blog</a>
               <a href="#our-story" class="fm-btn">our story</a>
@@ -319,17 +289,13 @@
       <div class="fm-marquee" aria-hidden="true">
         <div class="fm-marquee__inner">
           <span>typography isn't decoration</span><span>·</span><span>kerning is
-            caring</span><span>·</span><span>serif > sans — fight
-            me</span><span>·</span><span>the font is the
+            caring</span><span>·</span><span>every typeface has a story</span><span>·</span><span>the font is the
             message</span><span>·</span><span>Akzidenz-Grotesk · Courier New ·
-            Garamond · Futura · Baskerville</span><span>·</span><span>type nerd
-            since before it was cool</span><span>·</span><span>typography isn't
+            Garamond · Futura · Baskerville</span><span>·</span><span>letterforms worth knowing</span><span>·</span><span>typography isn't
             decoration</span><span>·</span><span>kerning is
-            caring</span><span>·</span><span>serif > sans — fight
-            me</span><span>·</span><span>the font is the
+            caring</span><span>·</span><span>every typeface has a story</span><span>·</span><span>the font is the
             message</span><span>·</span><span>Akzidenz-Grotesk · Courier New ·
-            Garamond · Futura · Baskerville</span><span>·</span><span>type nerd
-            since before it was cool</span><span>·</span>
+            Garamond · Futura · Baskerville</span><span>·</span><span>letterforms worth knowing</span><span>·</span>
         </div>
       </div>
 
@@ -338,27 +304,26 @@
         aria-label="About fonts matter">
         <div class="fm-manifesto">
           <div>
-            <h2>we're not just another <em>design blog.</em></h2>
+            <h2>we take type <em>seriously.</em></h2>
             <p>We write about typefaces the way critics write about films — with
-              context, history, and actual opinions. No neutral takes. No
-              "it depends." We know what we think about Helvetica, and we'll
-              tell you.</p>
+              context, history, and a real point of view. Where a typeface came
+              from, what it was built to do, and why it still matters.</p>
           </div>
           <div class="fm-stats">
             <div>
               <div class="fm-stat__num" aria-label="300,000 plus">300,000+</div>
-              <div class="fm-stat__label">typefaces in existence. you have
-                strong opinions about at least twelve of them.</div>
+              <div class="fm-stat__label">typefaces in existence. you recognize
+                more of them than you'd think.</div>
             </div>
             <div>
               <div class="fm-stat__num">0.05s</div>
-              <div class="fm-stat__label">how long it takes a viewer to form an
-                opinion. type is always first.</div>
+              <div class="fm-stat__label">how long it takes a reader to form an
+                impression. type gets there first.</div>
             </div>
             <div>
               <div class="fm-stat__num">1957</div>
               <div class="fm-stat__label">Akzidenz-Grotesk inspires Helvetica.
-                the argument starts.</div>
+                the family tree begins.</div>
             </div>
           </div>
         </div>
@@ -875,17 +840,17 @@
           </div>
           <div>
             <div class="fm-why__num" aria-hidden="true">02</div>
-            <h3 class="fm-why__title">opinions, not takes</h3>
-            <p class="fm-why__text">We don't write "it depends." We write about
-              what we actually believe, what the history actually shows, and
-              what the type community has been arguing about for decades.</p>
+            <h3 class="fm-why__title">history first</h3>
+            <p class="fm-why__text">Every entry starts with where a typeface came
+              from and what it was made to do — the craft, the context, and the
+              conversations type designers have had for generations.</p>
           </div>
           <div>
             <div class="fm-why__num" aria-hidden="true">03</div>
             <h3 class="fm-why__title">the details matter</h3>
-            <p class="fm-why__text">Everything here is set in Courier New.
-              Deliberately. The typeface is the argument — no explanation
-              needed, no decoration required.</p>
+            <p class="fm-why__text">The whole site runs on EB Garamond and Poppins — a serif that trusts
+              the reader, a sans that gets out of the way. Restraint is the
+              argument; type doesn't have to shout to be right.</p>
           </div>
         </div>
       </section>
@@ -897,33 +862,31 @@
         <div class="fm-story" id="our-story">
           <div>
             <p class="fm-eyebrow" style="margin-bottom: 1.25rem;">our story</p>
-            <h2 id="story-heading">we're from San Diego.<br>we have
-              <em>opinions.</em></h2>
+            <h2 id="story-heading">we're from San Diego.<br>we pay
+              <em>attention.</em></h2>
           </div>
           <div>
-            <p class="fm-story__body">fonts matter. started in San Diego, which
-              means we grew up next to the Pacific Ocean and still found time to
-              have strong feelings about typefaces. priorities.</p>
-            <p class="fm-story__body">this obsession didn't start last year.
-              it's been thirty years of noticing the wrong font on a sign, the
-              bad kerning on a menu, the moment a brand's whole personality
-              collapses because someone picked Arial. we've been the person at
-              the table saying <em>that's not the right typeface</em> since
-              before it was something you could say out loud.</p>
+            <p class="fm-story__body">fonts matter. started in San Diego — a
+              lifetime spent noticing the type all around us, and wanting to
+              understand it better.</p>
+            <p class="fm-story__body">it's been thirty years of noticing the type
+              on a storefront sign, the spacing on a menu, the way a single
+              typeface can shape how an entire brand feels. this is where we
+              write down <em>what we've learned.</em></p>
             <div
               style="display:flex; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
               <div><span
                   style="font-size:2rem; display:block; line-height:1;">30</span><span
                   style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">years
-                  caring too much about fonts</span></div>
+                  spent noticing type</span></div>
               <div><span
-                  style="font-size:2rem; display:block; line-height:1;">0</span><span
-                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">apologies
-                  for having opinions about kerning</span></div>
+                  style="font-size:2rem; display:block; line-height:1;">21</span><span
+                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">typefaces
+                  in the field guide</span></div>
               <div><span
                   style="font-size:2rem; display:block; line-height:1;">∞</span><span
-                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">strong
-                  feelings about Comic Sans</span></div>
+                  style="font-size:0.8rem; color:#666; display:block; margin-top:0.25rem; max-width:14ch; line-height:1.4;">endless
+                  curiosity about letterforms</span></div>
             </div>
             <a href="/blog/" class="fm-btn fm-btn--solid"
               style="margin-top:0.5rem;">read the field guide</a>
@@ -940,16 +903,16 @@
         style="max-width:1100px; margin:0 auto; padding:clamp(3rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(3rem,6vw,6rem); align-items:start;">
         <div>
           <p
-            style="font-family:'Courier New',Courier,monospace; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#666; margin-bottom:1.25rem;">get
+            style="font-family:var(--brand); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#666; margin-bottom:1.25rem;">get
             in touch</p>
           <h2 id="contact-heading"
-            style="font-family:'Courier New',Courier,monospace; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
-            something.<br><em style="font-style:italic; color:var(--sage-accent);">we have
-              opinions<br>about everything.</em></h2>
+            style="font-family:var(--brand); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
+            something.<br><em style="font-style:italic; color:var(--sage-accent);">we read
+              every<br>note you send.</em></h2>
           <p
-            style="font-family:var(--garamond); font-size:1.15rem; line-height:1.6; color:#1f1f1f; margin-bottom:2rem;">Whether
-            you want to argue about kerning, pitch a collaboration, or just tell
-            us we're wrong about Comic Sans — we're here for it.</p>
+            style="font-family:var(--read); font-size:1.02rem; line-height:1.62; color:#1f1f1f; margin-bottom:2rem;">Whether
+            you have a question about a typeface, a project in mind, or just
+            something to share — we'd love to hear it.</p>
           <div
             style="width:32px; height:1px; background:rgba(0,0,0,0.15); margin-bottom:1.75rem;"></div>
           <div
@@ -959,7 +922,7 @@
                 target="_blank" rel="noopener noreferrer"
                 style="color:#555; text-decoration:none;">@fontsmatterperiod</a></div>
             <div>based in — San Diego, CA</div>
-            <div>est. — in Courier New</div>
+            <div>set in — EB Garamond &amp; Poppins</div>
           </div>
         </div>
         <div>
@@ -967,16 +930,16 @@
             style="display:flex; border:1px solid rgba(0,0,0,0.15); margin-bottom:2rem;">
             <button id="btn-general" onclick="switchType('general')"
               aria-pressed="true"
-              style="flex:1; font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:#0a0a0a; color:#f0ede6; border:none; border-right:1px solid rgba(0,0,0,0.15); cursor:pointer;">general
+              style="flex:1; font-family:var(--brand); font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:#0a0a0a; color:#f0ede6; border:none; border-right:1px solid rgba(0,0,0,0.15); cursor:pointer;">general
               / fan mail</button>
             <button id="btn-press" onclick="switchType('press')"
               aria-pressed="false"
-              style="flex:1; font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
+              style="flex:1; font-family:var(--brand); font-weight:bold; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.8rem 1rem; background:transparent; color:#0a0a0a; border:none; cursor:pointer; opacity:0.4;">press
               &amp; collabs</button>
           </div>
           <div id="form-general">
             <div class="fm-success" id="success-general">thanks — we got it.
-              opinions incoming.</div>
+              we'll be in touch soon.</div>
             <div class="fm-error-msg" id="error-general"></div>
             <form id="fm-form-general" novalidate>
               <input type="hidden" name="inquiry_type"
@@ -995,21 +958,21 @@
               <div class="fm-field"><label class="fm-label"
                   for="gen-message">what's on your mind</label><textarea
                   id="gen-message" name="message" class="fm-input" rows="5"
-                  placeholder="opinions, questions, arguments welcome."
+                  placeholder="questions, ideas, or anything on your mind."
                   style="resize:none;" required></textarea><span
                   class="fm-error-msg" data-fs-error="message"></span></div>
               <div class="fm-field"><label
                   style="display:flex; align-items:center; gap:0.75rem; cursor:pointer; font-size:0.85rem; color:#555; letter-spacing:0.02em;"><input
                     type="checkbox" name="join_list" value="yes"
-                    style="accent-color:#0a0a0a;"> join the list — new font
-                  features &amp; hot takes</label></div>
+                    style="accent-color:#0a0a0a;"> join the list — new typeface
+                  features and notes</label></div>
               <button type="submit" class="fm-submit" data-fs-submit-btn>send it
                 →</button>
             </form>
           </div>
           <div id="form-press" style="display:none;">
             <div class="fm-success" id="success-press">thanks — we'll be in
-              touch. set in courier new, obviously.</div>
+              touch soon.</div>
             <div class="fm-error-msg" id="error-press"></div>
             <form id="fm-form-press" novalidate>
               <input type="hidden" name="inquiry_type" value="press / collabs">
@@ -1040,7 +1003,7 @@
               <div class="fm-field"><label class="fm-label"
                   for="press-message">tell us more</label><textarea
                   id="press-message" name="message" class="fm-input" rows="4"
-                  placeholder="the pitch, the idea, the ask."
+                  placeholder="tell us about the project or idea."
                   style="resize:none;" required></textarea><span
                   class="fm-error-msg" data-fs-error="message"></span></div>
               <button type="submit" class="fm-submit" data-fs-submit-btn>send it

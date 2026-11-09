@@ -7,7 +7,7 @@
     <meta name="description"
       content="fonts matter, period. is an opinionated typography blog from San Diego. We write about typefaces — Garamond, Baskerville, Futura, Comic Sans — with context, history, and actual opinions.">
     <meta name="keywords"
-      content="typography, typeface, font history, type design, Courier New, Garamond, Baskerville, Futura, Comic Sans, Papyrus, fonts matter">
+      content="typography, typeface, font history, type design, Courier New, Garamond, Baskerville, Futura, Comic Sans, Papyrus, Poppins, fonts matter">
     <link rel="canonical" href="https://fontsmatterperiod.com/">
 
     <!-- Favicons -->
@@ -45,11 +45,16 @@
     "url": "https://fontsmatterperiod.com/",
     "description": "An opinionated typography blog from San Diego. We write about typefaces with context, history, and actual opinions.",
     "sameAs": [
-      "https://www.instagram.com/fontsmatterperiod",
-      "https://www.facebook.com/fontsmatterperiod"
+      "https://www.instagram.com/fontsmatterperiod"
     ]
   }
   </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet">
 
     <!-- Google Analytics -->
     <script async
@@ -67,10 +72,18 @@
   :root {
     --black: #0a0a0a;
     --off-white: #f8f8f5;
-    --sage: #e3f1eb;
-    --sage-mid: #d4e8e0;
-    --sage-dark: #a8cfc0;
+    /* ── PALETTE ──
+       Change these four and the whole page follows: hero, quote band,
+       contact, footer, marquee accents, the Garamond card specimen. */
+    --sage: #e3eff2;
+    --sage-mid: #d3e4ea;
+    --sage-dark: #a6c7d2;
+    --sage-accent: #577f8d;
     --mono: "Courier New", Courier, monospace;
+    --garamond: "EB Garamond", Garamond, serif;
+    /* reading-body font — set to Poppins to try a sans body.
+       Revert this one line to var(--garamond) to go back to serif. */
+    --read: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     --page-max: 1200px;
     --page-pad: clamp(1.5rem, 5vw, 4rem);
@@ -95,10 +108,16 @@
   .fm-eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; color: #666; text-transform: uppercase; margin-bottom: 1.25rem; }
   .fm-hero__headline { font-family: var(--mono); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.25rem; }
   .fm-hero__headline em { font-style: italic; }
-  .fm-hero__sub { font-size: 1rem; line-height: 1.7; color: var(--black); max-width: 38ch; margin-bottom: 2rem; }
+  /* ── READING PROSE IS GARAMOND ──
+     Courier New stays on everything that signals the brand — logo, nav,
+     headlines, eyebrows, labels, tags, stat numbers, buttons, form fields.
+     Anything that is a sentence read for its content is set in Garamond.
+     Sizes run ~20% larger than the Courier values they replaced, because
+     Garamond has a much smaller x-height at the same nominal size. */
+  .fm-hero__sub { font-family: var(--read); font-size: 1.05rem; line-height: 1.6; color: var(--black); max-width: 36em; margin-bottom: 2rem; }
   .fm-hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  .fm-btn { display: inline-block; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; padding: 0.75rem 1.5rem; text-decoration: none; border: 1px solid var(--black); color: var(--black); transition: background 0.15s, color 0.15s; cursor: pointer; }
+  .fm-btn { display: inline-block; font-family: var(--mono); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; padding: 0.75rem 1.5rem; text-decoration: none; border: 1px solid var(--black); color: var(--black); transition: background 0.15s, color 0.15s; cursor: pointer; }
   .fm-btn:hover { background: var(--black); color: var(--off-white); }
   .fm-btn--solid { background: var(--black); color: var(--off-white); }
   .fm-btn--solid:hover { background: #333; }
@@ -123,7 +142,7 @@
   @media (max-width: 700px) { .fm-manifesto { grid-template-columns: 1fr; gap: 2rem; } }
   .fm-manifesto h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
   .fm-manifesto h2 em { font-style: italic; }
-  .fm-manifesto p { font-size: 1rem; line-height: 1.7; color: #222; }
+  .fm-manifesto p { font-family: var(--read); font-size: 1.05rem; line-height: 1.64; color: #1f1f1f; }
   .fm-stats { display: flex; flex-direction: column; gap: 1.5rem; }
   .fm-stat__num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1; }
   .fm-stat__label { font-size: 0.85rem; line-height: 1.55; color: #444; margin-top: 0.25rem; max-width: 28ch; }
@@ -168,11 +187,39 @@
   .font-card--comic .font-card__specimen { background: #fff9c4; }
   .font-card--comic .font-card__big { font-family: "Comic Sans MS", "Comic Sans", cursive; font-weight: 700; letter-spacing: -0.01em; }
 
+  /* ── new fonts ── */
+  .font-card--franklin .font-card__specimen { background: #e8e4dc; }
+  .font-card--franklin .font-card__big { font-family: "Franklin Gothic Medium", "Franklin Gothic Book", "Arial Narrow", Impact, sans-serif; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; font-size: clamp(2.2rem, 3.8vw, 3.4rem); }
+  .font-card--arial .font-card__specimen { background: #1e1e1e; color: #f8f8f5; }
+  .font-card--arial .font-card__big { font-family: Arial, "Arial Nova", Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+  .font-card--arial .font-card__alpha { color: #666; }
+  .font-card--didot .font-card__specimen { background: #f8f4ee; }
+  .font-card--didot .font-card__big { font-family: Didot, "Didot LT Std", "GFS Didot", "Bodoni MT", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+  .font-card--bodoni .font-card__specimen { background: #fff; }
+  .font-card--bodoni .font-card__big { font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT Std", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
+  .font-card--gill .font-card__specimen { background: #182418; color: #e8f0ea; }
+  .font-card--gill .font-card__big { font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; font-weight: 400; letter-spacing: -0.01em; }
+  .font-card--gill .font-card__alpha { color: #9ab; }
+  .font-card--eurostile .font-card__specimen { background: #060e1a; color: #dde8f2; }
+  .font-card--eurostile .font-card__big { font-family: "Eurostile", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: 0.02em; font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
+  .font-card--eurostile .font-card__alpha { color: #4a6a8a; }
+  .font-card--gotham .font-card__specimen { background: #f2f0eb; }
+  .font-card--gotham .font-card__big { font-family: "Gotham", "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  .font-card--trajan .font-card__specimen { background: #1a1208; color: #f0e8d0; }
+  .font-card--trajan .font-card__big { font-family: "Trajan Pro", Cinzel, "Palatino Linotype", Times, serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: clamp(2.3rem, 4.3vw, 3.7rem); }
+  .font-card--trajan .font-card__alpha { color: #8a7a60; }
+  .font-card--copperplate .font-card__specimen { background: #0e1c18; color: #deeae6; }
+  .font-card--copperplate .font-card__big { font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
+  .font-card--copperplate .font-card__alpha { color: #5a8070; }
+  .font-card--poppins .font-card__specimen { background: #eef0f2; }
+  .font-card--poppins .font-card__big { font-family: Poppins, "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+  .font-card--poppins .font-card__alpha { color: #6a7a85; }
+
   .font-card__body { padding: 1.25rem 1.75rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
   .font-card__meta { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
   .font-card__tag { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; color: #444; }
   .font-card__name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.3; color: var(--black); }
-  .font-card__excerpt { font-size: 0.9rem; line-height: 1.7; color: #333; flex: 1; }
+  .font-card__excerpt { font-family: var(--read); font-size: 0.98rem; line-height: 1.6; color: #2a2a2a; flex: 1; }
   .font-card__read { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #777; }
 
   /* ── FEATURED ── */
@@ -184,7 +231,7 @@
 
   /* ── QUOTE ── */
   .fm-quote { background: var(--sage-mid); padding: clamp(3rem, 7vw, 5rem) var(--page-pad); text-align: center; }
-  .fm-quote blockquote { font-size: clamp(1.1rem, 2.5vw, 1.7rem); font-weight: 400; line-height: 1.5; max-width: 50ch; margin: 0 auto 1rem; font-style: italic; }
+  .fm-quote blockquote { font-family: var(--garamond); font-size: clamp(1.3rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.45; max-width: 42em; margin: 0 auto 1rem; font-style: italic; }
   .fm-quote cite { font-size: 0.8rem; letter-spacing: 0.08em; color: #555; font-style: normal; display: block; margin-bottom: 2rem; }
 
   /* ── WHY ── */
@@ -192,14 +239,14 @@
   @media (max-width: 700px) { .fm-why { grid-template-columns: 1fr; gap: 2rem; } }
   .fm-why__num { font-size: 0.7rem; color: #aaa; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
   .fm-why__title { font-size: 1rem; margin-bottom: 0.75rem; color: var(--black); }
-  .fm-why__text { font-size: 0.95rem; line-height: 1.75; color: #333; }
+  .fm-why__text { font-family: var(--read); font-size: 1.02rem; line-height: 1.62; color: #2a2a2a; }
 
   /* ── STORY ── */
   .fm-story { background: var(--off-white); border-top: 1px solid rgba(0,0,0,0.08); padding: clamp(3rem, 7vw, 6rem) var(--page-pad); display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; max-width: var(--page-max); margin: 0 auto; }
   @media (max-width: 700px) { .fm-story { grid-template-columns: 1fr; gap: 2rem; } }
   .fm-story h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
   .fm-story h2 em { font-style: italic; }
-  .fm-story__body { font-size: 1rem; line-height: 1.8; color: #222; margin-bottom: 1.25rem; }
+  .fm-story__body { font-family: var(--read); font-size: 1.05rem; line-height: 1.68; color: #1f1f1f; margin-bottom: 1.25rem; }
 
   /* ── CONTACT FORM ── */
   .fm-input { width:100%; font-family:'Courier New',Courier,monospace; font-size:0.95rem; background:transparent; border:none; border-bottom:1px solid rgba(0,0,0,0.2); color:#0a0a0a; padding:0.65rem 0; outline:none; transition:border-color 0.15s; line-height:1.5; }
@@ -211,8 +258,9 @@
   .fm-submit { font-family:'Courier New',Courier,monospace; font-weight:bold; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; background:#0a0a0a; color:#f0ede6; border:none; cursor:pointer; transition:background 0.15s; }
   .fm-submit:hover { background:#333; }
   .fm-submit:disabled { opacity:0.5; cursor:default; }
-  .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#3a6e5a; border:1px solid rgba(90,138,114,0.4); background:rgba(90,138,114,0.08); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
+  .fm-success { font-family:'Courier New',Courier,monospace; font-size:0.85rem; color:#35596b; border:1px solid rgba(87,127,141,0.45); background:rgba(87,127,141,0.09); padding:1.25rem 1.5rem; display:none; margin-bottom:1.5rem; }
   .fm-error-msg { font-family:'Courier New',Courier,monospace; font-size:0.72rem; color:#8b3a3a; margin-top:0.4rem; display:block; min-height:0; }
+  @media (max-width: 760px) { .fm-contact { grid-template-columns: 1fr !important; } }
   </style>
   </head>
   <body>
@@ -540,6 +588,272 @@
               </div>
             </a>
 
+            <a href="/blog/" class="font-card font-card--times"
+              aria-label="Times New Roman — it wasn't designed to be beautiful">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Times</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Serif</span><span
+                    class="font-card__tag">1931</span><span
+                    class="font-card__tag">Morison</span></div>
+                <div class="font-card__name">Times New Roman — it wasn't designed
+                  to be beautiful. It was designed to be cheap.</div>
+                <div class="font-card__excerpt">Stanley Morison commissioned it
+                  for The Times of London in 1931 with one brief: fit more words
+                  per column inch. Not elegance. Not prestige. Efficiency. The
+                  irony is it became the default typeface of academia, law, and
+                  bureaucracy worldwide — a workhorse mistaken for a monument
+                  every time someone hits 12pt on a fresh document.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--franklin"
+              aria-label="Franklin Gothic — he designed 221 typefaces. You've never heard his name.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Franklin</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Grotesque</span><span
+                    class="font-card__tag">1902</span><span
+                    class="font-card__tag">Benton</span></div>
+                <div class="font-card__name">Franklin Gothic — he designed 221
+                  typefaces. You've never heard his name.</div>
+                <div class="font-card__excerpt">Morris Fuller Benton was the most
+                  prolific type designer in American history. He redesigned half
+                  the faces in ATF's catalog and created dozens more from scratch.
+                  Franklin Gothic — named after Benjamin Franklin for no
+                  particular reason — became the heavy workhorse of American
+                  newspaper headlines and political campaign posters. Bold,
+                  condensed, completely unignorable.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--arial"
+              aria-label="Arial — the font that took Helvetica's job. Legally.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Arial</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Neo-Grotesque</span><span
+                    class="font-card__tag">1982</span><span
+                    class="font-card__tag">Monotype</span></div>
+                <div class="font-card__name">Arial — the font that took
+                  Helvetica's job. Legally.</div>
+                <div class="font-card__excerpt">Microsoft needed a Helvetica
+                  substitute that didn't require a license. Monotype designed
+                  Arial to have identical character widths so documents set in
+                  one would reflow correctly in the other. Type designers noticed
+                  immediately. The general public did not. Arial became the
+                  default sans-serif on every Windows machine for fifteen years.
+                  The whole time, it was a stand-in.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--didot"
+              aria-label="Didot — everyone says Vogue's logo is Bodoni. It isn't.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Didot</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Didone</span><span
+                    class="font-card__tag">1784</span><span
+                    class="font-card__tag">F. Didot</span></div>
+                <div class="font-card__name">Didot — everyone says Vogue's logo
+                  is Bodoni. It isn't. Here's why the mix-up makes total
+                  sense.</div>
+                <div class="font-card__excerpt">Firmin Didot cut these impossibly
+                  thin hairlines and extreme thick-thin contrasts in Paris in
+                  1784. Bodoni — designed in Italy around the same time — arrived
+                  at similar conclusions independently. They look almost
+                  identical to a civilian. Designers will fight you about which
+                  is which. Vogue has been using Didot since 1955. This is not a
+                  small distinction.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--bodoni"
+              aria-label="Bodoni — hard to read. Used by Vogue for over 100 years.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Bodoni</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Didone</span><span
+                    class="font-card__tag">1798</span><span
+                    class="font-card__tag">G. Bodoni</span></div>
+                <div class="font-card__name">Bodoni — hard to read. Used by Vogue
+                  for over 100 years. Nobody is changing anything.</div>
+                <div class="font-card__excerpt">Giambattista Bodoni designed
+                  letters for display, not for body text — the extreme contrast
+                  between thick and hairline strokes dazzles the eye at large
+                  sizes and turns to mush at small ones. Fashion magazines
+                  figured out early that this is a feature, not a bug. Something
+                  that looks luxurious at a glance and resists being read too
+                  carefully is exactly what the industry needed.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--gill"
+              aria-label="Gill Sans — beautiful typeface. Monstrous designer. Still everywhere.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Gill Sans</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Humanist Sans</span><span
+                    class="font-card__tag">1928</span><span
+                    class="font-card__tag">Eric Gill</span></div>
+                <div class="font-card__name">Gill Sans — beautiful typeface.
+                  Monstrous designer. Still everywhere.</div>
+                <div class="font-card__excerpt">Eric Gill was a sculptor,
+                  letterer, and type designer whose work shaped 20th-century
+                  British design. He was also, as his own diaries made
+                  undeniable, a deeply terrible person. Gill Sans is on the BBC
+                  logo. It was the face of British Railways for decades. The
+                  type community has never agreed on what to do about the
+                  distinction between the work and the man.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--eurostile"
+              aria-label="Eurostile — the typeface that made the future look like a rectangle">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Eurostile</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Geometric Sans</span><span
+                    class="font-card__tag">1962</span><span
+                    class="font-card__tag">Novarese</span></div>
+                <div class="font-card__name">Eurostile — the typeface that made
+                  the future look like a rectangle</div>
+                <div class="font-card__excerpt">Aldo Novarese designed Eurostile
+                  in 1962 with squared-off round forms — the corners just barely
+                  curve. It looks like something a spacecraft would wear. Which
+                  is why it appeared on every science-fiction movie set,
+                  television console, and tech product of the 1960s and 70s. The
+                  future, as imagined by the Space Age, was Eurostile. Some
+                  things age badly. This one aged into an aesthetic.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--gotham"
+              aria-label="Gotham — the font that won a presidential election">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Gotham</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Geometric Sans</span><span
+                    class="font-card__tag">2000</span><span
+                    class="font-card__tag">Frere-Jones</span></div>
+                <div class="font-card__name">Gotham — the font that won a
+                  presidential election</div>
+                <div class="font-card__excerpt">Tobias Frere-Jones based Gotham
+                  on the vernacular lettering of mid-century New York — the
+                  painted signs, the building facades, the no-nonsense block
+                  lettering of a city that doesn't have time for flourishes. The
+                  Obama 2008 campaign used it for "HOPE." After that, every
+                  political campaign, startup, and municipality in America
+                  wanted to look trustworthy and modern. Gotham was the answer
+                  to the question for fifteen years.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--trajan"
+              aria-label="Trajan — carved in stone. Now on every movie poster.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Trajan</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Display Serif</span><span
+                    class="font-card__tag">1989</span><span
+                    class="font-card__tag">Twombly</span></div>
+                <div class="font-card__name">Trajan — carved in stone. Now on
+                  every movie poster.</div>
+                <div class="font-card__excerpt">Carol Twombly drew Trajan from
+                  the inscriptions on Trajan's Column in Rome — letterforms
+                  carved around 113 AD, considered by many the peak of Roman
+                  monumental lettering. It has no lowercase. It was designed for
+                  grandeur. Hollywood noticed. From Titanic to Gladiator to
+                  pretty much any film that needs to feel epic and important,
+                  the poster is probably in Trajan.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--copperplate"
+              aria-label="Copperplate Gothic — small caps only. No excuses.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Copper</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Display</span><span
+                    class="font-card__tag">1901</span><span
+                    class="font-card__tag">Goudy</span></div>
+                <div class="font-card__name">Copperplate Gothic — small caps
+                  only. No excuses.</div>
+                <div class="font-card__excerpt">Frederic Goudy designed
+                  Copperplate Gothic in 1901 with no lowercase — every character
+                  is a capital, with tiny incised serifs that look like they were
+                  cut into a metal plate. It was built for engraved stationery,
+                  business cards, and law firm letterheads. It communicates
+                  authority, permanence, and a certain inability to relax. It is
+                  still on more business cards than almost anything else ever
+                  designed.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
+            <a href="/blog/" class="font-card font-card--poppins"
+              aria-label="Poppins — on a trillion screens. Never on the list.">
+              <div class="font-card__specimen">
+                <div class="font-card__big">Poppins</div>
+                <div class="font-card__alpha">Aa Bb Cc 123</div>
+              </div>
+              <div class="font-card__body">
+                <div class="font-card__meta"><span
+                    class="font-card__tag">Geometric Sans</span><span
+                    class="font-card__tag">2014</span><span
+                    class="font-card__tag">ITF</span></div>
+                <div class="font-card__name">Poppins — on a trillion screens.
+                  Never on the list.</div>
+                <div class="font-card__excerpt">Six people drew it in-house at
+                  Indian Type Foundry between 2013 and 2016. Google Fonts
+                  analytics puts it eighth all-time. Typewolf tracks three
+                  thousand curated design sites and it isn't in the top fifteen.
+                  A font nobody paid for doesn't read as a decision — it reads
+                  as what was already there. The design is fine. The credit
+                  problem is the story.</div>
+                <div class="font-card__read">Read more →</div>
+              </div>
+            </a>
+
           </div>
         </div>
       </section>
@@ -623,9 +937,9 @@
     </main>
 
     <!-- CONTACT -->
-    <section style="background:#e3f1eb; color:#0a0a0a;" id="contact"
+    <section style="background:var(--sage); color:#0a0a0a;" id="contact"
       aria-labelledby="contact-heading">
-      <div
+      <div class="fm-contact"
         style="max-width:1100px; margin:0 auto; padding:clamp(3rem,7vw,6rem) var(--page-pad); display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(3rem,6vw,6rem); align-items:start;">
         <div>
           <p
@@ -633,10 +947,10 @@
             in touch</p>
           <h2 id="contact-heading"
             style="font-family:'Courier New',Courier,monospace; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:400; line-height:1.15; margin-bottom:1.5rem;">say
-            something.<br><em style="font-style:italic; color:#5a8a72;">we have
+            something.<br><em style="font-style:italic; color:var(--sage-accent);">we have
               opinions<br>about everything.</em></h2>
           <p
-            style="font-size:0.9rem; line-height:1.75; color:#222; margin-bottom:2rem;">Whether
+            style="font-family:var(--read); font-size:1.02rem; line-height:1.62; color:#1f1f1f; margin-bottom:2rem;">Whether
             you want to argue about kerning, pitch a collaboration, or just tell
             us we're wrong about Comic Sans — we're here for it.</p>
           <div
@@ -742,7 +1056,7 @@
 
     <!-- FOOTER -->
     <footer role="contentinfo"
-      style="border-top:1px solid rgba(0,0,0,0.1); background:#e3f1eb; padding:1.5rem var(--page-pad);">
+      style="border-top:1px solid rgba(0,0,0,0.1); background:var(--sage); padding:1.5rem var(--page-pad);">
       <div
         style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
         <p style="font-size:0.7rem; letter-spacing:0.06em; color:#777;">© 2026
