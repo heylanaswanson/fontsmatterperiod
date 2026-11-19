@@ -152,6 +152,7 @@ body {
 .fp--copperplate .font-hero__big { font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; font-size: clamp(2.2rem, 9cqw, 6rem); }
 .fp--courier .font-hero__big { font-family: "Courier New", Courier, monospace; font-weight: 700; letter-spacing: -0.03em; font-size: clamp(2.4rem, 10cqw, 6.8rem); }
 .fp--poppins .font-hero__big { font-family: Poppins, "Century Gothic", Futura, "Trebuchet MS", sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+.fp--playfair .font-hero__big { font-family: "Playfair Display", Georgia, serif; font-weight: 800; letter-spacing: -0.01em; }
 
 /* ── MOTION / CONTRAST PREFERENCES ── */
 @media (prefers-reduced-motion: reduce) {
