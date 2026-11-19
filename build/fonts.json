@@ -705,5 +705,60 @@
         "text": "Jonny Pinhorn drew the Latin — Reading-trained, previously designed Karla for Google Fonts, three years at ITF on Indic scripts. Ninad Kale drew the Devanagari — a diploma student at ITF when he cut the Devanagari of Poppins Extrabold. Shiva Nallaperumal, Michelle Parmar, Rahul Gajjar and Liang Hai extended the family through weights and italics. The reason you know Garamond is Claude Garamond. The reason you know Caslon is William Caslon. The reason Poppins doesn't carry a name attached to it is not that there are none. There are six."
       }
     ]
+  },
+  {
+    "slug": "playfair-display",
+    "num": "022",
+    "name": "Playfair Display",
+    "specimen": "Playfair",
+    "mod": "playfair",
+    "category": "Display Serif",
+    "year": "2011",
+    "designer": "Claus Eggers Sørensen",
+    "origin": "Amsterdam",
+    "tags": [
+      "serif",
+      "display"
+    ],
+    "title": "The free serif that makes anything look expensive.",
+    "hook": "A high-contrast serif, free on Google Fonts, that turns up on café menus, wedding invitations, and half the luxury brands online. It earns that look honestly at large sizes — and almost everyone uses it at the wrong one.",
+    "renderedIn": "Playfair Display (Google Fonts)",
+    "genuine": true,
+    "facts": [
+      {
+        "num": "2011",
+        "label": "released free on Google Fonts"
+      },
+      {
+        "num": "1700s",
+        "label": "steel-pen contrast it revives"
+      },
+      {
+        "num": "2023",
+        "label": "a successor built for body text"
+      }
+    ],
+    "body": [
+      {
+        "heading": "The look that reads as money",
+        "text": "Playfair Display is built on one dramatic idea: <em>thick strokes against hairline thins</em>. That extreme contrast is what makes it feel expensive — it's the same quality you see in Didot and Bodoni, the typefaces fashion magazines reach for. The look became possible in the late 1700s, when pointed steel pens replaced the quill and let letterers cut far finer lines. Claus Eggers Sørensen drew Playfair in 2011 in Amsterdam, working from Baskerville and Scotch Roman models of that era, and released it free on Google Fonts — which is how it ended up everywhere."
+      },
+      {
+        "heading": "\"Display\" is an instruction",
+        "text": "The second word in the name is doing real work. <em>Display</em> means a typeface built for large sizes — headlines, titles, covers, the one big line at the top. It is not a general-purpose face, and it was never meant to be. Read the name as a label on the tin: use me big."
+      },
+      {
+        "heading": "Where it breaks down",
+        "text": "Set Playfair large and the contrast reads as refinement. Shrink it to paragraph size and those same hairline strokes start to break up — they thin out, flicker, and fight the eye. Contrast that looks elegant in a 60-point headline turns into strain when the letters are small and there are hundreds of them in a row. The font isn't failing; it's being asked to do a job it wasn't drawn for."
+      },
+      {
+        "heading": "Pair it with something built for reading",
+        "text": "The fix is simple: let Playfair carry the headline, and hand the body copy to a typeface made for small sizes. Playfair's own Google Fonts description suggests <em>Georgia</em> or <em>Gelasio</em> for paragraphs — sturdy, even-weight serifs that stay legible when the type gets small. A display face up top and a text face below is one of the oldest, safest pairings there is."
+      },
+      {
+        "heading": "What happened next",
+        "text": "People set paragraphs in it anyway — the price was right and the name was familiar. So in 2023 a successor arrived, called simply <em>Playfair</em>, a larger family with an optical-size axis built specifically so the letterforms adjust as they shrink. If you love the look and need it to work at body size too, that's the one to reach for. The original Display remains exactly what it says: a face for the big line."
+      }
+    ]
   }
 ]
